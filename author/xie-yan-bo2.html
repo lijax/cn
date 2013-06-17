@@ -51,21 +51,31 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2010-05-19T02:37:00" pubdate>
-                            Wed 19 May 2010
+                        <time class="post-time" datetime="2011-04-08T00:18:00" pubdate>
+                            Fri 08 April 2011
                         </time>
-                        <a href="../posts/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e7%bd%91%e5%9d%80%e6%8f%90%e4%ba%a4%e5%85%a5%e5%8f%a3%e5%a4%a7%e5%85%a8.html" rel="bookmark"><h1>搜索引擎网址提交入口大全</h1></a>
+                        <a href="../posts/android程序构成.html" rel="bookmark"><h1>android程序构成</h1></a>
                     </header>
                     <section class="post-content">
-                        <p>一、搜索引擎以及登录入口</p>
-<p>百 度：<a href="http://www.baidu.com">http://www.baidu.com</a></p>
-<p>登陆入口：<a href="http://www.baidu.com/search/url_submit.html">http://www.baidu.com/search/url_submit.html</a></p>
-<p>Google ：<a href="http://www.g.cn">http://www.g.cn</a></p>
-<p>登陆入口：<a href="http://www.google.com/addurl">http://www.google.com/addurl</a></p>
-<p>雅 虎：<a href="http://cn.yahoo.com">http://cn.yahoo.com</a></p>
-<p>登陆入口：<a href="http://search.help.cn.yahoo.com/h4_4.html">http://search.help.cn.yahoo.com/h4_4.html</a></p>
-<p>搜 搜：<a href="http://www.soso.com">http://www.soso.com</a></p>
-<p>登陆入口：<a href="http://www.soso.com/help/usb/urlsubmit.shtml">http ...</a></p>
+                        <h3>Components</h3>
+<p>一个android程序中可以包含一个多个Components</p>
+<ul>
+<li><strong>Activities</strong>：有用户界面的程序；</li>
+<li><strong>Services</strong>：后台运行的程序；</li>
+<li><strong>Content providers</strong>：提供数据操作，其他components通过
+    ContentResolver层对content provider进行数据操作；</li>
+<li><strong>Broadcast
+    receivers</strong>：接收系统级别程序广播，没有用户界面，可在在提示栏创建显示信息，经常是激活activity和service的入口；</li>
+</ul>
+<h3>Intent</h3>
+<p>用来激活除content
+provider之外的components，components之间的传递信息，可指定激活某个特定component，也可通过intent-filter指定可激活的components类别。</p>
+<h3>Manifest</h3>
+<p>描述.apk程序包的信息</p>
+<ul>
+<li><strong>申明所含components</strong>：所有的components包含在\&lt;application>\&lt;/application>中，activity用\&lt;activity>\&lt;/activity>申明，service用\&lt;service>\&lt;/service>申明；</li>
+<li>
+<p><strong>申明components的能力</strong>：在activity中采用\&lt;intent-filter>\&lt;/intent-filter>描述所能接受的intent，包含action和category，action=android.intent.action ...</p></li></ul>
                     </section>
                 </article>
             </li>
@@ -73,20 +83,22 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2011-06-05T15:42:00" pubdate>
-                            Sun 05 June 2011
+                        <time class="post-time" datetime="2010-10-09T17:13:00" pubdate>
+                            Sat 09 October 2010
                         </time>
-                        <a href="../posts/%e6%b2%a1%e5%b9%b2%e6%ad%a3%e4%ba%8b.html" rel="bookmark"><h1>没干正事</h1></a>
+                        <a href="../posts/apt安装girlfriend-没有money不行.html" rel="bookmark"><h1>apt安装girlfriend，没有money不行</h1></a>
                     </header>
                     <section class="post-content">
-                        <p>最近好像一直没干正事。</p>
-<p>虽然天天照常在实验室，九点到，十一点回，作息很规律，上班时间也是在忙自己的课题或者学习新的技术（和专业相关的），但是，可能是没有明显的结果吧，总觉得没做多少事情。反倒是下班之后，忙一些自己喜欢的事情比较有结果，好像反而成了这段时间的主要工作。</p>
-<h5>discuz!X论坛谷歌地图</h5>
-<p>以前本科快毕业的时候玩过一段时间的discuz论坛程序。那时高山师兄建的一个生物信息学的谷歌群总是上不去，我就想建一个论坛方便交流，所以就用discuz7.2建了一个<a href="http://www.bioinformatics.tk" title="生物信息学天空">生物信息学天空</a>论坛，后来师兄去了美国，上的人也少了，就一直没管。</p>
-<p>最近熊杰等兄弟搞个了旅游论坛<a href="http://www.69city.net">69city</a>，需要实现些地图定位的功能，俺也就参加了，顺便整理了一下之前自己搞的那个。</p>
-<p>说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。</p>
-<p>好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步<a href="http://www.bioinformatics.tk">论坛</a>查看）</p>
-<p>~~~~ {lang ...</p>
+                        <p>sudo apt-get install girlfriend<br />
+正在读取软件包列表... 完成<br />
+正在分析软件包的依赖关系树... 完成<br />
+有一些软件包无法被安装。<br />
+下列的信息可能会对解决问题有所帮助：<br />
+下列的软件包有不能满足的依赖关系：<br />
+girlfriend: 依赖: house但是它将不会被安装<br />
+girlfriend: 依赖: car但是它将不会被安装<br />
+house,car: 依赖: money但是它将不会被安装<br />
+E: 无法安装的软件包</p>
                     </section>
                 </article>
             </li>
@@ -94,143 +106,22 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2011-06-18T21:44:00" pubdate>
-                            Sat 18 June 2011
+                        <time class="post-time" datetime="2011-05-10T09:37:00" pubdate>
+                            Tue 10 May 2011
                         </time>
-                        <a href="../posts/%e7%94%9f%e7%89%a9%e4%bf%a1%e6%81%af%e5%ad%a6%e7%9b%b8%e5%85%b3%e6%9c%9f%e5%88%8afeed%e6%b1%87%e6%80%bb.html" rel="bookmark"><h1>生物信息学相关期刊feed汇总</h1></a>
+                        <a href="../posts/file-roller压缩包中文乱码解决方法.html" rel="bookmark"><h1>file roller压缩包中文乱码解决方法</h1></a>
                     </header>
                     <section class="post-content">
-                        <dt>
-[Advances in Bioinformatics][]
-</dt>
+                        <p>移除rar、unrar</p>
+<p>~~~~ {lang="LINUX"}
+sudo apt-get remove rar
+sudo apt-get remove unrar</p>
+<div class="highlight"><pre><span class="err">安裝</span><span class="n">p7zip</span><span class="err">、</span><span class="n">p7zip</span><span class="o">-</span><span class="n">rar</span>
 
-<dd>
-<http://www.hindawi.com/RSS.aspx?journalx3dabi>
-</dd>
-
-<dt>
-[Algorithms for molecular biology][]
-</dt>
-
-<dd>
-<http://www.almob.org/rss/>
-</dd>
-
-<dt>
-[BioData Mining][]
-</dt>
-
-<dd>
-<http://www.biodatamining.org/rss>
-</dd>
-
-<dt>
-[Bioinformatics][]
-</dt>
-
-<dd>
-<http://bioinformatics.oupjournals.org/rss/recent.xml>
-</dd>
-
-<dt>
-[Bioinformatics and Biology Insights][]
-</dt>
-
-<dd>
-<http://la-press.com/feed.php?journal_id=39>
-</dd>
-
-<dt>
-[Biomedical engineering online][]
-</dt>
-
-<dd>
-<http://www.biomedical-engineering-online.com/rss/>
-</dd>
-
-<dt>
-[Biometrics][]
-</dt>
-
-<dd>
-<http://www3.interscience.wiley.com/rss/journal/118538342>
-</dd>
-
-<dt>
-[Biometrika][]
-</dt>
-
-<dd>
-<http://biomet.oupjournals.org/rss/recent.xml>
-</dd>
-
-<dt>
-[Biostatistics][]
-</dt>
-
-<dd>
-<http://biostatistics.oxfordjournals.org/rss/current.xml>
-</dd>
-
-<dt>
-[BMC bioinformatics][]
-</dt>
-
-<dd>
-<http://www.biomedcentral.com/bmcbioinformatics/rss/>
-</dd>
-
-<dt>
-[BMC genomics][]
-</dt>
-
-<dd>
-<http://www.biomedcentral.com/bmcgenomics/rss>
-</dd>
-
-<dt>
-[BMC medical informatics and decision making][]
-</dt>
-
-<dd>
-<http://www.biomedcentral.com/bmcmedinformdecismak/rss/>
-</dd>
-
-<dt>
-[Briefings in bioinformatics][]
-</dt>
-
-<dd>
-<http://bib.oxfordjournals.org/rss/current.xml>
-</dd>
-
-<dt>
-[British Journal of Healthcare Computing and Information Management,
-The][]
-</dt>
-
-<dd>
-<http://www.bjhcim.co.uk/news.xml>
-</dd>
-
-<dt>
-[Cancer informatics][]
-</dt>
-
-<dd>
-<http://la-press.com/feed.php?journal_id=10>
-</dd>
-
-<dt>
-[Computers, informatics, nursing][]
-</dt>
-
-<dd>
-<http://194.66.22.134/rss/journals//00024665/current.rss>
-</dd>
-
-<dt>
-[Database: The Journal ...</dt>
+<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span><span class="p">}</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">p7zip</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">p7zip</span><span class="o">-</span><span class="n">rar</span>
+</pre></div>
                     </section>
                 </article>
             </li>
@@ -238,13 +129,33 @@ The][]
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2010-05-02T02:42:00" pubdate>
-                            Sun 02 May 2010
+                        <time class="post-time" datetime="2010-05-27T06:00:00" pubdate>
+                            Thu 27 May 2010
                         </time>
-                        <a href="../posts/%e7%94%a8%e6%89%8b%e6%9c%ba%e5%8f%91%e8%a1%a8%e5%8d%9a%e5%ae%a2.html" rel="bookmark"><h1>微软表态,众巨头一致支持HTML5</h1></a>
+                        <a href="../posts/follow5-分享功能不错.html" rel="bookmark"><h1>follow5 分享功能不错</h1></a>
                     </header>
                     <section class="post-content">
-                        <p>这是我用手机发的一篇博客,想看看效果怎么样.写点什么呢,说说HTML5吧.听说最近微软也开始正式支持它了,且公开提出HTML5才是互联网的未来,虽然早在之前他们已经发布了支持HTML5的IE9,但这次公开的表态还真是破天荒,显然面对开放式互联网的迅猛发展,这个软件行业巨头也开始让步了.微软很有可能因此放弃还没来得及普及就要夭折的SILVERLIGHT项目.而这几天面临同样困扰的是ADOBE的FLASH,乔布斯不但不让自已的产品支持它,最近还对其公开数落了一通,表明支持HTML5作为其替代.加上谷歌在HTML5上是主要推动者，其chrome加上几大主流浏览器厂商Mozilla的Firefox、Apple的Safari、Opera，和移动巨头诺基亚、RIM（黑莓手机）等手机厂商的大力支持。相信HTML5这几年会有不错的发展，尤其是这些电信移动领域和互联网领域的互相渗透，对互联网的影响将是革命性的。HTML5+移动互联网+云计算，未来的网络生活会非常精彩。</p>
+                        <p>刚注册了个follow5微博，分享功能非常强大，几乎支持所有已知的网站微博共享：支持通过手机短信、QQ、MSN、Gtalk、飞信来发送微博，可以同步到以下所有网站</p>
+<ul>
+<li>![]<a href="http://twitter.com/"></a>[]</li>
+<li>![]<a href="http://www.plurk.com/">1</a>[]</li>
+<li>![]<a href="http://digu.com/">2</a>[]</li>
+<li>![]<a href="http://m.jiwai.de/">3</a>[]</li>
+<li>![]<a href="http://www.zuosa.com/">4</a>[]</li>
+<li>![]<a href="http://www.kaixin001.com/">5</a>[]</li>
+<li>![]<a href="http://www.renren.com/">6</a>[]</li>
+<li>![]<a href="http://hellotxt.com/">7</a>[]</li>
+<li>![]<a href="http://t.sina.com.cn/">8</a>[]</li>
+<li>![]<a href="http://tongxue.com/">9</a>[]</li>
+<li>![]<a href="http://www.9911.com/">10</a>[]</li>
+<li>![]<a href="http://www.douban.com/">11</a>[]</li>
+<li>![]<a href="http://t.sohu.com/">12</a>[]</li>
+<li>![]<a href="http://t.163.com/">13</a>[]</li>
+<li>![]<a href="http://t.people.com.cn/">14</a>[]</li>
+<li>![]<a href="http://bo.xianguo.com/">15</a>[]</li>
+<li>![]<a href="http://www.friendfeed.com/">16</a>[]</li>
+<li>![]<a href="http://t.ifeng.com/">17</a>[]</li>
+</ul>
                     </section>
                 </article>
             </li>
@@ -252,84 +163,32 @@ The][]
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2010-11-27T10:45:00" pubdate>
-                            Sat 27 November 2010
+                        <time class="post-time" datetime="2011-05-08T13:12:00" pubdate>
+                            Sun 08 May 2011
                         </time>
-                        <a href="../posts/%e7%a7%91%e7%a0%94%e5%bf%85%e5%a4%87%e7%bd%91%e7%bb%9c%e6%8a%80%e8%83%bd%e4%b9%8b%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86.html" rel="bookmark"><h1>科研必备网络技能之使用代理</h1></a>
+                        <a href="../posts/virtualbox-ose4.0.4-安装及运行错误.html" rel="bookmark"><h1>virtualbox-ose4.0.4 安装及运行错误</h1></a>
                     </header>
                     <section class="post-content">
-                        <h1><strong>使用代理</strong></h1>
-<p>你可能遇到过这样一些情况：</p>
-<ol>
-<li>正在用google搜索某篇文献，你不觉得其中关键词有什么不妥，但突然出现“此网页无法访问”，之后十多分钟你都不能使用google（你是否认为google服务器挂了）；</li>
-<li>终于找到这篇文献，但是发现链接打不开（你一般会认为这个链接已经死掉）；</li>
-<li>你打开了这个链接，但是因为你不在学校或者研究所，你发现这篇文献需要付费才能下载；</li>
-<li>在校外无法访问校内的BBS；</li>
-<li>你想在国外网站上申请一个什么服务，但是发现你所在的IP无法申请。</li>
-<li>你想玩国外的某个网游，譬如魔兽世界美服，你的IP无法登录。</li>
-<li>你听说过的国外的许多优秀网络服务无法访问。</li>
-</ol>
-<p>还有很多……</p>
-<p>你需要使用代理。</p>
-<p><strong>什么是代理？</strong></p>
-<p>代理相当于你的电脑和所访问的网络服务之间的一台服务器，你通过这台服务器间接访问你所请求的网络服务，而不是直接访问。</p>
-<p>[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/演示文稿1.jpg" />][]</p>
-<p>图片转自可能吧</p>
-<p><strong>代理的用途</strong></p>
-<ol>
-<li>突破服务提供者对访问者IP的限制，3、 4、
-    5、6属于这种情况。你想下载某个杂志上的文章，发现学校或研究所里面可以下载，在外面就需要你付费了，那是因为学校或研究所已经对杂志付过费，这样，学校或研究所里面的IP都被允许免费下载。如果你使用其中的一个IP作为代理，便能免费下载（吴跃伟老师有提供武汉分院图书馆的代理地址）。456同样的道理，只不过换一个IP。</li>
-<li>透过防火墙对某些网站的封锁（各种技术，不细说），1、
-    2 ...</li></ol>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2010-11-17T14:39:00" pubdate>
-                            Wed 17 November 2010
-                        </time>
-                        <a href="../posts/%e7%a7%91%e7%a0%94%e5%bf%85%e5%a4%87%e7%bd%91%e7%bb%9c%e6%8a%80%e8%83%bd%e4%b9%8b%e4%bd%bf%e7%94%a8google.html" rel="bookmark"><h1>科研必备网络技能之使用google</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p><span style="color: #ff0000;">网络是科研人员了解科研进展、获取最新知识的重要渠道。由于网络在国内环境的特殊性，科研人员必须学会一些基本的网络生存技能。</span></p>
-<h1><span style="color: #ff0000;">使用google</span></h1>
-<p><span style="color: #ff0000;">不要把google和百度对比，不是一个数量级。百度号称是专注中文搜索，但是中文搜索它给你的结果是：想要的它不给你（过滤），不想要的它放最前面(广告）。英文的搜索你就更别指望了。它顶多算一个被阉割了的字符串匹配。当然它也不是一无是处，还是有点用处，百度知道、贴吧、百科（要想知道更多，最好用维基百科）都还行，但就是别用它的搜索。</span></p>
-<p><span style="color: #ff0000;">这里所说的不是使用谷歌中国，是使用.com下的google，google的核心服务都在.com下，以前的.cn和现在的.hk只是一个残缺google。怎么使用.com的google，我以前的文章有提到。因为你在国内直接访问google.com，它会识别出你的IP来源是中国，所以一般会直接将你跳转的.cn或.hk下的谷歌。你要么点页面下方的google.com，要么可以用代理实现。</span></p>
-<h3><span style="color: #ff0000;">google搜索</span></h3>
-<p><span style="color: #ff0000;">google的搜索技术没话可说，不多评论。怎样使用google搜索还是有点小技巧。直接在主页面搜索，谁都会用 ...</span></p>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2011-06-10T19:21:00" pubdate>
-                            Fri 10 June 2011
-                        </time>
-                        <a href="../posts/%e7%bb%a7%e7%bb%ad%e7%8e%a9%e8%b0%b7%e6%ad%8c%e5%90%89%e4%bb%96.html" rel="bookmark"><h1>继续玩谷歌吉他</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p>爱谷歌，爱生活，把谷歌吉他搬到自己的博客继续玩。  </p>
-<iframe src="/guitar/google-guitar.htm" height="350px" width="660px" style="overflow:hidden" frameborder="0"></iframe>
+                        <p>今天debian升级后，重装virtualbox-ose报了个错</p>
+<p>~~~~ {lang="LINUX" colla="+"}
+Starting VirtualBox kernel modulesNo suitable module for running kernel found ...
+failed!
+failed!</p>
+<div class="highlight"><pre><span class="err">但是程序还是安装成功了，也就没管它</span>
 
-<p>之前把代码搞下来在自己电脑上玩，总发不出声音，看了<a href="http://www.zhujun.org/web/google-doodle-guitar-source-code/">朱俊独立博客</a>才知道是flash的安全问题，上传到网站上就没这个问题了。</p>
-<p>搜罗一下曲子：<br />
-小星星：<br />
-1155665 4433221 5544332 5544332 1155665 4433221<br />
-沧海一笑：<br />
-pouyt uytew wewetyuop ppouyty<br />
-欢乐颂：<br />
-uuiooiuyttyuuyyuuiooiuyttyuytt<br />
-爱情买卖：<br />
-hhdsd ssdsas gggdgggd hddsd hhdsd ssdsas gggdgggd jggdh dhkkdhk jhjhgsd
-sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
-月亮之上：<br />
-3686 3675 53686565326553 3686 89865 36865326656<br />
-两只老虎 ...</p>
+<span class="err">直接运行，添加虚拟机，启动时，还是报错了，弹出两个窗口，大概如下</span>  
+<span class="err">窗口</span><span class="mi">1</span>
+
+<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span> <span class="n">colla</span><span class="o">=</span><span class="s">&quot;+&quot;</span><span class="p">}</span>
+<span class="n">result</span> <span class="n">code</span><span class="o">:</span><span class="n">NS_ERROR_FAILURE</span> <span class="p">(</span><span class="mh">0x80004005</span><span class="p">)</span>
+<span class="nl">component:</span><span class="n">VirtualBox</span>
+<span class="nl">interface:</span><span class="n">IVirtualBox</span> <span class="p">{</span><span class="mi">2158464</span><span class="n">a</span><span class="o">-</span><span class="n">f706</span><span class="o">-</span><span class="mi">414</span><span class="n">b</span><span class="o">-</span><span class="n">a8c4</span><span class="o">-</span><span class="n">fb589dfc6b62</span><span class="p">}</span>
+</pre></div>
+
+
+<p>窗口2</p>
+<p>~~~~ {lang="LINUX" colla="+"}
+kernel ...</p>
                     </section>
                 </article>
             </li>
@@ -337,21 +196,90 @@ sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2012-10-06T13:56:00" pubdate>
-                            Sat 06 October 2012
+                        <time class="post-time" datetime="2010-05-24T20:48:00" pubdate>
+                            Mon 24 May 2010
                         </time>
-                        <a href="../posts/%e8%92%99%e7%89%b9%e5%8d%a1%e7%bd%97%e6%a8%a1%e6%8b%9f-%e5%8f%af%e6%b1%97%e5%ad%a6%e9%99%a2%e7%a4%ba%e4%be%8b.html" rel="bookmark"><h1>蒙特卡罗模拟-可汗学院示例</h1></a>
+                        <a href="../posts/一些云计算在线软件.html" rel="bookmark"><h1>一些云计算在线软件</h1></a>
                     </header>
                     <section class="post-content">
-                        <p>在可汗学院（<a href="http://www.khanacademy.org/">Khan
-Academy</a>）上看到的一个有趣的蒙特卡罗模拟的代码示例，蛮有意思的。</p>
-<p>说在詹姆斯一场球赛最后还剩30秒，落后3分的情况下，应该选择投三分还是两分造犯规呢？</p>
-<iframe width="580" height="420" src="http://www.youtube.com/embed/-fCVxTTAtFQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                        <p>这两年云计算炒得非常热，那么什么是云计算，无非就是互联网服务，所有现在能在桌面上实现的事情放到互联网上实现。说白了，从大家当初接触互联网一直使用到现在的网络邮箱就是一种云计算应用，只是当时这个概念没提出来。现在Javascript、ajax、Css、尤其是HTML5，这些技术让互联网越来越具有交互性，在线软件成为可能。下面介绍一些超酷的在线软件。</p>
+<p><span style="color: #ff0000;">特别提醒，如果你使用的是IE或IE核心的浏览器（国内的基本上都是），可能不能享用这些软件了，推荐使用Firefox、chrome、safari等高级的浏览器，扔掉老掉牙的IE吧。</span></p>
+<h3>1. 在线操作系统</h3>
+<p>说到在线软件，操作系统可是重中之重。06年的时候我玩过一个pc2n的在线系统，网址是www.pc2n.com（貌似现在没了），是以flash界面实现的，感觉太慢，操作不方便，玩了两次就再也没管了。</p>
+<ul>
+<li><a href="http://www.oos.cc/login.html">ICube</a>：提供1G的在线存储和文件共享，多媒体支持和一些常用办公工具。同时拥有一个email客户端和编程开发工具。界面有点像windows2000。</li>
+</ul>
+<p>[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg" />][]</p>
+<ul>
+<li><a href="http://www.eyeos.org/">EyeOS</a>：EyeOS是一个开源软件，可以下载使用也可以在其服务器上在线使用。拥有丰富的网络程序以及办公套件。个性化强度高。</li>
+</ul>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p><a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"></a></p>
+<p>[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg" title="eyeos" />][]</p>
+<ul>
+<li>[Glide
+    OS][]：flash实现的在线操作系统，除了提供Web入口之外，还提供移动网络入口 ...</li></ul>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2010-04-18T21:36:00" pubdate>
+                            Sun 18 April 2010
+                        </time>
+                        <a href="../posts/世上最迂回的公路-感觉很奇怪.html" rel="bookmark"><h1>世上最迂回的公路，感觉很奇怪</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>无意间在google
+earth上发现的，在不丹，感觉非常奇怪，有些弯度觉得简直就是没有必要，发上来看看。</p>
+<p>先来个全景[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/111.jpg" title="11" />][]</p>
+<p>放大[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/221.jpg" title="22" />][]</p>
+<p>再放大[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/331.jpg" title="33" />][]</p>
+<p>看这迂回，简直都平行了，也没见中间有多高，直接开过去不就行了，很是奇怪。</p>
+<div class="blogger-post-footer">
+本文来自我的另一博客站blog.yedashu.com![][3]
 
-<h2><a href="http://www.khanacademy.org/cs/basketball-decisions/1024155511">Basketball Decisions</a></h2>
-<iframe style="width: 580px; height: 460px; border: 0px;" src="http://www.khanacademy.org/cs/basketball-decisions/1024155511/embedded?editor=yes&amp;buttons=yes&amp;author=yes" frameborder="0" scrolling="auto"></iframe>
+</div>
 
-<p>Made using: <a href="http://www.khanacademy.org/cs">Khan Academy Computer Science</a>.</p>
+<p>[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/111.jpg" title="11" />]: http://www.yeyanbo.com/wp-content/uploads/2010/04/111.jpg
+  [<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/221.jpg" title="22" />]: http://www.yeyanbo.com/wp-content/uploads/2010/04/221.jpg
+  [<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/331.jpg" title="33" />]: http://www.yeyanbo.com/wp-content/uploads/2010/04/331.jpg</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2010-06-19T00:12:00" pubdate>
+                            Sat 19 June 2010
+                        </time>
+                        <a href="../posts/两个关于生物的笑话.html" rel="bookmark"><h1>两个关于生物的笑话</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>有个勤奋的生物学家死后，上帝不想让他去天堂，就把他放到了地狱。  </p>
+<p>过了一周，阎王来找上帝：敬爱的上帝，麻烦你赶紧把那个生物学家给我弄走，我要恢复  </p>
+<p>地狱的秩序。现在地狱所有的鬼都在熬夜，加班加点的转质粒，做PCR，摇菌，提蛋白，  </p>
+<p>走柱子，跑胶，写proposal，攒paper，修改、回复审查意见等，忙得一团糟。小鬼空闲<br />
+时都在看paper和review、参加各种技术培训，跟师兄师姐们帮忙......</p>
+<p>上帝无奈，把生物学家召回了天堂。  </p>
+<p>过了一个月，阎王来天宫办事，顺便问上帝：敬爱的上帝，那个生物学家还好吧？<br />
+上帝：首先我要说明一点，以后不要叫我上帝，要叫我Professor
+耶。另外，我现在很  </p>
+<p>忙，没有时间回答你的问题，我刚刚接了5个project，马上要连夜开组会。明天一大早我  </p>
+<p>又要赶去和释迦牟尼谈funding，之前要查看天使们的考勤记录,有事请发电子邮件,再见<br />
+。</p>
+<p>=======================</p>
+<p>一个小偷趁人不备，溜进某生物实验室里 ...</p>
                     </section>
                 </article>
             </li>
