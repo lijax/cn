@@ -1,79 +1,429 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lijax</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+                    <link rel="stylesheet" href="./theme/css/normalize.css">
+        <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./theme/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./theme/css/main.css">
+        
+    <link rel="stylesheet" href="./theme/css/blog.css">
+    <link rel="stylesheet" href="./theme/css/github.css">
+                <link href="http://blog.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+                        <script src="./theme/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Cn : http://blog.yeyanbo.com/cn/" />
+        <div id="wrapper">
+                <header id="sidebar" class="side-shadow">
+    <hgroup id="site-header">
+        <a id="site-title" href="."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <p id="site-desc"></p>
+    </hgroup>
+    <nav>
+        <ul id="nav-links">
+                                        <li><a href="./pages/about.html">关于Lijax</a></li>
+                            <li><a href="./pages/bioinformatics-resources.html">生物信息学资源</a></li>
+                                </ul>
+    </nav>
+    <footer id="site-info">
+    <p>
+        Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
+    </p>
+    <p>
+        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
+    </p>
+</footer></header>
+    <div id="post-container">
+        <ol id="post-list">
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2012-12-08T13:04:00" pubdate>
+                            Sat 08 December 2012
+                        </time>
+                        <a href="./posts/ubuntulinux%e9%bb%98%e8%ae%a4%e7%a8%8b%e5%ba%8f%e5%85%b3%e8%81%94%e6%96%87%e4%bb%b6.html" rel="bookmark"><h1>Ubuntu/Linux默认程序关联文件</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>今天想修改默认的文本编辑器gedit为sublime_text,更改了几次都没成功，原来关联文件一共有三个，记录以备用。</p>
+<div class="highlight"><pre><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">gnome</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span> <span class="n">or</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span>  
+<span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">mimeapps</span><span class="p">.</span><span class="n">list</span>  
+<span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span>
+</pre></div>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Cn</title>
-  </head>
+<p>用文本编辑器更改上述三个文件中的信息，替换gedit.desktop为sublime-text-2.desktop（确认/usr/share/applications/下的名称）</p>
+<p>最后重启nautilus</p>
+<div class="highlight"><pre><span class="n">pkill</span> <span class="n">nautilus</span>
+</pre></div>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2012-10-06T13:56:00" pubdate>
+                            Sat 06 October 2012
+                        </time>
+                        <a href="./posts/%e8%92%99%e7%89%b9%e5%8d%a1%e7%bd%97%e6%a8%a1%e6%8b%9f-%e5%8f%af%e6%b1%97%e5%ad%a6%e9%99%a2%e7%a4%ba%e4%be%8b.html" rel="bookmark"><h1>蒙特卡罗模拟-可汗学院示例</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>在可汗学院（<a href="http://www.khanacademy.org/">Khan
+Academy</a>）上看到的一个有趣的蒙特卡罗模拟的代码示例，蛮有意思的。</p>
+<p>说在詹姆斯一场球赛最后还剩30秒，落后3分的情况下，应该选择投三分还是两分造犯规呢？</p>
+<iframe width="580" height="420" src="http://www.youtube.com/embed/-fCVxTTAtFQ?rel=0" frameborder="0" allowfullscreen></iframe>
 
-  <body>
+<h2><a href="http://www.khanacademy.org/cs/basketball-decisions/1024155511">Basketball Decisions</a></h2>
+<iframe style="width: 580px; height: 460px; border: 0px;" src="http://www.khanacademy.org/cs/basketball-decisions/1024155511/embedded?editor=yes&amp;buttons=yes&amp;author=yes" frameborder="0" scrolling="auto"></iframe>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/lijax/cn">View on GitHub</a>
+<p>Made using: <a href="http://www.khanacademy.org/cs">Khan Academy Computer Science</a>.</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2012-04-22T20:05:00" pubdate>
+                            Sun 22 April 2012
+                        </time>
+                        <a href="./posts/eutils%e7%94%a8%e6%b3%95%e6%80%bb%e7%bb%93.html" rel="bookmark"><h1>Eutils用法总结</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>好久没更新了，这里都长草了。。。</p>
+<p>总结下Eutils的用法，参考《<a href="http://www.ncbi.nlm.nih.gov/books/NBK25500/">E-utilities Quick
+Start</a>》，没时间看英文的可以参考下。</p>
+<h2>简介</h2>
+<p>Eutils全称是The Entrez Programming Utilities
+(E-utilities)，是由八个服务器端程序组成的一套编程工具，它提供用于访问NCBI
+Entrez查询和数据库系统的稳定接口。
+这八个工具包括Einfo、ESearch、EPost、ESummary、EFetch、ELink、EGQuery、ESpell（详见表1）。通过这些工具，你可以访问NCBI
+Entrez所包含的序列、三维结构、文献等所有38个数据库。</p>
+<p><strong><span style="text-align: center;">表1. 八种Eutils工具</span></strong></p>
+<table class="aligncenter" cellspacing="0" cellpadding="4">
+<tbody>
+<tr>
+<th>
+<span style="font-family: 'DejaVu Serif Condensed', serif;">Eutils
+Name</span>
 
-          <h1 id="project_title">Cn</h1>
-          <h2 id="project_tagline">http://blog.yeyanbo.com/cn/</h2>
+</th>
+<th>
+<span style="font-family: 'DejaVu Serif Condensed', serif;">Entry</span>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/lijax/cn/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/lijax/cn/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+</th>
+<th>
+<span style="font-family: 'DejaVu Serif Condensed', serif;">Required
+Parameters</span>
+
+</th>
+<th>
+<span style="font-family: 'DejaVu Serif Condensed', serif;">Optional
+Parameters</span>
+
+</th>
+<th>
+<span style="font-family: 'DejaVu Serif Condensed', serif;">Return
+Format</span>
+
+</th>
+</tr>
+<tr>
+<td>
+<span style="color: #985735;"><span style="font-family: inherit;"><span style="font-size: small;">EInfo</span></span></span>
+
+</td>
+<td>
+<span><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: x-small;">einfo.fcgi</span></span></span>
+
+</td>
+<td valign="TOP">
+</td>
+<td valign="TOP">
+<span style="font-family: 'DejaVu Serif Condensed', serif;">db</span>
+
+</td>
+<td>
+<span><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: x-small;">xml</span></span></span>
+
+</td>
+</tr>
+<tr>
+<td>
+<span style="color: #985735;"><span style="font-family: inherit;"><span style="font-size: small;">ESearch</span></span></span>
+
+</td>
+<td>
+<span><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: x-small;">esearch.fcgi ...</span></span></span></td></tr></tbody></table>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2012-02-23T15:20:00" pubdate>
+                            Thu 23 February 2012
+                        </time>
+                        <a href="./posts/%e5%8d%9a%e5%ae%a2%e6%90%ac%e5%ae%b6.html" rel="bookmark"><h1>博客搬家</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>好久没更新博客了</p>
+<p>以前一直托管在免费的空间上，经常宕机，也懒得去管</p>
+<p>反正自己也没时间去写，访问量也不是很多，宕不宕机好像没多大关系</p>
+<p>再说本来就是免费的，有得用就不错了</p>
+<p>不过同时还建了一个论坛在托管在上面，人数现在也很多了，总这样断断续续似乎不大好</p>
+<p>于是终于狠心，花了几百大洋，搬了个比较靠谱的空间</p>
+<p>测试一下，哦，耶！</p>
+<p>[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa-300x295.png" title="aaa" />][]</p>
+<p>[<img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa-300x295.png" title="aaa" />]: http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa.png</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2011-06-18T21:44:00" pubdate>
+                            Sat 18 June 2011
+                        </time>
+                        <a href="./posts/%e7%94%9f%e7%89%a9%e4%bf%a1%e6%81%af%e5%ad%a6%e7%9b%b8%e5%85%b3%e6%9c%9f%e5%88%8afeed%e6%b1%87%e6%80%bb.html" rel="bookmark"><h1>生物信息学相关期刊feed汇总</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <dt>
+[Advances in Bioinformatics][]
+</dt>
+
+<dd>
+<http://www.hindawi.com/RSS.aspx?journalx3dabi>
+</dd>
+
+<dt>
+[Algorithms for molecular biology][]
+</dt>
+
+<dd>
+<http://www.almob.org/rss/>
+</dd>
+
+<dt>
+[BioData Mining][]
+</dt>
+
+<dd>
+<http://www.biodatamining.org/rss>
+</dd>
+
+<dt>
+[Bioinformatics][]
+</dt>
+
+<dd>
+<http://bioinformatics.oupjournals.org/rss/recent.xml>
+</dd>
+
+<dt>
+[Bioinformatics and Biology Insights][]
+</dt>
+
+<dd>
+<http://la-press.com/feed.php?journal_id=39>
+</dd>
+
+<dt>
+[Biomedical engineering online][]
+</dt>
+
+<dd>
+<http://www.biomedical-engineering-online.com/rss/>
+</dd>
+
+<dt>
+[Biometrics][]
+</dt>
+
+<dd>
+<http://www3.interscience.wiley.com/rss/journal/118538342>
+</dd>
+
+<dt>
+[Biometrika][]
+</dt>
+
+<dd>
+<http://biomet.oupjournals.org/rss/recent.xml>
+</dd>
+
+<dt>
+[Biostatistics][]
+</dt>
+
+<dd>
+<http://biostatistics.oxfordjournals.org/rss/current.xml>
+</dd>
+
+<dt>
+[BMC bioinformatics][]
+</dt>
+
+<dd>
+<http://www.biomedcentral.com/bmcbioinformatics/rss/>
+</dd>
+
+<dt>
+[BMC genomics][]
+</dt>
+
+<dd>
+<http://www.biomedcentral.com/bmcgenomics/rss>
+</dd>
+
+<dt>
+[BMC medical informatics and decision making][]
+</dt>
+
+<dd>
+<http://www.biomedcentral.com/bmcmedinformdecismak/rss/>
+</dd>
+
+<dt>
+[Briefings in bioinformatics][]
+</dt>
+
+<dd>
+<http://bib.oxfordjournals.org/rss/current.xml>
+</dd>
+
+<dt>
+[British Journal of Healthcare Computing and Information Management,
+The][]
+</dt>
+
+<dd>
+<http://www.bjhcim.co.uk/news.xml>
+</dd>
+
+<dt>
+[Cancer informatics][]
+</dt>
+
+<dd>
+<http://la-press.com/feed.php?journal_id=10>
+</dd>
+
+<dt>
+[Computers, informatics, nursing][]
+</dt>
+
+<dd>
+<http://194.66.22.134/rss/journals//00024665/current.rss>
+</dd>
+
+<dt>
+[Database: The Journal ...</dt>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2011-06-10T19:21:00" pubdate>
+                            Fri 10 June 2011
+                        </time>
+                        <a href="./posts/%e7%bb%a7%e7%bb%ad%e7%8e%a9%e8%b0%b7%e6%ad%8c%e5%90%89%e4%bb%96.html" rel="bookmark"><h1>继续玩谷歌吉他</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>爱谷歌，爱生活，把谷歌吉他搬到自己的博客继续玩。  </p>
+<iframe src="/guitar/google-guitar.htm" height="350px" width="660px" style="overflow:hidden" frameborder="0"></iframe>
+
+<p>之前把代码搞下来在自己电脑上玩，总发不出声音，看了<a href="http://www.zhujun.org/web/google-doodle-guitar-source-code/">朱俊独立博客</a>才知道是flash的安全问题，上传到网站上就没这个问题了。</p>
+<p>搜罗一下曲子：<br />
+小星星：<br />
+1155665 4433221 5544332 5544332 1155665 4433221<br />
+沧海一笑：<br />
+pouyt uytew wewetyuop ppouyty<br />
+欢乐颂：<br />
+uuiooiuyttyuuyyuuiooiuyttyuytt<br />
+爱情买卖：<br />
+hhdsd ssdsas gggdgggd hddsd hhdsd ssdsas gggdgggd jggdh dhkkdhk jhjhgsd
+sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
+月亮之上：<br />
+3686 3675 53686565326553 3686 89865 36865326656<br />
+两只老虎 ...</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2011-06-05T15:42:00" pubdate>
+                            Sun 05 June 2011
+                        </time>
+                        <a href="./posts/%e6%b2%a1%e5%b9%b2%e6%ad%a3%e4%ba%8b.html" rel="bookmark"><h1>没干正事</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>最近好像一直没干正事。</p>
+<p>虽然天天照常在实验室，九点到，十一点回，作息很规律，上班时间也是在忙自己的课题或者学习新的技术（和专业相关的），但是，可能是没有明显的结果吧，总觉得没做多少事情。反倒是下班之后，忙一些自己喜欢的事情比较有结果，好像反而成了这段时间的主要工作。</p>
+<h5>discuz!X论坛谷歌地图</h5>
+<p>以前本科快毕业的时候玩过一段时间的discuz论坛程序。那时高山师兄建的一个生物信息学的谷歌群总是上不去，我就想建一个论坛方便交流，所以就用discuz7.2建了一个<a href="http://www.bioinformatics.tk" title="生物信息学天空">生物信息学天空</a>论坛，后来师兄去了美国，上的人也少了，就一直没管。</p>
+<p>最近熊杰等兄弟搞个了旅游论坛<a href="http://www.69city.net">69city</a>，需要实现些地图定位的功能，俺也就参加了，顺便整理了一下之前自己搞的那个。</p>
+<p>说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。</p>
+<p>好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步<a href="http://www.bioinformatics.tk">论坛</a>查看）</p>
+<p>~~~~ {lang ...</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2011-05-13T23:52:00" pubdate>
+                            Fri 13 May 2011
+                        </time>
+                        <a href="./posts/%e4%bb%8a%e5%a4%a9%e7%9a%84%e6%bc%94%e8%ae%b2%e7%a8%bf.html" rel="bookmark"><h1>今天的演讲稿</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h1 style="text-align: center;">Love our country rationally</h1>
+<p>When I entered college, I became interested in reading news about our
+country. I only read those positive news, and refused to read negative
+ones. If someone showed me dark side of our country, I would naturally
+defend or find excuse for it. I also liked ...</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                    </ol>
+                <div class="paginator">
+                        Page 1 / 5
+                            <a href="./index2.html">
+                    <i class="icon-circle-arrow-right"></i>
+                </a>
+                    </div>
+        
     </div>
+        </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Cn maintained by <a href="https://github.com/lijax">lijax</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+        <script>
+    var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+        <script src="./theme/js/main.js"></script>
+    </body>
 </html>

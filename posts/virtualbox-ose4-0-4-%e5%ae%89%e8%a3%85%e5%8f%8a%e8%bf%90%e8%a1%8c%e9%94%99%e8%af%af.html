@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>    virtualbox-ose4.0.4 安装及运行错误
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+                    <link rel="stylesheet" href="../theme/css/normalize.css">
+        <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../theme/css/main.css">
+        
+    <link rel="stylesheet" href="../theme/css/blog.css">
+    <link rel="stylesheet" href="../theme/css/github.css">
+                <link href="http://blog.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper">
+                <header id="sidebar" class="side-shadow">
+    <hgroup id="site-header">
+        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <p id="site-desc"></p>
+    </hgroup>
+    <nav>
+        <ul id="nav-links">
+                                        <li><a href="../pages/about.html">关于Lijax</a></li>
+                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
+                                </ul>
+    </nav>
+    <footer id="site-info">
+    <p>
+        Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
+    </p>
+    <p>
+        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
+    </p>
+</footer></header>
+    <div id="post-container">
+        <ol id="post-list">
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2011-05-08T13:12:00" pubdate>
+                            Sun 08 May 2011
+                        </time>
+                        <a href="../posts/virtualbox-ose4-0-4-%e5%ae%89%e8%a3%85%e5%8f%8a%e8%bf%90%e8%a1%8c%e9%94%99%e8%af%af.html" rel="bookmark"><h1>virtualbox-ose4.0.4 安装及运行错误</h1></a>
+                    </header>
+
+                    <section class="post-content">
+                        <p>今天debian升级后，重装virtualbox-ose报了个错</p>
+<p>~~~~ {lang="LINUX" colla="+"}
+Starting VirtualBox kernel modulesNo suitable module for running kernel found ...
+failed!
+failed!</p>
+<div class="highlight"><pre><span class="err">但是程序还是安装成功了，也就没管它</span>
+
+<span class="err">直接运行，添加虚拟机，启动时，还是报错了，弹出两个窗口，大概如下</span>  
+<span class="err">窗口</span><span class="mi">1</span>
+
+<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span> <span class="n">colla</span><span class="o">=</span><span class="s">&quot;+&quot;</span><span class="p">}</span>
+<span class="n">result</span> <span class="n">code</span><span class="o">:</span><span class="n">NS_ERROR_FAILURE</span> <span class="p">(</span><span class="mh">0x80004005</span><span class="p">)</span>
+<span class="nl">component:</span><span class="n">VirtualBox</span>
+<span class="nl">interface:</span><span class="n">IVirtualBox</span> <span class="p">{</span><span class="mi">2158464</span><span class="n">a</span><span class="o">-</span><span class="n">f706</span><span class="o">-</span><span class="mi">414</span><span class="n">b</span><span class="o">-</span><span class="n">a8c4</span><span class="o">-</span><span class="n">fb589dfc6b62</span><span class="p">}</span>
+</pre></div>
+
+
+<p>窗口2</p>
+<p>~~~~ {lang="LINUX" colla="+"}
+kernel driver not installed (rc=-1908)
+Please install the virtualbox-ose-dkms package and execute 'modprobe vboxdrv' as root</p>
+<div class="highlight"><pre><span class="err">采用网上常用的方法：删除</span> <span class="p">.</span><span class="n">VirtualBox</span><span class="err">文件夹，未能解决</span>
+
+<span class="err">在某英文论坛有说是内核问题，需要用源码针对本机内核进行编译</span>  
+<span class="err">运行如下命令</span>
+
+<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span> <span class="n">colla</span><span class="o">=</span><span class="s">&quot;+&quot;</span><span class="p">}</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">virtualbox</span><span class="o">-</span><span class="n">ose</span><span class="o">-</span><span class="n">qt</span> <span class="n">virtualbox</span><span class="o">-</span><span class="n">ose</span><span class="o">-</span><span class="n">source</span> <span class="n">virtualbox</span><span class="o">-</span><span class="n">ose</span><span class="o">-</span><span class="n">dkms</span> <span class="n">module</span><span class="o">-</span><span class="n">assistant</span>
+<span class="n">m</span><span class="o">-</span><span class="n">a</span> <span class="n">prepare</span>
+<span class="n">m</span><span class="o">-</span><span class="n">a</span> <span class="n">a</span><span class="o">-</span><span class="n">i</span> <span class="n">virtualbox</span><span class="o">-</span><span class="n">ose</span><span class="o">-</span><span class="n">source</span>
+</pre></div>
+
+
+<p>问题解决</p>
+                    </section>
+                    <hr/>
+                    <aside class="post-meta">
+                        <p>Category: <a href="../category/ji-suan-ji.html">计算机</a></p>
+                                                <p>Tags: <a href="../tag/dkms.html">dkms</a>, <a href="../tag/linux.html">Linux</a>, <a href="../tag/ose.html">ose</a>, <a href="../tag/virtualbox.html">virtualbox</a>, <a href="../tag/nei-he.html">内核</a>, </p>
+                                            </aside>
+                    <hr/>
+                    <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'yeyanbo';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+                </article>
+            </li>
+        </ol>
+    </div>
+        </div>
+
+        <script>
+    var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+        <script src="../theme/js/main.js"></script>
+    </body>
+</html>

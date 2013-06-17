@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>    Intent, Content Providers, Processes and Threads笔记
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+                    <link rel="stylesheet" href="../theme/css/normalize.css">
+        <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../theme/css/main.css">
+        
+    <link rel="stylesheet" href="../theme/css/blog.css">
+    <link rel="stylesheet" href="../theme/css/github.css">
+                <link href="http://blog.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper">
+                <header id="sidebar" class="side-shadow">
+    <hgroup id="site-header">
+        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <p id="site-desc"></p>
+    </hgroup>
+    <nav>
+        <ul id="nav-links">
+                                        <li><a href="../pages/about.html">关于Lijax</a></li>
+                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
+                                </ul>
+    </nav>
+    <footer id="site-info">
+    <p>
+        Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
+    </p>
+    <p>
+        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
+    </p>
+</footer></header>
+    <div id="post-container">
+        <ol id="post-list">
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2011-04-16T15:42:00" pubdate>
+                            Sat 16 April 2011
+                        </time>
+                        <a href="../posts/intent-content-providers-processes-and-threads%e7%ac%94%e8%ae%b0.html" rel="bookmark"><h1>Intent, Content Providers, Processes and Threads笔记</h1></a>
+                    </header>
+
+                    <section class="post-content">
+                        <h1>intent激活components方法</h1>
+<h4>intent 激活 activity方法</h4>
+<blockquote>
+<p><font size="2"></font> <br />
+Context.startActivity() <br />
+Activity.startActivityForResult()
+先启动的Activity获取后启动的Activity所得的结果，并传递给前一个的Activity.setResult()方法。</p>
+</blockquote>
+<h4>intent 激活 service方法</h4>
+<blockquote>
+<p>Context.startService() <br />
+Context.bindService()
+绑定component和intent所描述的service，component启动时service会自动启动。</p>
+</blockquote>
+<h4>intent 激活 brodcast receiver</h4>
+<blockquote>
+<p>Context.sendBroadcast() <br />
+Context.sendOrderedBroadcast() <br />
+Context.sendStickyBroadcast()</p>
+</blockquote>
+<h1>intent 对象内容</h1>
+<h4>Component name</h4>
+<blockquote>
+<p>setComponent() <br />
+setClass() <br />
+setClassName() <br />
+getComponent()</p>
+</blockquote>
+<h4>Action 描述启动后component的动作</h4>
+<blockquote>
+<p>setAction() <br />
+getAction()</p>
+</blockquote>
+<h4>Data 描述动作的数据对象</h4>
+<blockquote>
+<p>包括数据类型（MIME media
+type）和数据URI，数据URI（scheme://host:port/path) <br />
+setData() <br />
+setType() <br />
+setDataAndType() <br />
+getData() <br />
+getType()</p>
+</blockquote>
+<h4>Category 描述要启动的component的类型</h4>
+<blockquote>
+<p>addCategory() <br />
+removeCategory() <br />
+getCategories()</p>
+</blockquote>
+<h4>Extras 将信息写入Bundle</h4>
+<blockquote>
+<p>putExtras() <br />
+getExtras()</p>
+</blockquote>
+<h4>Flags 指定activity怎么启动的标识</h4>
+<h4>Itent Resolution</h4>
+<blockquote>
+<p>如果component
+name没有定义，则通过action、data（URI和type）、category的信息筛选出最佳component，通过检索系统中所有component的Menifest，与里面定义的intent-filter对比进行筛选。</p>
+</blockquote>
+<hr />
+<h1>Content Providers</h1>
+<p>提供的数据是共享的，component不能直接操作，通过ContentResolver来操作</p>
+<blockquote>
+<p>get a ContentResolver in the activity <br />
+ContentResolver cr = getContentResolver();</p>
+<p>make query <br />
+ContentResolver.query() <br />
+Activity.managedQuery() <br />
+参数：URI； projection 返回的列； selection 筛选返回的行
+SQL中Where后面的部分；selectionArgs selection中对应的参数；sortOrder
+排列顺序 Order by后面的部分。 <br />
+take same arguments，but managedQuery causes activity to manage the
+life cycle of the returned Cusor <br />
+Activity.startManagingCursor()、stopManagingCursor(Cursor) can start
+or stop the manage</p>
+</blockquote>
+<h4>创建操作URI</h4>
+<blockquote>
+<p>ContentUris.withAppendedId() <br />
+Uri.withAppendedPath()</p>
+</blockquote>
+<h4>读取数据：cusor用法</h4>
+<blockquote>
+<p>int col = Cusor.getColumnIndex()获取字段所在的列数 <br />
+Cusor.getString(col)
+获取col列的值，以字符串返回，同样还有getInt()、getFloat()等</p>
+</blockquote>
+<h4>添加修改数据</h4>
+<blockquote>
+<p>添加记录 <br />
+ContentValues values = new ContentValues();创建记录 <br />
+values.put(People.NAME, "Abraham Lincoln");添加记录中的值 <br />
+values.put(People.STARRED, 1);添加记录中的值 <br />
+getContentResolver().insert(People.CONTENT_URI, values);插入记录 <br />
+修改记录 <br />
+修改已存在的记录中的某个条目，如联系人中的电话号码，关键在于insert()中传入的Uri</p>
+<p>phoneUri = Uri.withAppendedPath(uri,
+People.Phones.CONTENT_DIRECTORY); <br />
+values.clear(); <br />
+values.put(People.Phones.TYPE, People.Phones.TYPE_MOBILE); <br />
+values.put(People.Phones.NUMBER, "1233214567"); <br />
+getContentResolver().insert(phoneUri, values);</p>
+<p>ContentResolver.openOutputStream()存储大的二进制文件 <br />
+OutputStream outStream = getContentResolver().openOutputStream(uri); <br />
+sourceBitmap.compress(Bitmap.CompressFormat.JPEG, 50, outStream);</p>
+</blockquote>
+<p>创建Content provider需要在Menifest中申明</p>
+<hr />
+<h1>Processes and Threads</h1>
+<h4>Processes</h4>
+<blockquote>
+<p>默认一个程序的所有components使用一个process，也可以在Menifest中申明\&lt;activity>,
+\&lt;service>, \&lt;receiver>和\&lt;provider>使用的process <br />
+Foreground process <br />
+Visible process <br />
+Service process <br />
+Background process <br />
+Empty process</p>
+</blockquote>
+<h4>Threads</h4>
+<blockquote>
+<p>when application launched, system creates a main thread or UI thread
+of execution for the application, this thread interacts with UI
+components（components from widget and view packages）. <br />
+线程原则：1.不要阻断UI线程；2.不要从UI线程外来操作Android UI toolkit</p>
+<p>三种从外部线程操作UI线程从而操作android UI toolkit的方法 <br />
+Activity.runOnUiThread(Runnable) <br />
+View.post(Runnable) <br />
+View.postDelayed(Runnable, long)</p>
+</blockquote>
+<h4>AsyncTask实现异步处理的线程</h4>
+<blockquote>
+<p>创建类继承syncTask，实现doInBackground()方法和onPostExecute()方法，使用时用execute()传入参数。</p>
+<p>publishProgress(progress)可在doInBackground()调用，计算出progress，onProgressUpdate(progress)在publishProgress(progress)调用之后自动运行，里面实现UI交互操作，显示运行进度</p>
+<p>因此onPostExecute(Result)和onProgressUpdate(progress)均运行在UI线程中，都可进行UI操作，一个可作为运行之后的结果显示，一个可作为运行中的进度显示。</p>
+</blockquote>
+                    </section>
+                    <hr/>
+                    <aside class="post-meta">
+                        <p>Category: <a href="../category/ji-suan-ji.html">计算机</a></p>
+                                            </aside>
+                    <hr/>
+                    <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'yeyanbo';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+                </article>
+            </li>
+        </ol>
+    </div>
+        </div>
+
+        <script>
+    var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+        <script src="../theme/js/main.js"></script>
+    </body>
+</html>

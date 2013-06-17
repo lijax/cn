@@ -1,0 +1,2809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Lijax</title><link href="http://blog.yeyanbo.com/cn/" rel="alternate"></link><link href="http://blog.yeyanbo.com/cn/feeds/all.atom.xml" rel="self"></link><id>http://blog.yeyanbo.com/cn/</id><updated>2012-12-08T13:04:00+08:00</updated><entry><title>Ubuntu/Linux默认程序关联文件</title><link href="http://blog.yeyanbo.com/cn/posts/ubuntulinux%e9%bb%98%e8%ae%a4%e7%a8%8b%e5%ba%8f%e5%85%b3%e8%81%94%e6%96%87%e4%bb%b6.html" rel="alternate"></link><updated>2012-12-08T13:04:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2012-12-08:posts/ubuntulinux%e9%bb%98%e8%ae%a4%e7%a8%8b%e5%ba%8f%e5%85%b3%e8%81%94%e6%96%87%e4%bb%b6.html</id><summary type="html">&lt;p&gt;今天想修改默认的文本编辑器gedit为sublime_text,更改了几次都没成功，原来关联文件一共有三个，记录以备用。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;  
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mimeapps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;  
+&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;用文本编辑器更改上述三个文件中的信息，替换gedit.desktop为sublime-text-2.desktop（确认/usr/share/applications/下的名称）&lt;/p&gt;
+&lt;p&gt;最后重启nautilus&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pkill&lt;/span&gt; &lt;span class="n"&gt;nautilus&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>蒙特卡罗模拟-可汗学院示例</title><link href="http://blog.yeyanbo.com/cn/posts/%e8%92%99%e7%89%b9%e5%8d%a1%e7%bd%97%e6%a8%a1%e6%8b%9f-%e5%8f%af%e6%b1%97%e5%ad%a6%e9%99%a2%e7%a4%ba%e4%be%8b.html" rel="alternate"></link><updated>2012-10-06T13:56:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2012-10-06:posts/%e8%92%99%e7%89%b9%e5%8d%a1%e7%bd%97%e6%a8%a1%e6%8b%9f-%e5%8f%af%e6%b1%97%e5%ad%a6%e9%99%a2%e7%a4%ba%e4%be%8b.html</id><summary type="html">&lt;p&gt;在可汗学院（&lt;a href="http://www.khanacademy.org/"&gt;Khan
+Academy&lt;/a&gt;）上看到的一个有趣的蒙特卡罗模拟的代码示例，蛮有意思的。&lt;/p&gt;
+&lt;p&gt;说在詹姆斯一场球赛最后还剩30秒，落后3分的情况下，应该选择投三分还是两分造犯规呢？&lt;/p&gt;
+&lt;iframe width="580" height="420" src="http://www.youtube.com/embed/-fCVxTTAtFQ?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;&lt;a href="http://www.khanacademy.org/cs/basketball-decisions/1024155511"&gt;Basketball Decisions&lt;/a&gt;&lt;/h2&gt;
+&lt;iframe style="width: 580px; height: 460px; border: 0px;" src="http://www.khanacademy.org/cs/basketball-decisions/1024155511/embedded?editor=yes&amp;amp;buttons=yes&amp;amp;author=yes" frameborder="0" scrolling="auto"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Made using: &lt;a href="http://www.khanacademy.org/cs"&gt;Khan Academy Computer Science&lt;/a&gt;.&lt;/p&gt;</summary><category term="khanacademy"></category><category term="蒙特卡罗"></category></entry><entry><title>Eutils用法总结</title><link href="http://blog.yeyanbo.com/cn/posts/eutils%e7%94%a8%e6%b3%95%e6%80%bb%e7%bb%93.html" rel="alternate"></link><updated>2012-04-22T20:05:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2012-04-22:posts/eutils%e7%94%a8%e6%b3%95%e6%80%bb%e7%bb%93.html</id><summary type="html">&lt;p&gt;好久没更新了，这里都长草了。。。&lt;/p&gt;
+&lt;p&gt;总结下Eutils的用法，参考《&lt;a href="http://www.ncbi.nlm.nih.gov/books/NBK25500/"&gt;E-utilities Quick
+Start&lt;/a&gt;》，没时间看英文的可以参考下。&lt;/p&gt;
+&lt;h2&gt;简介&lt;/h2&gt;
+&lt;p&gt;Eutils全称是The Entrez Programming Utilities
+(E-utilities)，是由八个服务器端程序组成的一套编程工具，它提供用于访问NCBI
+Entrez查询和数据库系统的稳定接口。
+这八个工具包括Einfo、ESearch、EPost、ESummary、EFetch、ELink、EGQuery、ESpell（详见表1）。通过这些工具，你可以访问NCBI
+Entrez所包含的序列、三维结构、文献等所有38个数据库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="text-align: center;"&gt;表1. 八种Eutils工具&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;table class="aligncenter" cellspacing="0" cellpadding="4"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Eutils
+Name&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Entry&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Required
+Parameters&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Optional
+Parameters&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Return
+Format&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;EInfo&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;einfo.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;db&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;ESearch&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;esearch.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;term&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;usehistory&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;WebEnv&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;query\_key&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retstart&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retmax&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;rettype&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;field&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;datetype&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;reldate&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;mindate&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;,
+maxdate&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;p align="LEFT"&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;EPost&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;epost.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;id&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;WebEnv&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;QueryKey&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;ESummary&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;esummary.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;id&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;WebEnv&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;query\_key&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retstart&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retmax&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;version&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;EFetch&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;efetch.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;id&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;WebEnv&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;query\_key&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retmode&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retstart&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;retmax&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;rettype&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;strand&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;seq\_start&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;seq\_stop&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;complexity&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;p align="LEFT"&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml/text/asn&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+（详情见表2）
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;ELink&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;elink.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;dbfrom&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;cmd&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;id&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;WebEnv&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #ff0000;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;query\_key&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;linkname&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;term&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ff00;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;holding&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;datetype&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;reldate&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span style="color: #00ffff;"&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;mindate,
+maxdate&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;EGQuery&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;egquery.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;term&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;span style="color: #985735;"&gt;&lt;span style="font-family: inherit;"&gt;&lt;span style="font-size: small;"&gt;ESpell&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;espell.fcgi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;term&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;p align="LEFT"&gt;
+&lt;/td&gt;
+&lt;td valign="TOP"&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;xml&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;div&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;&lt;strong&gt;访问地址&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Eutils工具使用固定URL地址的形式进行访问，每个工具都有一个固定的访问地址BaseURL，都以EutilsURL开始。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;EutilsURL：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;如：EInfo 的访问地址为：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;即：BaseURL=EutilsURL + Entry（一个以工具名称命名的Fasta CGI
+文件，扩展名为fcgi。什么是Fasta CGI？。。。其实我也不了解）&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;使用限制&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;每秒查询次数不能超过3次，大型查询限制在周末和工作日的9:00 PM～5:00
+AM，超过次限制会被封IP，除非给&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#101;&amp;#117;&amp;#116;&amp;#105;&amp;#108;&amp;#105;&amp;#116;&amp;#105;&amp;#101;&amp;#115;&amp;#64;&amp;#110;&amp;#99;&amp;#98;&amp;#105;&amp;#46;&amp;#110;&amp;#108;&amp;#109;&amp;#46;&amp;#110;&amp;#105;&amp;#104;&amp;#46;&amp;#103;&amp;#111;&amp;#118;"&gt;&amp;#101;&amp;#117;&amp;#116;&amp;#105;&amp;#108;&amp;#105;&amp;#116;&amp;#105;&amp;#101;&amp;#115;&amp;#64;&amp;#110;&amp;#99;&amp;#98;&amp;#105;&amp;#46;&amp;#110;&amp;#108;&amp;#109;&amp;#46;&amp;#110;&amp;#105;&amp;#104;&amp;#46;&amp;#103;&amp;#111;&amp;#118;&lt;/a&gt;发邮件注册使用eutils服务的软件名称tool和email地址，并在使用服务时以URL参数的形式传入。大量操作最好还是注册一下比较好。&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;使用示例&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;通过设置不同的URL参数获取不同的结果，八个工具参数列表如下图所示，参数分为两种，必须参数和可选参数，返回文件格式大多为xml。&lt;/p&gt;
+&lt;ul style="padding-left: 30px;"&gt;
+-   **EInfo示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例2：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;示例1没有传入参数将列出所有的支持数据库，即示例2中db参数的名字；&lt;/p&gt;
+&lt;p&gt;示例2将列出protein数据库的基本信息。&lt;/p&gt;
+&lt;ul style="padding-left: 30px;"&gt;
+-   **Esearch示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=protein&amp;amp;term=dnapol&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例2：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?term=dnapol&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例3：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=protein&amp;amp;term=dnapol&amp;amp;usehistory=y&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例4：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=protein&amp;amp;term=virus&amp;amp;query_key=1&amp;amp;&lt;/code&gt;[WebEnv=NCID_1_55320436_][]&lt;/p&gt;
+&lt;p&gt;[130.14.18.48_5553_1335062251_525363903&amp;amp;usehistory=y][WebEnv=NCID_1_55320436_]&lt;/p&gt;
+&lt;p&gt;示例1传入必须参数，所查询的数据库名称db和要查询的关键词term；示例2仅传入要查询的关键词term，并不是由于db为非必须参数，而是因为db的默认值是pubmed，所以示例2将查询以dnapol为关键词查询pubmed数据库；&lt;/p&gt;
+&lt;p&gt;示例3使用可选usehistory参数将在服务器端产生一个查询历史记录，结果中将生成WebEnv和query_key值，下一次使用ESearch、ESummary等操作可利用这些参数在这一次查询结果基础上进行操作，这也是Eutils最强大的地方，可以方便的建立自己的工作流程；&lt;/p&gt;
+&lt;p&gt;示例4中即使用示例3中的查询结果重新查询以virus为关键词的条目，这等价于将示例3中的“term=dnapol”替换为“term=dnapol+virus”的查询结果。&lt;/p&gt;
+&lt;ul style="padding-left: 30px;"&gt;
+-   **EPost示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi?db=protein&amp;amp;id=15718680,157427902,119703751&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例2：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/epost.fcgi?db=protein&amp;amp;id=15718680,157427902,119703751&lt;/code&gt;[&amp;amp;WebEnv=NCID_1_25983036_][]&lt;/p&gt;
+&lt;p&gt;[165.112.9.24_5553_1335063999_246386066][&amp;amp;WebEnv=NCID_1_25983036_]&lt;/p&gt;
+&lt;p&gt;示例1将三个蛋白质数据库的id号上传到服务器，结果中将生成WebEnv和query_key值，以备后续操作使用；&lt;/p&gt;
+&lt;p&gt;示例2在给定的WebEnv历史记录上添加给定id号；注：在使用其他Eutils工具，如EFetch，id参数条目数超过限制时，只能使用EPost，先上传需要的id，然后在所使用工具中传入EPost结果中的WebEnv和query_key值。&lt;/p&gt;
+&lt;ul style="padding-left: 30px;"&gt;
+-   **ESummary示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&amp;amp;id=15718680,157427902,119703751&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例2：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&amp;amp;query_key=1&lt;/code&gt;&lt;a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&amp;amp;query_key=1&amp;amp;WebEnv=NCID_1_25983036_165.112.9.24_5553_1335063999_246386066"&gt;&amp;amp;WebEnv=&lt;/a&gt;&lt;a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&amp;amp;query_key=1&amp;amp;WebEnv=NCID_1_25983036_165.112.9.24_5553_1335063999_246386066"&gt;NCID_1_25983036_&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=protein&amp;amp;query_key=1&amp;amp;WebEnv=NCID_1_25983036_165.112.9.24_5553_1335063999_246386066"&gt;165.112.9.24_5553_1335063999_246386066&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;示例1列出给定id号的摘要信息；&lt;/p&gt;
+&lt;p&gt;示例2列出给定查询历史记录中的摘要信息。&lt;/p&gt;
+&lt;p&gt;注：ESummary中db为必选参数，id和(query_key+WebEnv)二选一。&lt;/p&gt;
+&lt;ul style="padding-left: 30px;"&gt;
+-   **EFetch示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&amp;amp;id=15718680,157427902,119703751&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例2：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&amp;amp;id=15718680,157427902,119703751&amp;amp;rettype=fasta&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例3：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&amp;amp;id=15718680,157427902,119703751&amp;amp;rettype=fasta&amp;amp;retmode=xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;示例1以text ASN.1格式返回给定id号的蛋白序列文件；&lt;/p&gt;
+&lt;p&gt;示例2以text fasta格式返回给定id号的蛋白序列文件；&lt;/p&gt;
+&lt;p&gt;示例3以xml fasta格式返回给定id号的蛋白序列文件。&lt;/p&gt;
+&lt;p&gt;注：EFetch是获取数据库文件的常用工具，示例1中没有给定rettype和retmode参数，默认为text
+ASN.1格式，示例2中retmode参数默认为text，示例3中retmode设置为xml，返回xml格式的fasta文件。各数据库支持的返回参数见表2。在EFetch中使用ESearch结果中的query_key和WebEnv参数，可轻松实现普通的Entrez下载操作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="text-align: center;"&gt;表2. EFetch中各数据库支持的retmode和rettype值 &lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;table class="aligncenter"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th rowspan="1" colspan="1"&gt;
+**Record Type**
+
+&lt;/th&gt;
+&lt;th rowspan="1" colspan="1"&gt;
+**&amp;rettype**
+
+&lt;/th&gt;
+&lt;th rowspan="1" colspan="1"&gt;
+**&amp;retmode**
+
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = biosample**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Full record XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+full, *default*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Full record text
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+full, *default*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = biosystems**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Full record XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml, *default*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = gds**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Summary
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+summary, *default*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = gene**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+asn.1, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Gene table
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gene\_table
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = homologene**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+asn.1, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Alignment scores
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+alignmentscores
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+FASTA
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+HomoloGene
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+homologene
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = mesh**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Full record
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+full, *default*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = nuccore, nucest, nucgss, protein or popset**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+binary ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+asn.1
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Full record in XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+native
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Accession number(s)
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+acc
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+FASTA
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+TinySeq XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+SeqID string
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+seqid
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**Additional options for db = nuccore, nucest, nucgss or popset**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+GenBank flat file
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gb
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+GBSeq XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gb
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+INSDSeq XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gbc
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**Additional option for db = nuccore and protein**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Feature table
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+ft
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**Additional option for db = nuccore**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+GenBank flat file with full sequence (contigs)
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gbwithparts
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+CDS nucleotide FASTA
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta\_cds\_na
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+CDS protein FASTA
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta\_cds\_aa
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**Additional option for db = nucest**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+EST report
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+est
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**Additional option for db = nucgss**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+GSS report
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gss
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**Additional options for db = protein**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+GenPept flat file
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gp
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+GBSeq XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gp
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+INSDSeq XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+gpc
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = pmc**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+MEDLINE
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+medline
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = pubmed**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+asn.1*, default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+MEDLINE
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+medline
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+PMID list
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+uilist
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown" rowspan="1" colspan="1"&gt;
+Abstract
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+abstract
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = sequences**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Accession number(s)
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+acc
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+FASTA
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+SeqID string
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+seqid
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = snp**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text ASN.1
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+asn.1, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Flat file
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+flt
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+FASTA
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+fasta
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+RS Cluster report
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+rsr
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+SS Exemplar list
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+ssexemplar
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Chromosome report
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+chr
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Genotype XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+genxml
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+Summary
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+docset
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+UID list
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+uilist
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text or xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = sra**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+full, *default*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="3"&gt;
+**db = taxonomy**
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+XML
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+*null*
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+xml, *default*
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+TaxID list
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+uilist
+
+&lt;/td&gt;
+&lt;td rowspan="1" colspan="1"&gt;
+text or xml
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul style="padding-left: 30px;"&gt;
+-   **ELink示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=protein&amp;amp;db=gene&amp;amp;id=15718680,157427902&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;示例2：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&amp;amp;db=pubmed&amp;amp;id=20210808&amp;amp;cmd=neighbor_score&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;示例1将返回给定的蛋白id所对应的基因的id；示例2将返回和文章20210808相似的pubmedID，并给出对应的相似性分数。&lt;/p&gt;
+&lt;p&gt;注：ELink是eutils中一个强大的跨库查询工具，通过cmd参数可以实现各种各样的map功能。如示例1中，cmd默认参数是neighbor，实现简单的将蛋白id映射到对应的基因id的功能。示例2中neighbor_score实现相似文章的搜索。cmd参数的详细功能见表3。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style="text-align: center; font-family: 'DejaVu Serif Condensed', serif;"&gt;表3.
+Elink中cmd&lt;/span&gt;&lt;span style="text-align: center;"&gt;参数功能详解&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;table class="aligncenter" cellspacing="0" cellpadding="4"&gt;
+&lt;tbody&gt;
+&lt;tr valign="TOP"&gt;
+&lt;th&gt;
+**参数**
+
+&lt;/th&gt;
+&lt;th&gt;
+**功能**
+
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**neighbor
+(default)**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;返回另一个数据库中和给定&lt;/span&gt;&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;对应的&lt;/span&gt;&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;。&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;如不设置&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;相当于设置&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db=pubmed&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;（默认值）。下同&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**neighbor\_score**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;返回同一数据库中和给定&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;相似的&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;列表及相似性分数。&lt;span style="color: #ff0000;"&gt;如&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;不设置&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;相当于设置与&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;dbfrom&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;相同的值。下同&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**neighbor\_history**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;将以&lt;/span&gt;&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**neighbor**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;为参数&lt;/span&gt;&lt;span&gt;返回的结果存入历史记录服务器，并返回 &lt;/span&gt;&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**query\_key **&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;和&lt;/span&gt;&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**WebEnv**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;。&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;同&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**1**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**acheck**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;返回给定&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;的所有可能链接方式。&lt;span style="color: #23ff23;"&gt;如&lt;/span&gt;&lt;span style="color: #23ff23;"&gt;不设置&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #23ff23;"&gt;相当于选中所有。&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**ncheck**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;判断同一个数据库中是否存在与给定的&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;相关的链接。&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;同&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;，忽略&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;设置&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**lcheck**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;判断给定的&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;是否存在链出链接。&lt;span style="color: #ff0000;"&gt;同&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;，忽略&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;设置&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**llinks**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;列出给定&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;的所有非图书馆链出链接及对应属性。&lt;span style="color: #ff0000;"&gt;同&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;，忽略&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;设置&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**llinkslib**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;列出给定&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;的所有链出链接及对应属性，包含图书馆链接。&lt;span style="color: #ff0000;"&gt;同&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;，忽略&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;设置&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;**prlinks**&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span&gt;列出给定&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;UID&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span&gt;的首选链出链接及对应属性，在设置&lt;span style="font-family: arial, helvetica, clean, sans-serif; font-size: xx-small;"&gt;retmode=ref情况下直接跳转到链接网页&lt;/span&gt;&lt;/span&gt;&lt;span&gt;。&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;同&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;，忽略&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;&lt;span style="font-family: arial, helvetica, clean, sans-serif;"&gt;&lt;span style="font-size: x-small;"&gt;db&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;设置&lt;/span&gt;
+
+&lt;div&gt;
+&lt;span style="color: #ff0000;"&gt;  
+&lt;/span&gt;
+
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul style="padding-left: 30px;"&gt;
+-   **EGQuery示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi?term=asthma&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;示例1返回所有数据库中含有关键词asthma的条目数&lt;/p&gt;
+&lt;p&gt;注：EGQuery为全局查询，和在Entrez中选择所有数据库查询的结果相同。&lt;/p&gt;
+&lt;ul style="padding-left: 30px;"&gt;
+-   **ESpell示例**
+
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;示例1：http://eutils.ncbi.nlm.nih.gov/entrez/eutils/espell.fcgi?db=pubmed&amp;amp;term=asthmaa+OR+alergies&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;示例1返回对三个关键词的拼写建议，asthmaa被替换为asthma，OR为逻辑词不进行替换，alergies被替换为allergies。&lt;/p&gt;
+&lt;p&gt;注：ESpell为拼写建议工具，会根据关键词的相似性进行建议，方便关键词的纠错和相关关键词的推荐。&lt;/p&gt;
+&lt;h2&gt;部分通用参数解释&lt;/h2&gt;
+&lt;p&gt;db：查询的数据库名称。和Entrez下拉菜单中显示的名称不一样，所支持的所有值可通过EInfo(&lt;a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi"&gt;http://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi&lt;/a&gt;)查看；&lt;/p&gt;
+&lt;p&gt;term：查询的关键词。和Entrez查询相似，可使用逻辑操作词AND，OR，NOT以及[acession]、[organism]等以字段限定词等（具体可参见&lt;a href="http://www.ncbi.nlm.nih.gov/books/NBK3837/"&gt;Entrez
+Help&lt;/a&gt;），但是中间的空格要以“+”替代，其他特殊符号要转换为URL编码（如引号“编码为%22；井号#编码为%23）。&lt;/p&gt;
+&lt;p&gt;WebEnv：历史记录环境编号。
+ESearch的usehistory=y参数、EPost、ELink的cmd=neighbor_history参数都会产生一个WebEnv。后续操作传入次参数将大大减少查询工作量。&lt;/p&gt;
+&lt;p&gt;query_key：历史记录环境下的查询编号。第一次生成WebEnv的结果的query_key为1，在此WebEnv环境下的下一个操作结果的query_key为2，后续操作依次递增。&lt;/p&gt;
+&lt;p&gt;retstart：返回结果在查询结果中的起始位置。默认为0，配合retmax实现分页显示。&lt;/p&gt;
+&lt;p&gt;retmax：返回结果条目数最大值。默认为20。&lt;/p&gt;
+&lt;p&gt;rettype：返回数据类型。不同的工具有不同的可选值。ESearch的可选类型为uilist（默认）和count（只返回查询结果数目），EFetch可参加表2。&lt;/p&gt;
+&lt;p&gt;retmode：返回数据方式。详见表2。&lt;/p&gt;
+&lt;p&gt;datetype：限定日期的类型。限定reldate, mindate,
+maxdate的日期类型，不同的数据库有不同的可选值，常见的为mdat(modification
+date)、pdat(publication date)、edat (Entrez date)。&lt;/p&gt;
+&lt;p&gt;reldate：相对于当前时间的天数。返回过去多少天内的数据。&lt;/p&gt;
+&lt;p&gt;mindate,
+maxdate：时间间隔。返回由最小日期和最大日期限定的时间间隔中的数据，必须同时使用，格式为YYYY/MM/DD，或者YYYY,
+YYYY/MM。&lt;/p&gt;
+&lt;h2&gt;其他参数解释&lt;/h2&gt;
+&lt;p&gt;field：ESearch中term的限定字段。如[accession]、[title]等，设置此参数后，term中的所有关键词将只查询指定字段。&lt;/p&gt;
+&lt;p&gt;version：指定所使用Esummary的版本号。&lt;/p&gt;
+&lt;p&gt;strand：指定EFetch中DNA链的类型，正义为1，反义为2。&lt;/p&gt;
+&lt;p&gt;seq_start：指定EFetch中返回序列的起始位点。&lt;/p&gt;
+&lt;p&gt;seq_stop：指定EFetch中返回序列的终止位点。&lt;/p&gt;
+&lt;p&gt;complexity：指定EFetch中返回数据的内容。许多序列数据和其他数据存储在一起，组成一个大的数据结构或BLOB（二进制大对象）。指定该参数可选择返回哪些数据内容。详见表4。&lt;/p&gt;
+&lt;p&gt;linkname：限定ELink中限制返回的链接类型，如gene_snp_genegenotype只返回所有链接中genegenotype子类。&lt;/p&gt;
+&lt;p&gt;holding：限定ELink中链出链接的提供商。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;表4. EFetch中complexity值与返回的数据内容&lt;/strong&gt;&lt;/p&gt;
+&lt;table class="aligncenter" cellspacing="0" cellpadding="4"&gt;
+&lt;colgroup&gt;
+&lt;col width="159"&gt;
+&lt;/col&gt;
+&lt;col width="304"&gt;
+&lt;/col&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr valign="TOP"&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Value of
+complexity&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;th&gt;
+&lt;span style="font-family: 'DejaVu Serif Condensed', serif;"&gt;Data
+returned for each requested GI&lt;/span&gt;
+
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;entire
+blob&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;bioseq&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;minimal
+bioseq-set&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;minimal
+nuc-prot&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr valign="TOP"&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;td&gt;
+&lt;span style="color: #000000;"&gt;&lt;span style="font-family: Verdana, Arial, Helvetica, sans-serif;"&gt;&lt;span style="font-size: xx-small;"&gt;minimal
+pub-set&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;span style="font-size: small;"&gt;&lt;span style="line-height: normal;"&gt;&lt;br /&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-size: small;"&gt;&lt;span style="line-height: normal;"&gt;&lt;br /&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style="text-align: left;"&gt;结语&lt;/h2&gt;
+&lt;div style="text-align: left; padding-left: 30px;"&gt;
+这里根据前一段时间使用和学习Eutils的经历，参考《Entrez Programming
+Utilities
+Help》一书对Eutils的用法做了初步的总结，不可避免有错误，欢迎指正。
+
+&lt;/div&gt;
+
+&lt;div style="text-align: left; padding-left: 30px;"&gt;
+本文未涉及返回结果处理和编程部分，后面考虑是否写一下相关文章。
+
+&lt;/div&gt;
+
+&lt;div style="text-align: left; padding-left: 30px;"&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+**参考链接**
+
+&lt;/div&gt;
+
+&lt;div&gt;
+《Entrez Programming Utilities
+Help》: &lt;http://www.ncbi.nlm.nih.gov/books/NBK25501/&gt;
+
+&lt;/div&gt;
+
+&lt;div&gt;
+《Entrez Help》: &lt;http://www.ncbi.nlm.nih.gov/books/NBK3837/&gt;
+
+&lt;/div&gt;</summary><category term="entrez"></category><category term="eutils"></category><category term="NCBI"></category></entry><entry><title>博客搬家</title><link href="http://blog.yeyanbo.com/cn/posts/%e5%8d%9a%e5%ae%a2%e6%90%ac%e5%ae%b6.html" rel="alternate"></link><updated>2012-02-23T15:20:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2012-02-23:posts/%e5%8d%9a%e5%ae%a2%e6%90%ac%e5%ae%b6.html</id><summary type="html">&lt;p&gt;好久没更新博客了&lt;/p&gt;
+&lt;p&gt;以前一直托管在免费的空间上，经常宕机，也懒得去管&lt;/p&gt;
+&lt;p&gt;反正自己也没时间去写，访问量也不是很多，宕不宕机好像没多大关系&lt;/p&gt;
+&lt;p&gt;再说本来就是免费的，有得用就不错了&lt;/p&gt;
+&lt;p&gt;不过同时还建了一个论坛在托管在上面，人数现在也很多了，总这样断断续续似乎不大好&lt;/p&gt;
+&lt;p&gt;于是终于狠心，花了几百大洋，搬了个比较靠谱的空间&lt;/p&gt;
+&lt;p&gt;测试一下，哦，耶！&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa-300x295.png" title="aaa" /&gt;][]&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa-300x295.png" title="aaa" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa.png&lt;/p&gt;</summary></entry><entry><title>生物信息学相关期刊feed汇总</title><link href="http://blog.yeyanbo.com/cn/posts/%e7%94%9f%e7%89%a9%e4%bf%a1%e6%81%af%e5%ad%a6%e7%9b%b8%e5%85%b3%e6%9c%9f%e5%88%8afeed%e6%b1%87%e6%80%bb.html" rel="alternate"></link><updated>2011-06-18T21:44:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-06-18:posts/%e7%94%9f%e7%89%a9%e4%bf%a1%e6%81%af%e5%ad%a6%e7%9b%b8%e5%85%b3%e6%9c%9f%e5%88%8afeed%e6%b1%87%e6%80%bb.html</id><summary type="html">&lt;dt&gt;
+[Advances in Bioinformatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.hindawi.com/RSS.aspx?journalx3dabi&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Algorithms for molecular biology][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.almob.org/rss/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[BioData Mining][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.biodatamining.org/rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Bioinformatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://bioinformatics.oupjournals.org/rss/recent.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Bioinformatics and Biology Insights][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://la-press.com/feed.php?journal_id=39&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Biomedical engineering online][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.biomedical-engineering-online.com/rss/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Biometrics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/118538342&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Biometrika][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://biomet.oupjournals.org/rss/recent.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Biostatistics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://biostatistics.oxfordjournals.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[BMC bioinformatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.biomedcentral.com/bmcbioinformatics/rss/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[BMC genomics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.biomedcentral.com/bmcgenomics/rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[BMC medical informatics and decision making][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.biomedcentral.com/bmcmedinformdecismak/rss/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Briefings in bioinformatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://bib.oxfordjournals.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[British Journal of Healthcare Computing and Information Management,
+The][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.bjhcim.co.uk/news.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Cancer informatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://la-press.com/feed.php?journal_id=10&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Computers, informatics, nursing][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://194.66.22.134/rss/journals//00024665/current.rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Database: The Journal of Biological Databases and Curation][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://database.oxfordjournals.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[ERCIM News][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://ercim-news.ercim.org/component/option,com_rss/feed,RSS2.0/no_html,1/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Genome research][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.genome.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[GenomeBiology.com][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://genomebiology.com/rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Health Information and Libraries Journal][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/118001742&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Healthcare informatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://feeds.feedburner.com/healthcare-informatics/articles?format=xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[IEEE engineering in medicine and biology magazine][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://ieeexplore.ieee.org/rss/TOC51.XML&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[IEEE transactions on information technology in biomedicine][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://ieeexplore.ieee.org/rss/TOC4233.XML&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[International journal of medical informatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://rss.sciencedirect.com/publication/science/5066&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[JAAMT][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://194.66.22.134/rss/journals//01179370/current.rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of biological chemistry][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.jbc.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of biomedical informatics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://rss.sciencedirect.com/getMessage?registrationId=IJDCIKDCJPDDQJEEKJDJIOFEJMIIMJIJRBFKLRMFKU&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of Biomedical Semantics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://jbiomedsem.com/rss/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of biopharmaceutical statistics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.informaworld.com/ampp/rss~content=t713597263&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of communication][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/118502213&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of evaluation in clinical practice][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://rss.ebscohost.com/AlertSyndicationService/Syndication.asmx/GetFeed?guid=1415229&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of medical Internet research][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.jmir.org/feed/rss2&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of the American Medical Informatics Association : JAMIA][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://rss.sciencedirect.com/getMessage?registrationId=JACAJBCAKGCBRADCLACHJFEBJJDEMFGHNSEIMJCCJQ&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Journal of the Canadian Health Libraries Association][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://pubservices.nrc-cnrc.ca/rp-ps/rss.jsp?lang=eng&amp;jcode=jchla&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Medical and biological engineering and computing][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.springerlink.com/content/1741-0444/?sortorder=asc&amp;export=rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Medical decision making][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://mdm.sagepub.com/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Nature][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.nature.com/nature/current_issue/rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Nature biotechnology][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.nature.com/nbt/current_issue/rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Nucleic acids research][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://nar.oupjournals.org/rss/recent.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Pharmaceutical statistics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/93012805&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[PLoS Computational Biology][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://feeds.feedburner.com/ploscompbiol/NewArticles&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[PLoS One][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://feeds.feedburner.com/plosone/PLoSONE&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Proceedings of the Royal Society B: Biological Sciences][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.journals.royalsoc.ac.uk/content/102024/?sortorder=asc&amp;export=rss&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Protein science][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.proteinscience.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Proteins][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/36176&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Proteomics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/76510741&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Science][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.sciencemag.org/rss/current.xml&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Source Code for Biology and Medicine][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www.scfbm.org/rss/&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Statistics in medicine][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://www3.interscience.wiley.com/rss/journal/2988&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Trends in Biochemical Sciences][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://rss.sciencedirect.com/getMessage?registrationId=DGGGDHGGEMGHLGHIFGGNDLIHEMIOHNNKEYIOGJMMJF&gt;
+&lt;/dd&gt;
+
+&lt;dt&gt;
+[Wiley Interdisciplinary Reviews: Computational Statistics][]
+&lt;/dt&gt;
+
+&lt;dd&gt;
+&lt;http://onlinelibrary.wiley.com/rss/journal/10.1002/(ISSN)1939-0068&gt;
+&lt;/dd&gt;
+
+&lt;p&gt;[British Journal of Healthcare Computing and Information Management,
+  The]: http://www.bjhcim.co.uk/news.xml&lt;/p&gt;</summary><category term="feed"></category><category term="rss"></category><category term="期刊"></category><category term="生物信息学"></category></entry><entry><title>继续玩谷歌吉他</title><link href="http://blog.yeyanbo.com/cn/posts/%e7%bb%a7%e7%bb%ad%e7%8e%a9%e8%b0%b7%e6%ad%8c%e5%90%89%e4%bb%96.html" rel="alternate"></link><updated>2011-06-10T19:21:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-06-10:posts/%e7%bb%a7%e7%bb%ad%e7%8e%a9%e8%b0%b7%e6%ad%8c%e5%90%89%e4%bb%96.html</id><summary type="html">&lt;p&gt;爱谷歌，爱生活，把谷歌吉他搬到自己的博客继续玩。  &lt;/p&gt;
+&lt;iframe src="/guitar/google-guitar.htm" height="350px" width="660px" style="overflow:hidden" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;之前把代码搞下来在自己电脑上玩，总发不出声音，看了&lt;a href="http://www.zhujun.org/web/google-doodle-guitar-source-code/"&gt;朱俊独立博客&lt;/a&gt;才知道是flash的安全问题，上传到网站上就没这个问题了。&lt;/p&gt;
+&lt;p&gt;搜罗一下曲子：&lt;br /&gt;
+小星星：&lt;br /&gt;
+1155665 4433221 5544332 5544332 1155665 4433221&lt;br /&gt;
+沧海一笑：&lt;br /&gt;
+pouyt uytew wewetyuop ppouyty&lt;br /&gt;
+欢乐颂：&lt;br /&gt;
+uuiooiuyttyuuyyuuiooiuyttyuytt&lt;br /&gt;
+爱情买卖：&lt;br /&gt;
+hhdsd ssdsas gggdgggd hddsd hhdsd ssdsas gggdgggd jggdh dhkkdhk jhjhgsd
+sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh&lt;br /&gt;
+月亮之上：&lt;br /&gt;
+3686 3675 53686565326553 3686 89865 36865326656&lt;br /&gt;
+两只老虎：&lt;br /&gt;
+TYUT TYUT UIO UIO OPOIUT OPOIUT UWT UWT&lt;br /&gt;
+隐形的翅膀：&lt;br /&gt;
+358787 6568321 11186532122 358787 6568321 1118653211&lt;br /&gt;
+天空之城：&lt;br /&gt;
+6787807 365685 254573 874477 6787807 365685 34878908 876756 1232352
+5878007 678789855 43213 376321 21253 376321 21276&lt;/p&gt;</summary><category term="doodle"></category><category term="Google"></category><category term="guitar"></category><category term="logo"></category><category term="吉他"></category><category term="涂鸦"></category><category term="谷歌"></category></entry><entry><title>没干正事</title><link href="http://blog.yeyanbo.com/cn/posts/%e6%b2%a1%e5%b9%b2%e6%ad%a3%e4%ba%8b.html" rel="alternate"></link><updated>2011-06-05T15:42:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-06-05:posts/%e6%b2%a1%e5%b9%b2%e6%ad%a3%e4%ba%8b.html</id><summary type="html">&lt;p&gt;最近好像一直没干正事。&lt;/p&gt;
+&lt;p&gt;虽然天天照常在实验室，九点到，十一点回，作息很规律，上班时间也是在忙自己的课题或者学习新的技术（和专业相关的），但是，可能是没有明显的结果吧，总觉得没做多少事情。反倒是下班之后，忙一些自己喜欢的事情比较有结果，好像反而成了这段时间的主要工作。&lt;/p&gt;
+&lt;h5&gt;discuz!X论坛谷歌地图&lt;/h5&gt;
+&lt;p&gt;以前本科快毕业的时候玩过一段时间的discuz论坛程序。那时高山师兄建的一个生物信息学的谷歌群总是上不去，我就想建一个论坛方便交流，所以就用discuz7.2建了一个&lt;a href="http://www.bioinformatics.tk" title="生物信息学天空"&gt;生物信息学天空&lt;/a&gt;论坛，后来师兄去了美国，上的人也少了，就一直没管。&lt;/p&gt;
+&lt;p&gt;最近熊杰等兄弟搞个了旅游论坛&lt;a href="http://www.69city.net"&gt;69city&lt;/a&gt;，需要实现些地图定位的功能，俺也就参加了，顺便整理了一下之前自己搞的那个。&lt;/p&gt;
+&lt;p&gt;说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。&lt;/p&gt;
+&lt;p&gt;好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步&lt;a href="http://www.bioinformatics.tk"&gt;论坛&lt;/a&gt;查看）&lt;/p&gt;
+&lt;p&gt;~~~~ {lang="php"}
+ $gm_update_frequency){&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Select &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.pid As pid, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.fid as fid, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.tid as tid, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.first as first, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.author as author, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.authorid as authorid, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.dateline as dateline, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.useip as useip, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_thread&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.subject as subject, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_thread&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.author as subject_author, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_thread&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.authorid as subject_authorid From &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_thread&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot; Where &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.tid = &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_thread&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.tid and &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;cur_time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot; - &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;table_post&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.dateline &amp;lt; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;gm_update_time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s"&gt;&amp;quot; Order by dateline Desc LIMIT 0 , &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;gm_max_update&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;$query = DB::query($sql);&lt;/p&gt;
+&lt;p&gt;$i = 0; 
+ //添加查询数据到数组  &lt;br /&gt;
+while($post = DB::fetch($query)) {        &lt;br /&gt;
+$row[$i] =  array(    &lt;br /&gt;
+'pid' =&amp;gt; $post['pid'],
+        'fid' =&amp;gt; $post['fid'],
+        'tid' =&amp;gt; $post['tid'],
+        'first' =&amp;gt; $post['first'],
+        'author' =&amp;gt; $post['author'],
+        'authorid' =&amp;gt; $post['authorid'],
+        'subject' =&amp;gt; $post['subject'],
+        'subject_author' =&amp;gt; $post['subject_author'],
+        'subject_authorid' =&amp;gt; $post['subject_authorid'],
+        'dateline' =&amp;gt; $post['dateline'],
+        'useip' =&amp;gt; $post['useip']
+        );&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;//转换成json格式并写入文件&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;php_json&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json_encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;file_pointer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;json_file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;fwrite&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;file_pointer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;php_json&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;fclose&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;file_pointer&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;}
+//输出文件内容
+$timeline_json = file_get_contents($json_file);
+echo $timeline_json;
+?&amp;gt;
+~~~~&lt;/p&gt;
+&lt;h6&gt;家国天下&lt;/h6&gt;
+&lt;p&gt;一个月前买了杨恒均（这次没念成杨均恒）的家国天下这本书，看了一半，忙别的事情去了就没看完，昨天晚上终于一口气看完了。杨博士的眼光确实犀利独到，总是不急不躁的、慢慢悠悠的讲道理，说的你真是心服口服啊。十分推荐大家看一下，他会让你将国家和这个世界看得更清楚。&lt;/p&gt;
+&lt;p&gt;真是没干正事，搞了两个论坛，看了一本闲书，自己的课题没有一点进展。&lt;/p&gt;
+&lt;p&gt;要说学习了php，也算学到点东西。貌似php和perl语法很像，就当学习perl了，bioperl还能和专业有点联系，算是安慰自己。&lt;/p&gt;
+&lt;p&gt;没干正事 。。没干正事。。抓紧干活吧&lt;/p&gt;</summary><category term="69city"></category><category term="discuz"></category><category term="googlemaps"></category><category term="json"></category><category term="php"></category><category term="实时消息"></category><category term="生物信息学天空"></category><category term="谷歌地图"></category></entry><entry><title>今天的演讲稿</title><link href="http://blog.yeyanbo.com/cn/posts/%e4%bb%8a%e5%a4%a9%e7%9a%84%e6%bc%94%e8%ae%b2%e7%a8%bf.html" rel="alternate"></link><updated>2011-05-13T23:52:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-05-13:posts/%e4%bb%8a%e5%a4%a9%e7%9a%84%e6%bc%94%e8%ae%b2%e7%a8%bf.html</id><summary type="html">&lt;h1 style="text-align: center;"&gt;Love our country rationally&lt;/h1&gt;
+&lt;p&gt;When I entered college, I became interested in reading news about our
+country. I only read those positive news, and refused to read negative
+ones. If someone showed me dark side of our country, I would naturally
+defend or find excuse for it. I also liked to see our people united to
+boycott Japanese goods, boycott Carrefour. I hated Japanese, and I even
+listened to rap songs from the internet that abuse them. I thought those
+were loving our country and I was proud of those actions.&lt;/p&gt;
+&lt;p&gt;With the increase of my knowledge and well understanding of this world,
+I begin to suspect those actions. Are these kinds of things really
+loving our country? Yes, but they are all blind loves, blind patriotism.&lt;/p&gt;
+&lt;p&gt;So what is loving one's country?&lt;/p&gt;
+&lt;p&gt;Country is just an abstract noun. Loving one's country is essentially
+loving the people in this country. If you boycott Japanese goods or
+Careefour, yes, those foreign companies will earn less money. Then what
+about our people working in those companies? Actually, we need those
+companies more than they do to increase our employment. Boycotting them
+cannot make us stronger but poorer, just like we boycotting the whole
+western world before the reform and opening-up.&lt;/p&gt;
+&lt;p&gt;If you love your country, you want to do everything you can to make it
+better.Criticism is the best motivation to make our country better. It
+is the highest level of loving our country. Like human beings, no
+country is perfect. From the macro point of view, our country is more
+prosperous than it use to be. (You know, 2nd place GDP, Olympics, World
+Exposition, Asian Games.) But when it comes to details, there are still
+so many problems, (like high house price and inflation, food safety,
+forced demolition, judicial injustice, political corruption.) We
+shouldn't refuse to accept the flaws of our country. On the contrary, we
+should actively discover those flaws so that we can fix them.&lt;/p&gt;
+&lt;p&gt;(We don't need to criticize other country's same problems as ours's
+excuse. I think most of us don't want to criticize other countries, like
+America or England, to make them better.)&lt;/p&gt;
+&lt;p&gt;Narrow nationalism isn't really loving our country. Some people gloated
+about Japan's earthquake when it happened. Anyone who is rational would
+see that was shameful. Yes, we should'nt forget the history, but it is
+for preventing that happen again not for hatred or even revenge. Peoples
+are innocent, don't lose our humanity. Belittling others cannot raise
+our reputation, it only belittles ourselves.&lt;/p&gt;
+&lt;p&gt;Blindly following the leader or government's order isn't really loving
+one's country. Japanese soldiers in aggression war against us also
+thought they love their country. Red guards in culture revolution also
+thought they love their country. But they were wrong. Leaders or
+governors are humans, they also can be wrong, especially when they are
+for their own power and interests. We should use our own mind, humanity,
+common sense to judge this.&lt;/p&gt;
+&lt;p&gt;Blind patriotism can be dangerous. Sometimes it can causes war or
+humanitarian catastrophe.&lt;/p&gt;
+&lt;p&gt;So how to rationally love our country?&lt;/p&gt;
+&lt;p&gt;To love our country rationally. We should have a well understanding of
+our histories, culture, government and society, not only from our point
+of view, but also from others outside of our country, to avoid bias and
+blind patriotism.&lt;/p&gt;
+&lt;p&gt;To love our country rationally. We should criticize our government of
+inappropriate policies, society's unfairness. Focus on current events.
+Concern those intellectuals who always criticize this country and
+lawyers who struggle for justice of our society. It is them that really
+make our country better.&lt;/p&gt;
+&lt;p&gt;To love our country rationally. More importantly, use our own mind,
+common sense and don't lose our humanity.&lt;/p&gt;</summary><category term="country"></category><category term="love"></category><category term="patriotism"></category></entry><entry><title>file roller压缩包中文乱码解决方法</title><link href="http://blog.yeyanbo.com/cn/posts/file-roller%e5%8e%8b%e7%bc%a9%e5%8c%85%e4%b8%ad%e6%96%87%e4%b9%b1%e7%a0%81%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95.html" rel="alternate"></link><updated>2011-05-10T09:37:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-05-10:posts/file-roller%e5%8e%8b%e7%bc%a9%e5%8c%85%e4%b8%ad%e6%96%87%e4%b9%b1%e7%a0%81%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95.html</id><summary type="html">&lt;p&gt;移除rar、unrar&lt;/p&gt;
+&lt;p&gt;~~~~ {lang="LINUX"}
+sudo apt-get remove rar
+sudo apt-get remove unrar&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;安裝&lt;/span&gt;&lt;span class="n"&gt;p7zip&lt;/span&gt;&lt;span class="err"&gt;、&lt;/span&gt;&lt;span class="n"&gt;p7zip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rar&lt;/span&gt;
+
+&lt;span class="o"&gt;~~~~&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;LINUX&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;p7zip&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;p7zip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rar&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="file roller"></category><category term="Linux"></category><category term="p7zip"></category><category term="p7zip-rar"></category><category term="rar"></category><category term="unrar"></category><category term="中文"></category><category term="乱码"></category><category term="压缩包"></category></entry><entry><title>virtualbox-ose4.0.4 安装及运行错误</title><link href="http://blog.yeyanbo.com/cn/posts/virtualbox-ose4-0-4-%e5%ae%89%e8%a3%85%e5%8f%8a%e8%bf%90%e8%a1%8c%e9%94%99%e8%af%af.html" rel="alternate"></link><updated>2011-05-08T13:12:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-05-08:posts/virtualbox-ose4-0-4-%e5%ae%89%e8%a3%85%e5%8f%8a%e8%bf%90%e8%a1%8c%e9%94%99%e8%af%af.html</id><summary type="html">&lt;p&gt;今天debian升级后，重装virtualbox-ose报了个错&lt;/p&gt;
+&lt;p&gt;~~~~ {lang="LINUX" colla="+"}
+Starting VirtualBox kernel modulesNo suitable module for running kernel found ...
+failed!
+failed!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;但是程序还是安装成功了，也就没管它&lt;/span&gt;
+
+&lt;span class="err"&gt;直接运行，添加虚拟机，启动时，还是报错了，弹出两个窗口，大概如下&lt;/span&gt;  
+&lt;span class="err"&gt;窗口&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="o"&gt;~~~~&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;LINUX&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;colla&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;NS_ERROR_FAILURE&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mh"&gt;0x80004005&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nl"&gt;component:&lt;/span&gt;&lt;span class="n"&gt;VirtualBox&lt;/span&gt;
+&lt;span class="nl"&gt;interface:&lt;/span&gt;&lt;span class="n"&gt;IVirtualBox&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;2158464&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f706&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;414&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a8c4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;fb589dfc6b62&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;窗口2&lt;/p&gt;
+&lt;p&gt;~~~~ {lang="LINUX" colla="+"}
+kernel driver not installed (rc=-1908)
+Please install the virtualbox-ose-dkms package and execute 'modprobe vboxdrv' as root&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;采用网上常用的方法：删除&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;VirtualBox&lt;/span&gt;&lt;span class="err"&gt;文件夹，未能解决&lt;/span&gt;
+
+&lt;span class="err"&gt;在某英文论坛有说是内核问题，需要用源码针对本机内核进行编译&lt;/span&gt;  
+&lt;span class="err"&gt;运行如下命令&lt;/span&gt;
+
+&lt;span class="o"&gt;~~~~&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;LINUX&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;colla&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;
+&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;virtualbox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ose&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;qt&lt;/span&gt; &lt;span class="n"&gt;virtualbox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ose&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="n"&gt;virtualbox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ose&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dkms&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;assistant&lt;/span&gt;
+&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;prepare&lt;/span&gt;
+&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;virtualbox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ose&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;问题解决&lt;/p&gt;</summary><category term="dkms"></category><category term="Linux"></category><category term="ose"></category><category term="virtualbox"></category><category term="内核"></category></entry><entry><title>WordPress连接微博android客户端</title><link href="http://blog.yeyanbo.com/cn/posts/wordpress%e8%bf%9e%e6%8e%a5%e5%be%ae%e5%8d%9aandroid%e5%ae%a2%e6%88%b7%e7%ab%af.html" rel="alternate"></link><updated>2011-04-25T20:50:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-04-25:posts/wordpress%e8%bf%9e%e6%8e%a5%e5%be%ae%e5%8d%9aandroid%e5%ae%a2%e6%88%b7%e7%ab%af.html</id><summary type="html">&lt;p&gt;一直想写一个连接多个微博平台的android程序，苦于自己水平不足。&lt;/p&gt;
+&lt;p&gt;昨天有时间利用&lt;a href="http://www.smyx.net/" title="水脉烟香"&gt;水脉烟香&lt;/a&gt;的&lt;a href="http://www.smyx.net/wp-connect.html"&gt;WordPress连接微博&lt;/a&gt;插件写了个android客户端，也算练练手。&lt;/p&gt;
+&lt;p&gt;功能很简单，只是做了个简陋界面，用了下POST协议。&lt;/p&gt;
+&lt;p&gt;程序界面如图：&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2011/04/Screenshot.png" title="Screenshot" /&gt;][]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;程序用户：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;有wordpress独立博客；&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;安装了水脉烟香的连接微博插件，并绑定了相应账号；&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;按插件要求创建了独立的微博发布页面。&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;程序使用：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;微博连接地址输入你的微博发布页面地址；&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;密码为插件配置界面所设置的密码。&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;TODO：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span style="color: #0000ff;"&gt;添加上传图片功能，图片上传到wordpress博客，然后发送到微博消息；&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #0000ff;"&gt;错误处理，用户体验方面优化；&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #0000ff;"&gt;界面做好看点，地址和密码放设置里面，保存。&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载地址：&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2011/04/WPConnect.apk" title="WPConnect.apk"&gt;WPConnect.apk&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span style="text-decoration: underline;"&gt;&lt;span style="color: #ff00ff;"&gt;更新： 只留消息发送界面，其他信息放入设置界面&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff00ff;"&gt;下载地址：&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2011/04/WPConnect0.1.apk" title="WPConnect0.1.apk"&gt;WPConnect0.1.apk&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2011/04/Screenshot.png" title="Screenshot" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2011/04/Screenshot.png&lt;/p&gt;</summary><category term="android"></category><category term="post"></category><category term="WordPress"></category><category term="wpconnect"></category><category term="微博"></category><category term="连接"></category></entry><entry><title>Intent, Content Providers, Processes and Threads笔记</title><link href="http://blog.yeyanbo.com/cn/posts/intent-content-providers-processes-and-threads%e7%ac%94%e8%ae%b0.html" rel="alternate"></link><updated>2011-04-16T15:42:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-04-16:posts/intent-content-providers-processes-and-threads%e7%ac%94%e8%ae%b0.html</id><summary type="html">&lt;h1&gt;intent激活components方法&lt;/h1&gt;
+&lt;h4&gt;intent 激活 activity方法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;font size="2"&gt;&lt;/font&gt; &lt;br /&gt;
+Context.startActivity() &lt;br /&gt;
+Activity.startActivityForResult()
+先启动的Activity获取后启动的Activity所得的结果，并传递给前一个的Activity.setResult()方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;intent 激活 service方法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Context.startService() &lt;br /&gt;
+Context.bindService()
+绑定component和intent所描述的service，component启动时service会自动启动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;intent 激活 brodcast receiver&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Context.sendBroadcast() &lt;br /&gt;
+Context.sendOrderedBroadcast() &lt;br /&gt;
+Context.sendStickyBroadcast()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;intent 对象内容&lt;/h1&gt;
+&lt;h4&gt;Component name&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;setComponent() &lt;br /&gt;
+setClass() &lt;br /&gt;
+setClassName() &lt;br /&gt;
+getComponent()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Action 描述启动后component的动作&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;setAction() &lt;br /&gt;
+getAction()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Data 描述动作的数据对象&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;包括数据类型（MIME media
+type）和数据URI，数据URI（scheme://host:port/path) &lt;br /&gt;
+setData() &lt;br /&gt;
+setType() &lt;br /&gt;
+setDataAndType() &lt;br /&gt;
+getData() &lt;br /&gt;
+getType()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Category 描述要启动的component的类型&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;addCategory() &lt;br /&gt;
+removeCategory() &lt;br /&gt;
+getCategories()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Extras 将信息写入Bundle&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;putExtras() &lt;br /&gt;
+getExtras()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Flags 指定activity怎么启动的标识&lt;/h4&gt;
+&lt;h4&gt;Itent Resolution&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果component
+name没有定义，则通过action、data（URI和type）、category的信息筛选出最佳component，通过检索系统中所有component的Menifest，与里面定义的intent-filter对比进行筛选。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h1&gt;Content Providers&lt;/h1&gt;
+&lt;p&gt;提供的数据是共享的，component不能直接操作，通过ContentResolver来操作&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;get a ContentResolver in the activity &lt;br /&gt;
+ContentResolver cr = getContentResolver();&lt;/p&gt;
+&lt;p&gt;make query &lt;br /&gt;
+ContentResolver.query() &lt;br /&gt;
+Activity.managedQuery() &lt;br /&gt;
+参数：URI； projection 返回的列； selection 筛选返回的行
+SQL中Where后面的部分；selectionArgs selection中对应的参数；sortOrder
+排列顺序 Order by后面的部分。 &lt;br /&gt;
+take same arguments，but managedQuery causes activity to manage the
+life cycle of the returned Cusor &lt;br /&gt;
+Activity.startManagingCursor()、stopManagingCursor(Cursor) can start
+or stop the manage&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;创建操作URI&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ContentUris.withAppendedId() &lt;br /&gt;
+Uri.withAppendedPath()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;读取数据：cusor用法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;int col = Cusor.getColumnIndex()获取字段所在的列数 &lt;br /&gt;
+Cusor.getString(col)
+获取col列的值，以字符串返回，同样还有getInt()、getFloat()等&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;添加修改数据&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;添加记录 &lt;br /&gt;
+ContentValues values = new ContentValues();创建记录 &lt;br /&gt;
+values.put(People.NAME, "Abraham Lincoln");添加记录中的值 &lt;br /&gt;
+values.put(People.STARRED, 1);添加记录中的值 &lt;br /&gt;
+getContentResolver().insert(People.CONTENT_URI, values);插入记录 &lt;br /&gt;
+修改记录 &lt;br /&gt;
+修改已存在的记录中的某个条目，如联系人中的电话号码，关键在于insert()中传入的Uri&lt;/p&gt;
+&lt;p&gt;phoneUri = Uri.withAppendedPath(uri,
+People.Phones.CONTENT_DIRECTORY); &lt;br /&gt;
+values.clear(); &lt;br /&gt;
+values.put(People.Phones.TYPE, People.Phones.TYPE_MOBILE); &lt;br /&gt;
+values.put(People.Phones.NUMBER, "1233214567"); &lt;br /&gt;
+getContentResolver().insert(phoneUri, values);&lt;/p&gt;
+&lt;p&gt;ContentResolver.openOutputStream()存储大的二进制文件 &lt;br /&gt;
+OutputStream outStream = getContentResolver().openOutputStream(uri); &lt;br /&gt;
+sourceBitmap.compress(Bitmap.CompressFormat.JPEG, 50, outStream);&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;创建Content provider需要在Menifest中申明&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;Processes and Threads&lt;/h1&gt;
+&lt;h4&gt;Processes&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;默认一个程序的所有components使用一个process，也可以在Menifest中申明\&amp;lt;activity&gt;,
+\&amp;lt;service&gt;, \&amp;lt;receiver&gt;和\&amp;lt;provider&gt;使用的process &lt;br /&gt;
+Foreground process &lt;br /&gt;
+Visible process &lt;br /&gt;
+Service process &lt;br /&gt;
+Background process &lt;br /&gt;
+Empty process&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Threads&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;when application launched, system creates a main thread or UI thread
+of execution for the application, this thread interacts with UI
+components（components from widget and view packages）. &lt;br /&gt;
+线程原则：1.不要阻断UI线程；2.不要从UI线程外来操作Android UI toolkit&lt;/p&gt;
+&lt;p&gt;三种从外部线程操作UI线程从而操作android UI toolkit的方法 &lt;br /&gt;
+Activity.runOnUiThread(Runnable) &lt;br /&gt;
+View.post(Runnable) &lt;br /&gt;
+View.postDelayed(Runnable, long)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;AsyncTask实现异步处理的线程&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创建类继承syncTask，实现doInBackground()方法和onPostExecute()方法，使用时用execute()传入参数。&lt;/p&gt;
+&lt;p&gt;publishProgress(progress)可在doInBackground()调用，计算出progress，onProgressUpdate(progress)在publishProgress(progress)调用之后自动运行，里面实现UI交互操作，显示运行进度&lt;/p&gt;
+&lt;p&gt;因此onPostExecute(Result)和onProgressUpdate(progress)均运行在UI线程中，都可进行UI操作，一个可作为运行之后的结果显示，一个可作为运行中的进度显示。&lt;/p&gt;
+&lt;/blockquote&gt;</summary></entry><entry><title>关于Postgresql9.0没有找到pg_config的解决办法</title><link href="http://blog.yeyanbo.com/cn/posts/%e5%85%b3%e4%ba%8epostgresql9-0%e6%b2%a1%e6%9c%89%e6%89%be%e5%88%b0pg_config%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95.html" rel="alternate"></link><updated>2011-04-14T11:07:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-04-14:posts/%e5%85%b3%e4%ba%8epostgresql9-0%e6%b2%a1%e6%9c%89%e6%89%be%e5%88%b0pg_config%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95.html</id><summary type="html">&lt;p&gt;使用平台Debian5.0.8，安装perl
+DBD::Pg模块的过程中出现pg_config未找到的错误。&lt;br /&gt;
+在网上搜索，能找到的解决办法是安装postgresql-devel包&lt;br /&gt;
+可是我在软件库里面没找到这个包&lt;br /&gt;
+最终选择安装postgresql-server-dev-9.0包，问题得以解决&lt;/p&gt;</summary></entry><entry><title>android程序构成</title><link href="http://blog.yeyanbo.com/cn/posts/android%e7%a8%8b%e5%ba%8f%e6%9e%84%e6%88%90.html" rel="alternate"></link><updated>2011-04-08T00:18:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2011-04-08:posts/android%e7%a8%8b%e5%ba%8f%e6%9e%84%e6%88%90.html</id><summary type="html">&lt;h3&gt;Components&lt;/h3&gt;
+&lt;p&gt;一个android程序中可以包含一个多个Components&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Activities&lt;/strong&gt;：有用户界面的程序；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Services&lt;/strong&gt;：后台运行的程序；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content providers&lt;/strong&gt;：提供数据操作，其他components通过
+    ContentResolver层对content provider进行数据操作；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Broadcast
+    receivers&lt;/strong&gt;：接收系统级别程序广播，没有用户界面，可在在提示栏创建显示信息，经常是激活activity和service的入口；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Intent&lt;/h3&gt;
+&lt;p&gt;用来激活除content
+provider之外的components，components之间的传递信息，可指定激活某个特定component，也可通过intent-filter指定可激活的components类别。&lt;/p&gt;
+&lt;h3&gt;Manifest&lt;/h3&gt;
+&lt;p&gt;描述.apk程序包的信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;申明所含components&lt;/strong&gt;：所有的components包含在\&amp;lt;application&gt;\&amp;lt;/application&gt;中，activity用\&amp;lt;activity&gt;\&amp;lt;/activity&gt;申明，service用\&amp;lt;service&gt;\&amp;lt;/service&gt;申明；&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;申明components的能力&lt;/strong&gt;：在activity中采用\&amp;lt;intent-filter&gt;\&amp;lt;/intent-filter&gt;描述所能接受的intent，包含action和category，action=android.intent.action.MAIN表明该activity为apk程序入口，category
+    =
+    android.intent.category.LAUNCHER表明该activity需在程序启动器中显示，以让用户可以启动该activity；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;申明程序所需的环境&lt;/strong&gt;：包含程序所需的屏幕、输入设置、硬件设备和平台版本信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="activity"></category><category term="android"></category><category term="intent"></category><category term="service"></category></entry><entry><title>科研必备网络技能之使用代理</title><link href="http://blog.yeyanbo.com/cn/posts/%e7%a7%91%e7%a0%94%e5%bf%85%e5%a4%87%e7%bd%91%e7%bb%9c%e6%8a%80%e8%83%bd%e4%b9%8b%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86.html" rel="alternate"></link><updated>2010-11-27T10:45:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-11-27:posts/%e7%a7%91%e7%a0%94%e5%bf%85%e5%a4%87%e7%bd%91%e7%bb%9c%e6%8a%80%e8%83%bd%e4%b9%8b%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86.html</id><summary type="html">&lt;h1&gt;&lt;strong&gt;使用代理&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;你可能遇到过这样一些情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;正在用google搜索某篇文献，你不觉得其中关键词有什么不妥，但突然出现“此网页无法访问”，之后十多分钟你都不能使用google（你是否认为google服务器挂了）；&lt;/li&gt;
+&lt;li&gt;终于找到这篇文献，但是发现链接打不开（你一般会认为这个链接已经死掉）；&lt;/li&gt;
+&lt;li&gt;你打开了这个链接，但是因为你不在学校或者研究所，你发现这篇文献需要付费才能下载；&lt;/li&gt;
+&lt;li&gt;在校外无法访问校内的BBS；&lt;/li&gt;
+&lt;li&gt;你想在国外网站上申请一个什么服务，但是发现你所在的IP无法申请。&lt;/li&gt;
+&lt;li&gt;你想玩国外的某个网游，譬如魔兽世界美服，你的IP无法登录。&lt;/li&gt;
+&lt;li&gt;你听说过的国外的许多优秀网络服务无法访问。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;还有很多……&lt;/p&gt;
+&lt;p&gt;你需要使用代理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什么是代理？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代理相当于你的电脑和所访问的网络服务之间的一台服务器，你通过这台服务器间接访问你所请求的网络服务，而不是直接访问。&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/演示文稿1.jpg" /&gt;][]&lt;/p&gt;
+&lt;p&gt;图片转自可能吧&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代理的用途&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;突破服务提供者对访问者IP的限制，3、 4、
+    5、6属于这种情况。你想下载某个杂志上的文章，发现学校或研究所里面可以下载，在外面就需要你付费了，那是因为学校或研究所已经对杂志付过费，这样，学校或研究所里面的IP都被允许免费下载。如果你使用其中的一个IP作为代理，便能免费下载（吴跃伟老师有提供武汉分院图书馆的代理地址）。456同样的道理，只不过换一个IP。&lt;/li&gt;
+&lt;li&gt;透过防火墙对某些网站的封锁（各种技术，不细说），1、
+    2、7属于这种情况。可能你访问的页面或者网站虽然没有“非法”内容，但是还是被封了，那是因为他所在的服务器或者IP段上的别的网站有“非法”内容，你知道zf一般是宁可错杀一百，不愿放过一个的。这些咱不去管它，咱只关心我们想要的东西，没办法，用下代理，就是麻烦点。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;代理分类&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接代理：直接使用可用代理IP，在浏览器中设置IP和端口后，进行代理上网。重要的是你需要有一个可用的代理IP。&lt;/li&gt;
+&lt;li&gt;代理软件：利用成熟的代理软件进行上网，比直接代理复杂一点，但是更稳定。其原理是：代理软件连接代理服务器的IP，浏览器通过本地IP（127.0.0.1）和端口进行连接。代理软件有很多，常用来翻墙的有自由门、Puff、无界、世界通、GAppProxy等等（还是不提供下载吧，需要的自己搜索）。有些能自动搜索代理服务器IP，如自由门，不过速度就不敢保证；有些需要自己设置代理账号，有免费的，也有收费的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/11/演示文稿1.jpg"&gt;&lt;/a&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/演示文稿1.jpg" title="演示文稿1" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在线代理：如无忧代理什么的，简单方便，不用设置代理IP；不过有广告，速度比较慢，而且一般不支持网站账号的登录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;各种浏览器的代理设置&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IE设置：右键IE图标或通过菜单进入Internet选项，选择连接选项卡，点击“局域网设置”，在其中设置你的代理域名或IP、端口号，譬如使用自由门的话，输入127.0.0.1和8580。下面的图是IE9的，其他版本应该差不多。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/IE.png" title="IE" /&gt;][]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IE内核的浏览器设置：以360为例，工具》代理服务器》代理服务器设置，里面添加代理就可以。搜狗浏览器则是，工具》网络连接》网络连接设置。其他遨游、世界之窗、TT浏览器等等基本上都差不多。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/360.jpg" title="360" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chrome和firefox自动切换代理设置：如下。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Chrome+Switchy或Firefox+Autoproxy&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代理上网时，如果是使用国外的代理，你会发觉访问国外的网站很快，而国内的网站变得非常慢，因为一次访问有两个来回；或者你使用下载文献的代理时，你就不能访问代理所支持的杂志以外的网站。这样你就必须来回切换代理设置，使用上面说到的浏览器上网就不是很方便。&lt;/p&gt;
+&lt;p&gt;推荐使用firefox浏览器+Autoproxy扩展或者chorme浏览器+Switchy扩展进行代理上网，这样可以在使用代理的同时又不影响正常上网。&lt;/p&gt;
+&lt;p&gt;由于只使用过Chrome，就说一下Chrome+Swithcy，firefox+autoproxy大家可以自己找一下，貌似使用得更普遍点。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先安装Switchy插件，在chrome扳手设置菜单中找到“扩展程序”项，进入扩展程序设置界面后，点击右下角的“获得更多扩展程序
+    &gt;&gt;”，搜索Switchy，有英文也有中文的，选择一个版本，安装完成后启用该扩展。点击代理图标，选择选项进行设置。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/switchy.png" title="switchy" /&gt;][]&lt;/li&gt;
+&lt;li&gt;在“代理概况”里面配置新代理，你可以添加很多不同目的的代理，包括直接代理的远程IP和代理软件的本地IP（127.0.0.1）和端口。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/Switchy1.png" title="Switchy1" /&gt;][]&lt;/li&gt;
+&lt;li&gt;在“切换规则”里面设置哪些网站需要使用哪个代理，在在线规则列表里面输入地址&lt;a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt"&gt;http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt&lt;/a&gt;，这是一个常见的被墙网站的列表，这样当列表更新时，你的访问规则也会与之同步更新。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/switchy2.png" title="switchy2" /&gt;][]&lt;/li&gt;
+&lt;li&gt;当然，这个列表里面的网站不一定满足你的要求，当你无法访问某个网站时，或者登录某网站下载文献时，点击Switchy菜单中的“新规则”，选择合适的代理，确定后，“切换规则”列表中会自动生成一个快速规则。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/swithy3.png" title="swithy3" /&gt;][]&lt;/li&gt;
+&lt;li&gt;设置好之后，选择Switchy菜单中的“自动切换模式”，就可以自动代理上网了，只有“切换规则”中有的网站才会使用代理，其他网站就会不通过代理直接访问。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;代理地址获取&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;搜索免费的代理地址，不可靠，许多是死地址；&lt;/li&gt;
+&lt;li&gt;注册某些提供免费代理地址的网站，或者购买收费的；&lt;/li&gt;
+&lt;li&gt;使用免费代理软件还比较可靠，自由门、无界等，速度不是很快；&lt;/li&gt;
+&lt;li&gt;利用Google App
+    Engine和GAppProxy自己架设专用代理，速度非常不错，技术上比较繁琐。特别是有IPV6部署的大学和科学院，由于GAE同时支持IPV6和IPV4，利用GAppProxy做代理基本上可以实现免费上网；&lt;/li&gt;
+&lt;li&gt;下载文献可以使用图书馆提供的代理服务，访问BBS等内网的同学可以让校内的同学做代理；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;OK，就这么多，希望对大家有用，欢迎交流。&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;申明：本文方法仅供学术科研，禁止用于访问“非法”内容。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;&lt;span style="color: #000000;"&gt;上篇：&lt;/span&gt;&lt;a href="http://www.yeyanbo.com/archives/268.html" title="链接到 科研必备网络技能之使用google"&gt;科研必备网络技能之使用google&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/演示文稿1.jpg" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/翻墙原理.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/IE.png" title="IE" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/IE.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/360.jpg" title="360" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/360.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/switchy.png" title="switchy" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/switchy.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/Switchy1.png" title="Switchy1" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/Switchy1.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/switchy2.png" title="switchy2" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/switchy2.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/swithy3.png" title="swithy3" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/swithy3.png&lt;/p&gt;</summary><category term="代理"></category><category term="科研"></category><category term="网络"></category><category term="翻墙"></category></entry><entry><title>科研必备网络技能之使用google</title><link href="http://blog.yeyanbo.com/cn/posts/%e7%a7%91%e7%a0%94%e5%bf%85%e5%a4%87%e7%bd%91%e7%bb%9c%e6%8a%80%e8%83%bd%e4%b9%8b%e4%bd%bf%e7%94%a8google.html" rel="alternate"></link><updated>2010-11-17T14:39:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-11-17:posts/%e7%a7%91%e7%a0%94%e5%bf%85%e5%a4%87%e7%bd%91%e7%bb%9c%e6%8a%80%e8%83%bd%e4%b9%8b%e4%bd%bf%e7%94%a8google.html</id><summary type="html">&lt;p&gt;&lt;span style="color: #ff0000;"&gt;网络是科研人员了解科研进展、获取最新知识的重要渠道。由于网络在国内环境的特殊性，科研人员必须学会一些基本的网络生存技能。&lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;span style="color: #ff0000;"&gt;使用google&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;不要把google和百度对比，不是一个数量级。百度号称是专注中文搜索，但是中文搜索它给你的结果是：想要的它不给你（过滤），不想要的它放最前面(广告）。英文的搜索你就更别指望了。它顶多算一个被阉割了的字符串匹配。当然它也不是一无是处，还是有点用处，百度知道、贴吧、百科（要想知道更多，最好用维基百科）都还行，但就是别用它的搜索。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;这里所说的不是使用谷歌中国，是使用.com下的google，google的核心服务都在.com下，以前的.cn和现在的.hk只是一个残缺google。怎么使用.com的google，我以前的文章有提到。因为你在国内直接访问google.com，它会识别出你的IP来源是中国，所以一般会直接将你跳转的.cn或.hk下的谷歌。你要么点页面下方的google.com，要么可以用代理实现。&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;span style="color: #ff0000;"&gt;google搜索&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;google的搜索技术没话可说，不多评论。怎样使用google搜索还是有点小技巧。直接在主页面搜索，谁都会用。这里说几点常用的技巧：&lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;用site关键词在指定网站搜索。一般比较好的网站都有提供搜索功能，但是不是所有的网站都提供全文检索功能。譬如在ncbi搜索含有“hiv”的网页，你可以在google输入“hiv
+    site: www.ncbi.nlm.nih.gov”或“site:www.ncbi.nlm.nih.gov
+    hiv”进行检索，注意site后面的冒号是英文半角，后面没有空格，而需要检索的关键词和指定站点间是有空格的。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/site.png" title="site" /&gt;][]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;用filetype关键词检索指定格式的文件。当我们需要查找某个文件时，习惯于用“文件的名称”加“下载”进行检索，其实用filetype关键词你能直接找到所需文件的下载链接。譬如输入“hiv
+    filetype:pdf”或“filetype:pdf
+    hiv”进行检索，会得到hiv相关的所有pdf文件，当然你也可以用doc、rar、zip等等扩展名检索其他类型文件。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/filetype.png" title="filetype" /&gt;][]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style="color: #ff0000;"&gt;+号用法。在搜索的过程中，google会把你输入的关键词进行处理，一般会将十分常见的词（I、and等等）过滤掉，如果你必须检索含有这些词的网页，你可以将这些词用+号连接，注意+号前面必须有空格，以和其他关键词分开。&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;当然还有其他如
+intext、inurl、intitle、inanchor、allintext、allinurl、allintitle、allinanchor等限制词的搜索，用的不是很多，感兴趣可以看一下。如果嫌上面的使用太麻烦，你也可以点搜索框右边的高级选项按提示进行高级搜索，这样会更直观。&lt;/span&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/gaojisousuo-1024x455.png" title="gaojisousuo" /&gt;][]&lt;/p&gt;
+&lt;h3&gt;&lt;span style="color: #ff0000;"&gt;google学术搜索&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;google对科研人员帮助最大的莫过于学术搜索，其网址是http://scholar.google.com，你也可以在“主页》更多》更多”选项里面找到，其实google的所有服务都在这里面。打开是中文的页面，不过建议点下面的“google
+scholar in
+english”，会有一些更多的功能。&lt;/span&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/xueshu.png" title="xueshu" /&gt;][]&lt;span style="color: #ff0000;"&gt;检索之后会出来关键词相关的文章，可根据上方提供的条件筛选。检索结果提供标题，摘要，作者，引用次数，相关文章，文章来源，版本，文件类型等信息。&lt;/span&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/hivscholar.png" title="hivscholar" /&gt;][]&lt;span style="color: #ff0000;"&gt;学术搜索中最有价值的是高级搜索和email提醒功能，在高级搜索中，你可以通过更多的条件进行筛选。“email提醒功能”可以在您关心的领域有新的文章时及时发送邮件提醒您。&lt;/span&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/advancedsearch.png" title="advancedsearch" /&gt;][]&lt;span style="color: #ff0000;"&gt;最后，在google搜索中能用到的检索限制词如site，filetype等，在学术搜索中同样适用。&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;&lt;span style="color: #ff0000;"&gt;Google Reader&lt;/span&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;说到google reader
+就不得不&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;先&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;说Rss。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;Rss是Really Simple
+Syndication的缩写，是xml格式的一种应用，是现在网络使用最普遍的内容发布，传输，同步和共享的格式和技术。它的好处是让内容传输更加及时，准确，方便。你不需要打开内容所在的网页，而只需订阅它提供的rss链接就能查看你所关心的内容，从而避免被广告等垃圾信息所打扰。你也可以只在一个地方发布内容，通过rss同步传播到各个不同的平台。譬如这篇文章在这里发布时就同步发送到了新浪，qq，人人等等。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/nav_rss.gif" title="nav_rss" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;一般支持rss的网站，都&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;会有一个类似这样的图标，图标对应的链接一般就是rss的链接。如果你直接点击它，打开的页面是一堆让你觉得很乱的文字，没有图片，没有排版。那是因为rss是不能直接用浏览器来查看的，你必须用专门的rss阅读器查看。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;rss阅读器有在线的，也有软件安装版的。而google
+reader就是rss在线rss阅读器中的老大。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;对于科研人员，使用google
+reader订阅最新的杂志是最方便不过的了，你可以把所有你感兴趣领域的杂志都放到里面。当然你也可以订阅新闻或者你感兴趣的博客。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;打开&lt;a href="http://www.google.com/reader/"&gt;http://www.google.com/reader/&lt;/a&gt;，在左上角“添加订阅”那里输入你找到的rss地址“添加”就可以了。[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/googlereader.png" title="googlereader" /&gt;][]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;这里提供一下nature和science的一些rss地址列表的网址，nature的：&lt;a href="http://www.nature.com/webfeeds/index.html"&gt;http://www.nature.com/webfeeds/index.html&lt;/a&gt;（注意，这个不是rss地址，点开了在里面找,里面列出来的每一项链接都是rss地址），sicence的：&lt;a href="http://www.sciencemag.org/site/rss/"&gt;http://www.sciencemag.org/site/rss/&lt;/a&gt;（打开，里面的有xml图标的地址才是）。其他杂志的自己在其网站上找吧。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;除了上面三个以外，&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;google翻译，不用说了，大家都会用；&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;google
+doc也非常方便，在线处理文档，ppt，表格等等，文件能共享；&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;igoogle也是一个方便的工具，它能把你经常用到的小工具集合到一个地方，譬如你蛋白结构的查看，DNA氨基酸序列的转换等等小工具，只要你能想到的工具，搜索一下，基本上都有，当然也有一些常见的杂志和新闻的小工具，也是rss订阅的原理；&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;google code
+对于计算机相关的人员来说，非常有价值，比较有名的android，app
+engine，chrome都在这里，里面有学不完的知识。当然里面也有生物信息学相关的项目，其中有一个叫synbiowave的项目就是这里诞生的，是在google
+wave（貌似因为用户量少，google已经不再支持了）的基础上开发的，半年前关注过他的博客，前几天发现它居然发表在了近期的bioinformatics上。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;关于使用google，就说这么多，希望对大家有用。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;不过好的东西在天朝不一定能用，你还需要具备另一个很重要的技能，那是网络生存的根本。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/site.png" title="site" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/site.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/filetype.png" title="filetype" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/filetype.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/gaojisousuo-1024x455.png" title="gaojisousuo" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/gaojisousuo.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/xueshu.png" title="xueshu" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/xueshu.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/hivscholar.png" title="hivscholar" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/hivscholar.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/advancedsearch.png" title="advancedsearch" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/advancedsearch.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/googlereader.png" title="googlereader" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/11/googlereader.png&lt;/p&gt;</summary><category term="Google"></category><category term="学术"></category><category term="技能"></category><category term="科研"></category><category term="网络"></category></entry><entry><title>Linux 远程多任务不断线操作方法</title><link href="http://blog.yeyanbo.com/cn/posts/linux-%e8%bf%9c%e7%a8%8b%e5%a4%9a%e4%bb%bb%e5%8a%a1%e4%b8%8d%e6%96%ad%e7%ba%bf%e6%93%8d%e4%bd%9c%e6%96%b9%e6%b3%95.html" rel="alternate"></link><updated>2010-10-18T10:46:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-10-18:posts/linux-%e8%bf%9c%e7%a8%8b%e5%a4%9a%e4%bb%bb%e5%8a%a1%e4%b8%8d%e6%96%ad%e7%ba%bf%e6%93%8d%e4%bd%9c%e6%96%b9%e6%b3%95.html</id><summary type="html">&lt;p&gt;Linux 远程多任务不断线操作方法&lt;/p&gt;
+&lt;p&gt;生物信息学经常会运行一些高计算量的程序，普通的计算机不能胜任，必须放在远程的高性能计算机上的运行。因此本地和远程之间的操作是非常频繁的事情。这些高计算量的程序可能运行几个小时，几天，甚至几个月，本地的计算机不可能一直开着，那么怎样实现本地与远程断开之后程序仍然运行呢？我们可以用screen命令实现。&lt;/p&gt;
+&lt;p&gt;常用的三个命令：&lt;/p&gt;
+&lt;p&gt;scp 实现本地与远程的文件传输&lt;/p&gt;
+&lt;p&gt;ssh 登录远程linux系统&lt;/p&gt;
+&lt;p&gt;screen 实现多任务后台运行&lt;/p&gt;
+&lt;p&gt;步骤：&lt;/p&gt;
+&lt;p&gt;1.将需要运行的文件和程序上传到服务器&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #0000ff;"&gt;scp 本地文件路径
+user@IP:远程文件路径&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;按提示输入密码后传送&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;user@IP's password:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2.登录远程服务器&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #0000ff;"&gt;ssh user@IP&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;按提示输入密码后登录&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;user@IP's password:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;3.服务器后台运行程序&lt;/p&gt;
+&lt;p&gt;输入&lt;span style="color: #0000ff;"&gt;screen&lt;/span&gt;命令进入后台程序运行&lt;/p&gt;
+&lt;p&gt;screen命令行界面运行目标程序&lt;/p&gt;
+&lt;p&gt;至此程序已经在后台开始运行&lt;/p&gt;
+&lt;p&gt;怎样退出呢&lt;/p&gt;
+&lt;p&gt;按&lt;span style="color: #0000ff;"&gt;ctrl+AD&lt;/span&gt;键回到服务器端普通命令行界面&lt;/p&gt;
+&lt;p&gt;此时输入&lt;span style="color: #0000ff;"&gt;screen
+-ls&lt;/span&gt;可查看当前screen运行程序&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;There are screens on:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;31107.pts-4.r710 (10/18/2010 10:00:21 AM)
+(Detached)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;2 Sockets in /var/run/screen/S-user&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如果想回到某个程序&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #0000ff;"&gt;screen -R
+&lt;/span&gt;（适用于后台只有一个程序时）&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #0000ff;"&gt;screen -r 31107.pts-4.r710
+&lt;/span&gt;（适用于利用screen运行了多个后台程序时）&lt;/p&gt;</summary><category term="Linux"></category><category term="scp"></category><category term="screen"></category><category term="ssh"></category><category term="远程"></category></entry><entry><title>apt安装girlfriend，没有money不行</title><link href="http://blog.yeyanbo.com/cn/posts/apt%e5%ae%89%e8%a3%85girlfriend%ef%bc%8c%e6%b2%a1%e6%9c%89money%e4%b8%8d%e8%a1%8c.html" rel="alternate"></link><updated>2010-10-09T17:13:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-10-09:posts/apt%e5%ae%89%e8%a3%85girlfriend%ef%bc%8c%e6%b2%a1%e6%9c%89money%e4%b8%8d%e8%a1%8c.html</id><summary type="html">&lt;p&gt;sudo apt-get install girlfriend&lt;br /&gt;
+正在读取软件包列表... 完成&lt;br /&gt;
+正在分析软件包的依赖关系树... 完成&lt;br /&gt;
+有一些软件包无法被安装。&lt;br /&gt;
+下列的信息可能会对解决问题有所帮助：&lt;br /&gt;
+下列的软件包有不能满足的依赖关系：&lt;br /&gt;
+girlfriend: 依赖: house但是它将不会被安装&lt;br /&gt;
+girlfriend: 依赖: car但是它将不会被安装&lt;br /&gt;
+house,car: 依赖: money但是它将不会被安装&lt;br /&gt;
+E: 无法安装的软件包&lt;/p&gt;</summary><category term="apt"></category><category term="girlfriend"></category></entry><entry><title>使用google.com的方法</title><link href="http://blog.yeyanbo.com/cn/posts/%e4%bd%bf%e7%94%a8google-com%e7%9a%84%e6%96%b9%e6%b3%95.html" rel="alternate"></link><updated>2010-07-30T23:19:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-07-30:posts/%e4%bd%bf%e7%94%a8google-com%e7%9a%84%e6%96%b9%e6%b3%95.html</id><summary type="html">&lt;p&gt;&lt;span style="color: #ff0000;"&gt;Google的好坏咱不谈，大家心知肚明，反正咱爱用，我是Google离开了之后才开始经常使用它的。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;谈正题&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;在国内上网，地址栏上输入www.google.com，会自动跳转到www.google.cn或www.google.com.hk。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google1.jpg" title="google1" /&gt;][]&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;如上图，点击"Google.com in English"
+进入Google.com&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;在页面的右上角有一个“Search
+settings”选项，点击进去&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google2.jpg" title="google2" /&gt;][]&lt;span style="color: #ff0000;"&gt;在“Interface
+Language”设置中选择“Chinese（Simplified）”，如果你经常搜索文字为中文和英文的话，在“Search
+Language”选项中勾选Chinese(Simplified)及English，当然也可勾选Chinese(Traditional)。&lt;/span&gt;&lt;/p&gt;
+&lt;div&gt;
+![][2]
+
+&lt;/div&gt;
+
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google3.jpg" title="google3" /&gt;][]&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;最后点击页面右上方的“Save
+Preferences”，你会看到如下图所示的google页面。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google4-1024x484.jpg" title="google4" /&gt;][]&lt;span style="color: #ff0000;"&gt;至此大功告成，以后访问www.google.com，你再也不会跳转到.cn或.hk了。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;当然这不能保证你能使用google的所有服务。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google1.jpg" title="google1" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/07/google1.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google2.jpg" title="google2" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/07/google2.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google3.jpg" title="google3" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/07/google3.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google4-1024x484.jpg" title="google4" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/07/google4.jpg&lt;/p&gt;</summary></entry><entry><title>android模拟器找不到的解决办法</title><link href="http://blog.yeyanbo.com/cn/posts/android%e6%a8%a1%e6%8b%9f%e5%99%a8%e6%89%be%e4%b8%8d%e5%88%b0%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95.html" rel="alternate"></link><updated>2010-07-17T18:36:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-07-17:posts/android%e6%a8%a1%e6%8b%9f%e5%99%a8%e6%89%be%e4%b8%8d%e5%88%b0%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95.html</id><summary type="html">&lt;p&gt;在avd manager中运行虚拟设备，可能出现以下错误&lt;/p&gt;
+&lt;p&gt;emulator: ERROR: unknown virtual device name: \&amp;lt;devicename&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;emulator&lt;/em&gt;: could not find virtual device named: \&amp;lt;devicename&gt;&lt;/p&gt;
+&lt;p&gt;解决办法：&lt;/p&gt;
+&lt;p&gt;在系统环境变量中新建“ANDROID_SDK_HOME”变量，路径设置为“.android”文件夹所在的路径。&lt;/p&gt;</summary></entry><entry><title>Linux和windows引导修复方法</title><link href="http://blog.yeyanbo.com/cn/posts/linux%e5%92%8cwindows%e5%bc%95%e5%af%bc%e4%bf%ae%e5%a4%8d%e6%96%b9%e6%b3%95.html" rel="alternate"></link><updated>2010-07-01T21:08:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-07-01:posts/linux%e5%92%8cwindows%e5%bc%95%e5%af%bc%e4%bf%ae%e5%a4%8d%e6%96%b9%e6%b3%95.html</id><summary type="html">&lt;p&gt;装ylmf系统的过程中不小心把系统引导装在了window系统所在的硬盘，本来是想装在移动硬盘上，这样方便即插即用的。现在到好，不插移动硬盘连window都启动不了啦，移动硬盘上的系统在别的机器上也没法引导。&lt;/p&gt;
+&lt;p&gt;找了一下解决办法，分两步。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先将grub引导写入Linux所在移动硬盘的mbr：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;sudo grub-install
+/dev/sdb（这里sdb是我对移动硬盘，根据情况而定）&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;再对windows所在的系统进行修复，使用ms-sys工具:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ms-sys不能通过软件库在线安装，需要单独下载，可通过&lt;a href="http://ms-sys.sourceforge.net/"&gt;http://ms-sys.sourceforge.net/&lt;/a&gt;下载。&lt;/p&gt;
+&lt;p&gt;在这之前确保你已经安装过gettext软件包，否则安装过程中可能会报&lt;span style="color: #0000ff;"&gt;
+msgfmt：命令未找到 &lt;span style="color: #000000;"&gt;错误。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;sudo apt-get install gettext &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;按照上面链接中的安装步骤进行ms-sys安装。&lt;/p&gt;
+&lt;p&gt;安装完，执行下面的命令修复windows引导&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;sudo ms-sys -m
+/dev/sda（sda是我的windows所在硬盘）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;成功修复后得到以下消息&lt;/p&gt;
+&lt;div id="_mcePaste" style="padding-left: 30px;"&gt;
+&lt;span style="color: #0000ff;"&gt;Windows 2000/XP/2003 master boot record
+successfully written to /dev/sda&lt;/span&gt;
+
+&lt;/div&gt;</summary><category term="Linux"></category><category term="windows"></category><category term="修复"></category><category term="引导"></category></entry><entry><title>雨林木风系统（ylmf OS）</title><link href="http://blog.yeyanbo.com/cn/posts/%e9%9b%a8%e6%9e%97%e6%9c%a8%e9%a3%8e%e7%b3%bb%e7%bb%9fylmf-os.html" rel="alternate"></link><updated>2010-06-29T23:17:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-06-29:posts/%e9%9b%a8%e6%9e%97%e6%9c%a8%e9%a3%8e%e7%b3%bb%e7%bb%9fylmf-os.html</id><summary type="html">&lt;p&gt;以后读研必须要用到Linux，现在就先熟悉一下。&lt;/p&gt;
+&lt;p&gt;以前接触过Ubuntu 9.10，对安装过程多少有些了解。&lt;/p&gt;
+&lt;p&gt;前一段时间听说了雨林木风系统，听说就是根据Ubuntu
+10.04专门美化设计的，xp的风格，里面加入了许多我们常用的工具，很符合用惯了windows系统的国人的习惯，一直想找个时间装一下。&lt;/p&gt;
+&lt;p&gt;今天就找了这个系统装在了自己的移动硬盘上。&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/06/ylmf-os-1.jpg" title="ylmf-os-1" /&gt;][]&lt;/p&gt;
+&lt;p&gt;画面还不错，典型的xp。&lt;/p&gt;
+&lt;p&gt;这次安装居然忘了设置交换分区了，于是乎在网上查了一下，果然有解决办法。可以建一个img文件来作文swap分区，感觉这个比固定的设置交换分区还好，以后安装都不用设置交换分区了，想设多大装完再说。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一步，建立一个img文件，大小为512M，需要1024的话就把count=500000改成1000000，这样我们才能访问它。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;/strong&gt;&lt;code&gt;dd if=/dev/zero of=swap.img bs=1024 count=500000&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二步，对它进行格式化，不要担心，格式化的只是这个文件，不用sudo。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mkswap swap.img&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三步，激活它，使它可用。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo swapon swap.img&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果要卸载它可用 sudo swapoff swap.img。&lt;/p&gt;
+&lt;p&gt;最后如果想设置开机就激活这个分区，可以更改下/etc/fstab文件。&lt;/p&gt;
+&lt;p&gt;末尾加上一句 swapimgpath swap swap defaults 0
+0（swapimgpath为img文件对路径）&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/06/ylmf-os-1.jpg" title="ylmf-os-1" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/06/ylmf-os-1.jpg&lt;/p&gt;</summary><category term="Linux"></category><category term="Ubuntu"></category><category term="Ylmf OS"></category></entry><entry><title>两个关于生物的笑话</title><link href="http://blog.yeyanbo.com/cn/posts/%e4%b8%a4%e4%b8%aa%e5%85%b3%e4%ba%8e%e7%94%9f%e7%89%a9%e7%9a%84%e7%ac%91%e8%af%9d.html" rel="alternate"></link><updated>2010-06-19T00:12:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-06-19:posts/%e4%b8%a4%e4%b8%aa%e5%85%b3%e4%ba%8e%e7%94%9f%e7%89%a9%e7%9a%84%e7%ac%91%e8%af%9d.html</id><summary type="html">&lt;p&gt;有个勤奋的生物学家死后，上帝不想让他去天堂，就把他放到了地狱。  &lt;/p&gt;
+&lt;p&gt;过了一周，阎王来找上帝：敬爱的上帝，麻烦你赶紧把那个生物学家给我弄走，我要恢复  &lt;/p&gt;
+&lt;p&gt;地狱的秩序。现在地狱所有的鬼都在熬夜，加班加点的转质粒，做PCR，摇菌，提蛋白，  &lt;/p&gt;
+&lt;p&gt;走柱子，跑胶，写proposal，攒paper，修改、回复审查意见等，忙得一团糟。小鬼空闲&lt;br /&gt;
+时都在看paper和review、参加各种技术培训，跟师兄师姐们帮忙......&lt;/p&gt;
+&lt;p&gt;上帝无奈，把生物学家召回了天堂。  &lt;/p&gt;
+&lt;p&gt;过了一个月，阎王来天宫办事，顺便问上帝：敬爱的上帝，那个生物学家还好吧？&lt;br /&gt;
+上帝：首先我要说明一点，以后不要叫我上帝，要叫我Professor
+耶。另外，我现在很  &lt;/p&gt;
+&lt;p&gt;忙，没有时间回答你的问题，我刚刚接了5个project，马上要连夜开组会。明天一大早我  &lt;/p&gt;
+&lt;p&gt;又要赶去和释迦牟尼谈funding，之前要查看天使们的考勤记录,有事请发电子邮件,再见&lt;br /&gt;
+。&lt;/p&gt;
+&lt;p&gt;=======================&lt;/p&gt;
+&lt;p&gt;一个小偷趁人不备，溜进某生物实验室里，可自打他进来，实验室里就有人，于是他躲在  &lt;/p&gt;
+&lt;p&gt;角落里等待下班时间的来临。没想到走了一拨，又来了一拨做实验的。他想，既然这么不  &lt;/p&gt;
+&lt;p&gt;容易进来，总不能空着手回去，等等吧，晚上总不会有人了吧？可没想到，晚饭后又来一&lt;br /&gt;
+批学生挑灯熬夜做实验。他坚持着。等到夜深人静的后半夜，还有人做实验……  &lt;/p&gt;
+&lt;p&gt;也不知道熬了多久，小偷终于从里出来了，他哥们见到他，就问他这几天去哪儿了。&lt;br /&gt;
+小偷：“溜进XX研究所了。”&lt;br /&gt;
+同伙羡慕不已，忙问收获如何。&lt;br /&gt;
+小偷：“破地方什么都没有！”&lt;br /&gt;
+同伙：“那你呆那么久？”&lt;br /&gt;
+小偷无限郁闷，苦笑道：“别说，我学会提质粒了……”&lt;/p&gt;</summary></entry><entry><title>follow5 分享功能不错</title><link href="http://blog.yeyanbo.com/cn/posts/follow5-%e5%88%86%e4%ba%ab%e5%8a%9f%e8%83%bd%e4%b8%8d%e9%94%99.html" rel="alternate"></link><updated>2010-05-27T06:00:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-27:posts/follow5-%e5%88%86%e4%ba%ab%e5%8a%9f%e8%83%bd%e4%b8%8d%e9%94%99.html</id><summary type="html">&lt;p&gt;刚注册了个follow5微博，分享功能非常强大，几乎支持所有已知的网站微博共享：支持通过手机短信、QQ、MSN、Gtalk、飞信来发送微博，可以同步到以下所有网站&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;![]&lt;a href="http://twitter.com/"&gt;&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.plurk.com/"&gt;1&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://digu.com/"&gt;2&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://m.jiwai.de/"&gt;3&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.zuosa.com/"&gt;4&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.kaixin001.com/"&gt;5&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.renren.com/"&gt;6&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://hellotxt.com/"&gt;7&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://t.sina.com.cn/"&gt;8&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://tongxue.com/"&gt;9&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.9911.com/"&gt;10&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.douban.com/"&gt;11&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://t.sohu.com/"&gt;12&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://t.163.com/"&gt;13&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://t.people.com.cn/"&gt;14&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://bo.xianguo.com/"&gt;15&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://www.friendfeed.com/"&gt;16&lt;/a&gt;[]&lt;/li&gt;
+&lt;li&gt;![]&lt;a href="http://t.ifeng.com/"&gt;17&lt;/a&gt;[]&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="follow5"></category><category term="分享"></category></entry><entry><title>试一下同步到新浪的插件</title><link href="http://blog.yeyanbo.com/cn/posts/%e8%af%95%e4%b8%80%e4%b8%8b%e5%90%8c%e6%ad%a5%e5%88%b0%e6%96%b0%e6%b5%aa%e7%9a%84%e6%8f%92%e4%bb%b6.html" rel="alternate"></link><updated>2010-05-27T02:44:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-27:posts/%e8%af%95%e4%b8%80%e4%b8%8b%e5%90%8c%e6%ad%a5%e5%88%b0%e6%96%b0%e6%b5%aa%e7%9a%84%e6%8f%92%e4%bb%b6.html</id><summary type="html">&lt;p&gt;刚刚在新浪开了微博，哎谁叫twitter被屏蔽了呢，用新浪的也是用吧，其实用的人也挺多的。新浪的能绑定博客，可惜只能是国内的，不能同步到wordpress。其实2006年就在新浪建了个博客，一直没写东西，现在就这样绑定了吧。刚发现一个同步到新浪的插件wp2sinablog，这样就能从wordpress到新浪博客再到新浪微博了。试一下这个插件能用否。&lt;/p&gt;</summary><category term="WordPress"></category><category term="同步"></category><category term="微博"></category><category term="插件"></category><category term="新浪"></category></entry><entry><title>一些云计算在线软件</title><link href="http://blog.yeyanbo.com/cn/posts/%e4%b8%80%e4%ba%9b%e4%ba%91%e8%ae%a1%e7%ae%97%e5%9c%a8%e7%ba%bf%e8%bd%af%e4%bb%b6.html" rel="alternate"></link><updated>2010-05-24T20:48:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-24:posts/%e4%b8%80%e4%ba%9b%e4%ba%91%e8%ae%a1%e7%ae%97%e5%9c%a8%e7%ba%bf%e8%bd%af%e4%bb%b6.html</id><summary type="html">&lt;p&gt;这两年云计算炒得非常热，那么什么是云计算，无非就是互联网服务，所有现在能在桌面上实现的事情放到互联网上实现。说白了，从大家当初接触互联网一直使用到现在的网络邮箱就是一种云计算应用，只是当时这个概念没提出来。现在Javascript、ajax、Css、尤其是HTML5，这些技术让互联网越来越具有交互性，在线软件成为可能。下面介绍一些超酷的在线软件。&lt;/p&gt;
+&lt;p&gt;&lt;span style="color: #ff0000;"&gt;特别提醒，如果你使用的是IE或IE核心的浏览器（国内的基本上都是），可能不能享用这些软件了，推荐使用Firefox、chrome、safari等高级的浏览器，扔掉老掉牙的IE吧。&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;1. 在线操作系统&lt;/h3&gt;
+&lt;p&gt;说到在线软件，操作系统可是重中之重。06年的时候我玩过一个pc2n的在线系统，网址是www.pc2n.com（貌似现在没了），是以flash界面实现的，感觉太慢，操作不方便，玩了两次就再也没管了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.oos.cc/login.html"&gt;ICube&lt;/a&gt;：提供1G的在线存储和文件共享，多媒体支持和一些常用办公工具。同时拥有一个email客户端和编程开发工具。界面有点像windows2000。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.eyeos.org/"&gt;EyeOS&lt;/a&gt;：EyeOS是一个开源软件，可以下载使用也可以在其服务器上在线使用。拥有丰富的网络程序以及办公套件。个性化强度高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg" title="eyeos" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[Glide
+    OS][]：flash实现的在线操作系统，除了提供Web入口之外，还提供移动网络入口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/glide1.jpg" title="glide" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[eXo
+    WebOS][]：&lt;span style="font-size: x-small;"&gt;使用了大量的&lt;/span&gt;&lt;span style="font-size: x-small;"&gt;Web2.0&lt;/span&gt;&lt;span style="font-size: x-small;"&gt;元素构造，使用了大量的AJAX和Jacascript，因此它使用起来是相当方便的，即使在没有互联网连接的情况下也可以使用。&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eXo.jpg" title="eXo" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.startforce.com/"&gt;startforce&lt;/a&gt;：非常像windows vista是吧，界面确实比较华丽。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/startforce.jpg" title="startforce" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://g.ho.st/"&gt;Ghost&lt;/a&gt;:
+    flash界面的，不过不是我们常说的ghost，它是一个webos。&lt;a href="http://www.startforce.com/"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/ghost.jpg" title="ghost" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.yeyanbo.com/wp-content/uploads/2010/05/yuanos.png" title="yuanos"&gt;YuanOS&lt;/a&gt;：特别推荐下国内的，界面仿的苹果，下面是我使用的桌面，呵呵，喜欢仓木麻衣。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="yuanos" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/yuanos.png" title="yuanos" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://ijimu.cn/"&gt;积木在线电脑&lt;/a&gt;：国内的在线系统，界面还不错，不过是flash做的，个人不太喜欢。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="积木在线电脑" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/jimu.jpg" title="jimu" /&gt;][]&lt;/p&gt;
+&lt;p&gt;更多在线系统可以参见My10sen的20个webOS的介绍&lt;/p&gt;
+&lt;h3&gt;2. 画图软件&lt;/h3&gt;
+&lt;p&gt;下面全是HTML5实现的，可不是flash，虽然flash实现的Photoshop类软件也很多，功能也很强大，但flash的太占资源了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://mugtug.com/sketchpad/"&gt;sketchpad&lt;/a&gt;：非常轻巧、方便而强大的画图软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/sketchpad1.png" title="sketchpad" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://editor.pixastic.com/"&gt;pixastic&lt;/a&gt;：这个菜单做的不错，功能就比较简单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/pixastic1.png" title="pixastic" /&gt;][]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://editor.pixastic.com/"&gt;&lt;/a&gt;&lt;a href="http://canvaspaint.org/"&gt;canvaspaint&lt;/a&gt;：这个太简单，就是仿的windows画图板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3.在线office&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.writely.com/"&gt;writely&lt;/a&gt; &amp;amp; &lt;a href="http://docs.google.com"&gt;google docs&lt;/a&gt;：其实writely现在就是google
+    docs，被google收购了）&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.zoho.com/"&gt;zoho office&lt;/a&gt; &amp;amp; &lt;a href="http://www.baihui.com/"&gt;baihui&lt;/a&gt;
+    ：zoho算是不错的在线办公软件了，baihui是zoho在中国的代理商，汉化还可以。听说前一段时间微软对网吧反盗版，baihui就趁机宣布对网吧免费提供合作。&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.com/"&gt;微软docs&lt;/a&gt; ：与facebook合作开发的，正在测试阶段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eyeos1.jpg" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/i-cube.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/glide1.jpg" title="glide" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/glide1.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/eXo.jpg" title="eXo" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/eXo.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/startforce.jpg" title="startforce" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/startforce.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/ghost.jpg" title="ghost" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/ghost.jpg
+  [&lt;img alt="yuanos" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/yuanos.png" title="yuanos" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/yuanos.png
+  [&lt;img alt="积木在线电脑" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/jimu.jpg" title="jimu" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/jimu.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/sketchpad1.png" title="sketchpad" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/sketchpad1.png
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/05/pixastic1.png" title="pixastic" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/05/pixastic1.png&lt;/p&gt;</summary><category term="HTML5"></category><category term="云计算"></category><category term="在线软件"></category></entry><entry><title>搜索引擎网址提交入口大全</title><link href="http://blog.yeyanbo.com/cn/posts/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e7%bd%91%e5%9d%80%e6%8f%90%e4%ba%a4%e5%85%a5%e5%8f%a3%e5%a4%a7%e5%85%a8.html" rel="alternate"></link><updated>2010-05-19T02:37:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-19:posts/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e7%bd%91%e5%9d%80%e6%8f%90%e4%ba%a4%e5%85%a5%e5%8f%a3%e5%a4%a7%e5%85%a8.html</id><summary type="html">&lt;p&gt;一、搜索引擎以及登录入口&lt;/p&gt;
+&lt;p&gt;百 度：&lt;a href="http://www.baidu.com"&gt;http://www.baidu.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://www.baidu.com/search/url_submit.html"&gt;http://www.baidu.com/search/url_submit.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google ：&lt;a href="http://www.g.cn"&gt;http://www.g.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://www.google.com/addurl"&gt;http://www.google.com/addurl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;雅 虎：&lt;a href="http://cn.yahoo.com"&gt;http://cn.yahoo.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://search.help.cn.yahoo.com/h4_4.html"&gt;http://search.help.cn.yahoo.com/h4_4.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;搜 搜：&lt;a href="http://www.soso.com"&gt;http://www.soso.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://www.soso.com/help/usb/urlsubmit.shtml"&gt;http://www.soso.com/help/usb/urlsubmit.shtml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有 道：&lt;a href="http://www.youdao.com"&gt;http://www.youdao.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://tellbot.youdao.com/report"&gt;http://tellbot.youdao.com/report&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;必 应：&lt;a href="http://cn.bing.com"&gt;http://cn.bing.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://cn.bing.com/docs/submit.aspx?FORM=WSDD2"&gt;http://cn.bing.com/docs/submit.aspx?FORM=WSDD2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;搜 狗：&lt;a href="http://www.sogou.com"&gt;http://www.sogou.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://www.sogou.com/feedback/urlfeedback.php"&gt;http://www.sogou.com/feedback/urlfeedback.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中 搜：&lt;a href="http://www.zhongsou.com"&gt;http://www.zhongsou.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登陆入口：&lt;a href="http://ads.zhongsou.com/register/page.jsp"&gt;http://ads.zhongsou.com/register/page.jsp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Alexa网站登录入口：&lt;a href="http://www.alexa.com/help/webmasters"&gt;http://www.alexa.com/help/webmasters&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dmoz网站登录入口：&lt;a href="http://www.dmoz.org/World/Chinese_Simplified/"&gt;http://www.dmoz.org/World/Chinese_Simplified/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Onebigdirectory.com
+搜索引擎批量提交：&lt;a href="http://www.onebigdirectory.com/cgi-bin/dir/addurl.cgi"&gt;http://www.onebigdirectory.com/cgi-bin/dir/addurl.cgi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Freewebsubmission.com
+搜索引擎批量提交：&lt;a href="http://www.freewebsubmission.com"&gt;http://www.freewebsubmission.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;二：博客搜索引擎以及登录入口&lt;/p&gt;
+&lt;p&gt;百度博客搜索：&lt;a href="http://blogsearch.baidu.com"&gt;http://blogsearch.baidu.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://ping.baidu.com/ping.html"&gt;http://ping.baidu.com/ping.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google博客搜索：&lt;a href="http://blogsearch.google.cn"&gt;http://blogsearch.google.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://blogsearch.google.cn/ping?hl=zh-CN"&gt;http://blogsearch.google.cn/ping?hl=zh-CN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有道博客搜索：&lt;a href="http://blog.youdao.com"&gt;http://blog.youdao.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://tellbot.youdao.com/report?type=BLOG"&gt;http://tellbot.youdao.com/report?type=BLOG&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;搜搜博客搜索：&lt;a href="http://blog.soso.com"&gt;http://blog.soso.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://blog.soso.com/join.html"&gt;http://blog.soso.com/join.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;搜狗博客搜索：&lt;a href="http://blogsearch.sogou.com"&gt;http://blogsearch.sogou.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://www.sogou.com/feedback/blogfeedback.php"&gt;http://www.sogou.com/feedback/blogfeedback.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;爱问博客搜索：&lt;a href="http://blog.iask.com"&gt;http://blog.iask.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://blog.iask.com/add_new_rss.php"&gt;http://blog.iask.com/add_new_rss.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;114 博客搜索：&lt;a href="http://blog.114.vnet.cn"&gt;http://blog.114.vnet.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中国人博客搜索：&lt;a href="http://so.blogchinese.com"&gt;http://so.blogchinese.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提交登陆入口：&lt;a href="http://so.blogchinese.com/search/url_submit.php"&gt;http://so.blogchinese.com/search/url_submit.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;博客网页搜索：&lt;a href="http://so2.bokee.com"&gt;http://so2.bokee.com&lt;/a&gt;&lt;/p&gt;</summary><category term="搜索引擎"></category></entry><entry><title>我的论文到底算工科还是理科啊</title><link href="http://blog.yeyanbo.com/cn/posts/%e6%88%91%e7%9a%84%e8%ae%ba%e6%96%87%e5%88%b0%e5%ba%95%e7%ae%97%e5%b7%a5%e7%a7%91%e8%bf%98%e6%98%af%e7%90%86%e7%a7%91%e5%95%8a.html" rel="alternate"></link><updated>2010-05-11T03:28:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-11:posts/%e6%88%91%e7%9a%84%e8%ae%ba%e6%96%87%e5%88%b0%e5%ba%95%e7%ae%97%e5%b7%a5%e7%a7%91%e8%bf%98%e6%98%af%e7%90%86%e7%a7%91%e5%95%8a.html</id><summary type="html">&lt;p&gt;蛋白质单点突变数据库，这是我的论文内容，就纯粹一个数据库。虽然这个工作是我喜欢的，可是论文却费劲了，我到底按工科还是按理科来写呢？要说算工科的，技术原理，代码，过程，一堆一堆的东西可以往上放，按工科论文标准来算，一万五的篇幅根本不算什么，何况理科只要八千，可毕竟到头来我最终还是理科的学位，不能这样写吧。好，按理科写吧，我说、再说、最后还说，说来说去只有个数据库，憋半天挑出一两个创新点，怎么组织也不成一个体系。不像做实验的还有背景方法说一说，材料说一说，过程说一说，最后来个没有结果的结果分析分析，最终再怎么着都有个思想贯穿。我一理科的，做的工科的事，最后不能按工科写，理科的思想又加不进去。哎，难！&lt;/p&gt;
+&lt;p&gt;睡觉！明天再憋点东西出来。。。&lt;/p&gt;</summary><category term="数据库"></category><category term="论文"></category></entry><entry><title>韩寒厦门大学演讲</title><link href="http://blog.yeyanbo.com/cn/posts/%e9%9f%a9%e5%af%92%e5%8e%a6%e9%97%a8%e5%a4%a7%e5%ad%a6%e6%bc%94%e8%ae%b2.html" rel="alternate"></link><updated>2010-05-03T23:49:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-03:posts/%e9%9f%a9%e5%af%92%e5%8e%a6%e9%97%a8%e5%a4%a7%e5%ad%a6%e6%bc%94%e8%ae%b2.html</id><summary type="html">&lt;p&gt;
+&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="400" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"&gt;
+&lt;param name="align" value="middle"&gt;&lt;/param&gt;&lt;param name="src" value="http://player.youku.com/player.php/sid/XMTU0NTA2NjE2/v.swf"&gt;&lt;/param&gt;&lt;param name="quality" value="high"&gt;&lt;/param&gt;
+&lt;embed type="application/x-shockwave-flash" width="480" height="400" src="http://player.youku.com/player.php/sid/XMTU0NTA2NjE2/v.swf" quality="high" align="middle"&gt;
+&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;</summary><category term="厦门大学"></category><category term="文化大国"></category><category term="韩寒"></category></entry><entry><title>非常好玩的视频</title><link href="http://blog.yeyanbo.com/cn/posts/%e9%9d%9e%e5%b8%b8%e5%a5%bd%e7%8e%a9%e7%9a%84%e8%a7%86%e9%a2%91.html" rel="alternate"></link><updated>2010-05-03T22:17:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-03:posts/%e9%9d%9e%e5%b8%b8%e5%a5%bd%e7%8e%a9%e7%9a%84%e8%a7%86%e9%a2%91.html</id><summary type="html">&lt;p&gt;非常形象的描述功夫网的视频，还有神兽。。呵呵&lt;/p&gt;
+&lt;p&gt;
+&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="500" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"&gt;
+&lt;param name="allowFullScreen" value="true"&gt;&lt;/param&gt;&lt;param name="allowscriptaccess" value="always"&gt;&lt;/param&gt;&lt;param name="src" value="http://www.youtube.com/v/dWfUOG0EA9w&amp;amp;hl=zh_CN&amp;amp;fs=1&amp;amp;color1=0x2b405b&amp;amp;color2=0x6b8ab6"&gt;&lt;/param&gt;&lt;param name="allowfullscreen" value="true"&gt;&lt;/param&gt;
+
+&lt;embed type="application/x-shockwave-flash" width="540" height="385" src="http://www.youtube.com/v/dWfUOG0EA9w&amp;amp;hl=zh_CN&amp;amp;fs=1&amp;amp;color1=0x2b405b&amp;amp;color2=0x6b8ab6" allowscriptaccess="always" allowfullscreen="true"&gt;
+&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;</summary><category term="功夫网"></category></entry><entry><title>微软表态,众巨头一致支持HTML5</title><link href="http://blog.yeyanbo.com/cn/posts/%e7%94%a8%e6%89%8b%e6%9c%ba%e5%8f%91%e8%a1%a8%e5%8d%9a%e5%ae%a2.html" rel="alternate"></link><updated>2010-05-02T02:42:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-05-02:posts/%e7%94%a8%e6%89%8b%e6%9c%ba%e5%8f%91%e8%a1%a8%e5%8d%9a%e5%ae%a2.html</id><summary type="html">&lt;p&gt;这是我用手机发的一篇博客,想看看效果怎么样.写点什么呢,说说HTML5吧.听说最近微软也开始正式支持它了,且公开提出HTML5才是互联网的未来,虽然早在之前他们已经发布了支持HTML5的IE9,但这次公开的表态还真是破天荒,显然面对开放式互联网的迅猛发展,这个软件行业巨头也开始让步了.微软很有可能因此放弃还没来得及普及就要夭折的SILVERLIGHT项目.而这几天面临同样困扰的是ADOBE的FLASH,乔布斯不但不让自已的产品支持它,最近还对其公开数落了一通,表明支持HTML5作为其替代.加上谷歌在HTML5上是主要推动者，其chrome加上几大主流浏览器厂商Mozilla的Firefox、Apple的Safari、Opera，和移动巨头诺基亚、RIM（黑莓手机）等手机厂商的大力支持。相信HTML5这几年会有不错的发展，尤其是这些电信移动领域和互联网领域的互相渗透，对互联网的影响将是革命性的。HTML5+移动互联网+云计算，未来的网络生活会非常精彩。&lt;/p&gt;</summary><category term="HTML5"></category><category term="互联网"></category></entry><entry><title>世上最迂回的公路，感觉很奇怪</title><link href="http://blog.yeyanbo.com/cn/posts/%e4%b8%96%e4%b8%8a%e6%9c%80%e8%bf%82%e5%9b%9e%e7%9a%84%e5%85%ac%e8%b7%af%ef%bc%8c%e6%84%9f%e8%a7%89%e5%be%88%e5%a5%87%e6%80%aa.html" rel="alternate"></link><updated>2010-04-18T21:36:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-04-18:posts/%e4%b8%96%e4%b8%8a%e6%9c%80%e8%bf%82%e5%9b%9e%e7%9a%84%e5%85%ac%e8%b7%af%ef%bc%8c%e6%84%9f%e8%a7%89%e5%be%88%e5%a5%87%e6%80%aa.html</id><summary type="html">&lt;p&gt;无意间在google
+earth上发现的，在不丹，感觉非常奇怪，有些弯度觉得简直就是没有必要，发上来看看。&lt;/p&gt;
+&lt;p&gt;先来个全景[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/111.jpg" title="11" /&gt;][]&lt;/p&gt;
+&lt;p&gt;放大[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/221.jpg" title="22" /&gt;][]&lt;/p&gt;
+&lt;p&gt;再放大[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/331.jpg" title="33" /&gt;][]&lt;/p&gt;
+&lt;p&gt;看这迂回，简直都平行了，也没见中间有多高，直接开过去不就行了，很是奇怪。&lt;/p&gt;
+&lt;div class="blogger-post-footer"&gt;
+本文来自我的另一博客站blog.yedashu.com![][3]
+
+&lt;/div&gt;
+
+&lt;p&gt;[&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/111.jpg" title="11" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/04/111.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/221.jpg" title="22" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/04/221.jpg
+  [&lt;img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/04/331.jpg" title="33" /&gt;]: http://www.yeyanbo.com/wp-content/uploads/2010/04/331.jpg&lt;/p&gt;</summary><category term="google earth"></category></entry><entry><title>HTML5之互联网的未来</title><link href="http://blog.yeyanbo.com/cn/posts/html5%e4%b9%8b%e4%ba%92%e8%81%94%e7%bd%91%e7%9a%84%e6%9c%aa%e6%9d%a5.html" rel="alternate"></link><updated>2010-04-18T00:07:00+08:00</updated><author><name>叶彦波</name></author><id>tag:blog.yeyanbo.com/cn,2010-04-18:posts/html5%e4%b9%8b%e4%ba%92%e8%81%94%e7%bd%91%e7%9a%84%e6%9c%aa%e6%9d%a5.html</id><summary type="html">&lt;p&gt;HTML5之互联网的未来  &lt;/p&gt;
+&lt;p&gt;最近对HTML5非常感兴趣，发现它才是互联网的未来，能够解决所有Flash和微软正大力开发推广的Silverlight所能解决的问题。连3D显示都能在网页中实现，包括网页交互，渲染图片，其炫目不亚于flash。最大的优势就在于它只是一个协议，所有的炫目效果都是网页的整体而不是任何的插件。我觉得Flash和Silverlight很可能因为它的存在和发展而最终淘汰。或许因为不太喜欢flash的菜单及讨厌的下载工具对它的识别，总是对flash有几分不满。看见HTML5的效果之后我欣喜若狂。  &lt;/p&gt;
+&lt;p&gt;软件产业最终将会走向互联网平台（当然移动平台还说不准），连3D的大型游戏都能在浏览器中实现了，还有什么软件功能不能在互联网实现吗？所以桌面级的应用可能都会被互联网的应用迅速替代，桌面平台最终会被淘汰。Google对未来互联网和信息产业的布局非常深远，其布局的操作系统即是网络操作系统，只支持互联网应用，可以想象引领互联网科技的趋势。而其所谓云计算，最终的目的就是用互联网应用解决所有问题，包括桌面平台所能解决的问题。  &lt;/p&gt;
+&lt;p&gt;互联网应用有很多好处，方便性：随时随地，只要有一个支持连接互联网的浏览器就行，不管是任何平台（也有可能未来所有平台都只支持互联网）；安全性：不用考虑病毒木马的存在，那是服务提供商所要考虑的问题；实时交互性：随时分享所有信息，文件从创建到使用都在云端，免去上传下载，要想给别人只需要一个简单的共享。  &lt;/p&gt;
+&lt;p&gt;据说HTML5会在2012年对外正式发布，正式应用于网络，期待那一天的到来，期待未来的互联网世界。为积极参与，现在开始学HTML5。（感新鲜看一下导航里面的HTML5演示，超级酷）。&lt;/p&gt;</summary></entry></feed>
