@@ -66,48 +66,46 @@
 <p>最近熊杰等兄弟搞个了旅游论坛<a href="http://www.69city.net">69city</a>，需要实现些地图定位的功能，俺也就参加了，顺便整理了一下之前自己搞的那个。</p>
 <p>说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。</p>
 <p>好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步<a href="http://www.bioinformatics.tk">论坛</a>查看）</p>
-<p>~~~~ {lang="php"}
- $gm_update_frequency){</p>
-<div class="highlight"><pre><span class="err">$</span><span class="n">sql</span> <span class="o">=</span> <span class="s">&quot;Select &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.pid As pid, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.fid as fid, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.tid as tid, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.first as first, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.author as author, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.authorid as authorid, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.dateline as dateline, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.useip as useip, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_thread</span><span class="p">.</span><span class="s">&quot;.subject as subject, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_thread</span><span class="p">.</span><span class="s">&quot;.author as subject_author, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_thread</span><span class="p">.</span><span class="s">&quot;.authorid as subject_authorid From &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;, &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_thread</span><span class="p">.</span><span class="s">&quot; Where &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.tid = &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_thread</span><span class="p">.</span><span class="s">&quot;.tid and &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">cur_time</span><span class="p">.</span><span class="s">&quot; - &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">table_post</span><span class="p">.</span><span class="s">&quot;.dateline &lt; &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">gm_update_time</span><span class="p">.</span><span class="s">&quot; Order by dateline Desc LIMIT 0 , &quot;</span><span class="p">.</span><span class="err">$</span><span class="n">gm_max_update</span><span class="p">;</span>
+<div class="highlight"><pre><span class="x"> $gm_update_frequency){</span>
+
+<span class="x">    $sql = &quot;Select &quot;.$table_post.&quot;.pid As pid, &quot;.$table_post.&quot;.fid as fid, &quot;.$table_post.&quot;.tid as tid, &quot;.$table_post.&quot;.first as first, &quot;.$table_post.&quot;.author as author, &quot;.$table_post.&quot;.authorid as authorid, &quot;.$table_post.&quot;.dateline as dateline, &quot;.$table_post.&quot;.useip as useip, &quot;.$table_thread.&quot;.subject as subject, &quot;.$table_thread.&quot;.author as subject_author, &quot;.$table_thread.&quot;.authorid as subject_authorid From &quot;.$table_post.&quot;, &quot;.$table_thread.&quot; Where &quot;.$table_post.&quot;.tid = &quot;.$table_thread.&quot;.tid and &quot;.$cur_time.&quot; - &quot;.$table_post.&quot;.dateline &lt; &quot;.$gm_update_time.&quot; Order by dateline Desc LIMIT 0 , &quot;.$gm_max_update;</span>
+<span class="x">$query = DB::query($sql);</span>
+
+<span class="x">$i = 0; </span>
+<span class="x"> //添加查询数据到数组    </span>
+<span class="x">while($post = DB::fetch($query)) {          </span>
+<span class="x">$row[$i] =  array(      </span>
+<span class="x">&#39;pid&#39; =&gt; $post[&#39;pid&#39;],</span>
+<span class="x">        &#39;fid&#39; =&gt; $post[&#39;fid&#39;],</span>
+<span class="x">        &#39;tid&#39; =&gt; $post[&#39;tid&#39;],</span>
+<span class="x">        &#39;first&#39; =&gt; $post[&#39;first&#39;],</span>
+<span class="x">        &#39;author&#39; =&gt; $post[&#39;author&#39;],</span>
+<span class="x">        &#39;authorid&#39; =&gt; $post[&#39;authorid&#39;],</span>
+<span class="x">        &#39;subject&#39; =&gt; $post[&#39;subject&#39;],</span>
+<span class="x">        &#39;subject_author&#39; =&gt; $post[&#39;subject_author&#39;],</span>
+<span class="x">        &#39;subject_authorid&#39; =&gt; $post[&#39;subject_authorid&#39;],</span>
+<span class="x">        &#39;dateline&#39; =&gt; $post[&#39;dateline&#39;],</span>
+<span class="x">        &#39;useip&#39; =&gt; $post[&#39;useip&#39;]</span>
+<span class="x">        );</span>
+
+<span class="x">        $i++;</span>
+<span class="x">    }</span>
+
+<span class="x">    //转换成json格式并写入文件</span>
+<span class="x">    if($row != null){</span>
+<span class="x">        $php_json = json_encode($row);</span>
+<span class="x">        $file_pointer = fopen($json_file,&quot;w&quot;);</span>
+<span class="x">        fwrite($file_pointer, $php_json);</span>
+<span class="x">        fclose($file_pointer);</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+<span class="x">//输出文件内容</span>
+<span class="x">$timeline_json = file_get_contents($json_file);</span>
+<span class="x">echo $timeline_json;</span>
+<span class="x">?&gt;</span>
 </pre></div>
 
 
-<p>$query = DB::query($sql);</p>
-<p>$i = 0; 
- //添加查询数据到数组  <br />
-while($post = DB::fetch($query)) {        <br />
-$row[$i] =  array(    <br />
-'pid' =&gt; $post['pid'],
-        'fid' =&gt; $post['fid'],
-        'tid' =&gt; $post['tid'],
-        'first' =&gt; $post['first'],
-        'author' =&gt; $post['author'],
-        'authorid' =&gt; $post['authorid'],
-        'subject' =&gt; $post['subject'],
-        'subject_author' =&gt; $post['subject_author'],
-        'subject_authorid' =&gt; $post['subject_authorid'],
-        'dateline' =&gt; $post['dateline'],
-        'useip' =&gt; $post['useip']
-        );</p>
-<div class="highlight"><pre>    <span class="err">$</span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">//转换成json格式并写入文件</span>
-<span class="k">if</span><span class="p">(</span><span class="err">$</span><span class="n">row</span> <span class="o">!=</span> <span class="n">null</span><span class="p">){</span>
-    <span class="err">$</span><span class="n">php_json</span> <span class="o">=</span> <span class="n">json_encode</span><span class="p">(</span><span class="err">$</span><span class="n">row</span><span class="p">);</span>
-    <span class="err">$</span><span class="n">file_pointer</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="err">$</span><span class="n">json_file</span><span class="p">,</span><span class="s">&quot;w&quot;</span><span class="p">);</span>
-    <span class="n">fwrite</span><span class="p">(</span><span class="err">$</span><span class="n">file_pointer</span><span class="p">,</span> <span class="err">$</span><span class="n">php_json</span><span class="p">);</span>
-    <span class="n">fclose</span><span class="p">(</span><span class="err">$</span><span class="n">file_pointer</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>}
-//输出文件内容
-$timeline_json = file_get_contents($json_file);
-echo $timeline_json;
-?&gt;
-~~~~</p>
 <h6>家国天下</h6>
 <p>一个月前买了杨恒均（这次没念成杨均恒）的家国天下这本书，看了一半，忙别的事情去了就没看完，昨天晚上终于一口气看完了。杨博士的眼光确实犀利独到，总是不急不躁的、慢慢悠悠的讲道理，说的你真是心服口服啊。十分推荐大家看一下，他会让你将国家和这个世界看得更清楚。</p>
 <p>真是没干正事，搞了两个论坛，看了一本闲书，自己的课题没有一点进展。</p>
