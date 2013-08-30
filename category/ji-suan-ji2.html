@@ -51,6 +51,56 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
+                        <time class="post-time" datetime="2011-04-16T15:42:00" pubdate>
+                            Sat 16 April 2011
+                        </time>
+                        <a href="../posts/Intent-Content-Providers-Processes-and-Threads笔记.html" rel="bookmark"><h1>Intent, Content Providers, Processes and Threads笔记</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h1>intent激活components方法</h1>
+<h4>intent 激活 activity方法</h4>
+<blockquote>
+<p><font size="2"></font> <br />
+Context.startActivity() <br />
+Activity.startActivityForResult()
+先启动的Activity获取后启动的Activity所得的结果，并传递给前一个的Activity.setResult()方法。</p>
+</blockquote>
+<h4>intent 激活 service方法</h4>
+<blockquote>
+<p>Context.startService() <br />
+Context.bindService()
+绑定component和intent所描述的service，component启动时service会自动启动。</p>
+</blockquote>
+<h4>intent 激活 brodcast receiver</h4>
+<blockquote>
+<p>Context.sendBroadcast() <br />
+Context.sendOrderedBroadcast() <br />
+Context.sendStickyBroadcast()</p>
+</blockquote>
+<h1>intent 对象内容</h1>
+<h4>Component name</h4>
+<blockquote>
+<p>setComponent() <br />
+setClass() <br />
+setClassName() <br />
+getComponent()</p>
+</blockquote>
+<h4>Action 描述启动后component的动作</h4>
+<blockquote>
+<p>setAction() <br />
+getAction()</p>
+</blockquote>
+<h4>Data 描述动作的数据对象</h4>
+<blockquote>
+<p>包括数据类型（MIME media
+type）和数据URI ...</p></blockquote>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
                         <time class="post-time" datetime="2011-04-14T11:07:00" pubdate>
                             Thu 14 April 2011
                         </time>
@@ -236,24 +286,6 @@ Language”选项中勾选Chinese(Simplified)及English，当然也可勾选Chin
 Preferences”，你会看到如下图所示的google页面。</span></p>
 <p><img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/07/google4-1024x484.jpg" title="google4" />
 <span style="color: #ff0000;">至此大功告成，以后访问www.google ...</span></p>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2010-07-17T18:36:00" pubdate>
-                            Sat 17 July 2010
-                        </time>
-                        <a href="../posts/android模拟器找不到的解决办法.html" rel="bookmark"><h1>android模拟器找不到的解决办法</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p>在avd manager中运行虚拟设备，可能出现以下错误</p>
-<p>emulator: ERROR: unknown virtual device name: \&lt;devicename></p>
-<p><em>emulator</em>: could not find virtual device named: \&lt;devicename></p>
-<p>解决办法：</p>
-<p>在系统环境变量中新建“ANDROID_SDK_HOME”变量，路径设置为“.android”文件夹所在的路径。</p>
                     </section>
                 </article>
             </li>

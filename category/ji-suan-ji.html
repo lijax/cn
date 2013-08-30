@@ -51,6 +51,29 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
+                        <time class="post-time" datetime="2013-08-30T20:30:00" pubdate>
+                            Fri 30 August 2013
+                        </time>
+                        <a href="../posts/Angularjs总结.html" rel="bookmark"><h1>Angularjs总结</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>Angularjs是谷歌开发的前端MVC框架，使得网页动态数据显示和后台数据交互之间、以及用户交互、业务逻辑的实现更加简单。</p>
+<p>总结几个概念：</p>
+<ul>
+<li>Directive（指令）：Angularjs中实现自定义的HTML标签元素（如可重用的网页模块），也作为属性或class实现相应的DOM操作功能，总之，所有的DOM操作必须要用Drective来实现；</li>
+<li>Control（控件）：用来对数据Model进行操作，实现业务逻辑和后台数据交互，Control需要绑定到DOM中的一块元素，并作用于这一块DOM元素；</li>
+<li>Scope（作用域）：用来绑定数据Model，每一个Control绑定的元素块都产生一个对应的Scope，Control和绑定的元素形成层级嵌套结构，对应的Scope中的Model也形成一中继承关系，子Scope可访问父级的数据，也可同名覆盖；</li>
+<li>Model（数据）：在Control中作为对应的Scope的属性，可以是基本数据类型，可以是对象，也可以是函数，在Control所对应的DOM块中则可以直接访问，不需要用Scope；</li>
+<li>Template（模板）：包含Control和数据Model绑定的DOM代码片段或片段文件；</li>
+<li>Service（服务）：用来提供全局的通用的服务方法，通过工厂的模式实现。</li>
+</ul>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
                         <time class="post-time" datetime="2012-12-08T13:04:00" pubdate>
                             Sat 08 December 2012
                         </time>
@@ -239,56 +262,6 @@ kernel ...</p>
 <p><span style="text-decoration: underline;"><span style="color: #ff00ff;">更新： 只留消息发送界面，其他信息放入设置界面</span></span></p>
 <p><span style="color: #ff00ff;">下载地址：<a href="http://www.yeyanbo.com/wp-content/uploads/2011/04/WPConnect0.1.apk" title="WPConnect0.1.apk">WPConnect0.1.apk</a></span></p>
 </blockquote>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2011-04-16T15:42:00" pubdate>
-                            Sat 16 April 2011
-                        </time>
-                        <a href="../posts/Intent-Content-Providers-Processes-and-Threads笔记.html" rel="bookmark"><h1>Intent, Content Providers, Processes and Threads笔记</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <h1>intent激活components方法</h1>
-<h4>intent 激活 activity方法</h4>
-<blockquote>
-<p><font size="2"></font> <br />
-Context.startActivity() <br />
-Activity.startActivityForResult()
-先启动的Activity获取后启动的Activity所得的结果，并传递给前一个的Activity.setResult()方法。</p>
-</blockquote>
-<h4>intent 激活 service方法</h4>
-<blockquote>
-<p>Context.startService() <br />
-Context.bindService()
-绑定component和intent所描述的service，component启动时service会自动启动。</p>
-</blockquote>
-<h4>intent 激活 brodcast receiver</h4>
-<blockquote>
-<p>Context.sendBroadcast() <br />
-Context.sendOrderedBroadcast() <br />
-Context.sendStickyBroadcast()</p>
-</blockquote>
-<h1>intent 对象内容</h1>
-<h4>Component name</h4>
-<blockquote>
-<p>setComponent() <br />
-setClass() <br />
-setClassName() <br />
-getComponent()</p>
-</blockquote>
-<h4>Action 描述启动后component的动作</h4>
-<blockquote>
-<p>setAction() <br />
-getAction()</p>
-</blockquote>
-<h4>Data 描述动作的数据对象</h4>
-<blockquote>
-<p>包括数据类型（MIME media
-type）和数据URI ...</p></blockquote>
                     </section>
                 </article>
             </li>

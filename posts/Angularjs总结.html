@@ -6,7 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Lijax - 叶彦波</title>
+        <title>    Angularjs总结
+</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
                     <link rel="stylesheet" href="../theme/css/normalize.css">
@@ -48,56 +49,48 @@
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
-                        <time class="post-time" datetime="2010-05-03T22:17:00" pubdate>
-                            Mon 03 May 2010
+                        <time class="post-time" datetime="2013-08-30T20:30:00" pubdate>
+                            Fri 30 August 2013
                         </time>
-                        <a href="../posts/非常好玩的视频.html" rel="bookmark"><h1>非常好玩的视频</h1></a>
+                        <a href="../posts/Angularjs总结.html" rel="bookmark"><h1>Angularjs总结</h1></a>
                     </header>
-                    <section class="post-content">
-                        <p>非常形象的描述功夫网的视频，还有神兽。。呵呵</p>
-<p>
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="500" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
-<param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="src" value="http://www.youtube.com/v/dWfUOG0EA9w&amp;hl=zh_CN&amp;fs=1&amp;color1=0x2b405b&amp;color2=0x6b8ab6"></param><param name="allowfullscreen" value="true"></param>
 
-<embed type="application/x-shockwave-flash" width="540" height="385" src="http://www.youtube.com/v/dWfUOG0EA9w&amp;hl=zh_CN&amp;fs=1&amp;color1=0x2b405b&amp;color2=0x6b8ab6" allowscriptaccess="always" allowfullscreen="true">
-</embed>
-</object>
-</p>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2010-05-03T23:49:00" pubdate>
-                            Mon 03 May 2010
-                        </time>
-                        <a href="../posts/韩寒厦门大学演讲.html" rel="bookmark"><h1>韩寒厦门大学演讲</h1></a>
-                    </header>
                     <section class="post-content">
-                        <p>
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="400" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
-<param name="align" value="middle"></param><param name="src" value="http://player.youku.com/player.php/sid/XMTU0NTA2NjE2/v.swf"></param><param name="quality" value="high"></param>
-<embed type="application/x-shockwave-flash" width="480" height="400" src="http://player.youku.com/player.php/sid/XMTU0NTA2NjE2/v.swf" quality="high" align="middle">
-</embed>
-</object>
-</p>
+                        <p>Angularjs是谷歌开发的前端MVC框架，使得网页动态数据显示和后台数据交互之间、以及用户交互、业务逻辑的实现更加简单。</p>
+<p>总结几个概念：</p>
+<ul>
+<li>Directive（指令）：Angularjs中实现自定义的HTML标签元素（如可重用的网页模块），也作为属性或class实现相应的DOM操作功能，总之，所有的DOM操作必须要用Drective来实现；</li>
+<li>Control（控件）：用来对数据Model进行操作，实现业务逻辑和后台数据交互，Control需要绑定到DOM中的一块元素，并作用于这一块DOM元素；</li>
+<li>Scope（作用域）：用来绑定数据Model，每一个Control绑定的元素块都产生一个对应的Scope，Control和绑定的元素形成层级嵌套结构，对应的Scope中的Model也形成一中继承关系，子Scope可访问父级的数据，也可同名覆盖；</li>
+<li>Model（数据）：在Control中作为对应的Scope的属性，可以是基本数据类型，可以是对象，也可以是函数，在Control所对应的DOM块中则可以直接访问，不需要用Scope；</li>
+<li>Template（模板）：包含Control和数据Model绑定的DOM代码片段或片段文件；</li>
+<li>Service（服务）：用来提供全局的通用的服务方法，通过工厂的模式实现。</li>
+</ul>
                     </section>
+                    <hr/>
+                    <aside class="post-meta">
+                        <p>Category: <a href="../category/ji-suan-ji.html">计算机</a></p>
+                                            </aside>
+                    <hr/>
+                    <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'yeyanbo';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
                 </article>
             </li>
-            <hr/>
-                    </ol>
-                <div class="paginator">
-                                                <a href="../author/xie-yan-bo4.html">
-                        <i class="icon-circle-arrow-left"></i>
-                    </a>
-                                        Page 5 / 5
-                    </div>
-        
+        </ol>
     </div>
         </div>
 

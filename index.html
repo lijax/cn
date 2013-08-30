@@ -51,6 +51,29 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
+                        <time class="post-time" datetime="2013-08-30T20:30:00" pubdate>
+                            Fri 30 August 2013
+                        </time>
+                        <a href="./posts/Angularjs总结.html" rel="bookmark"><h1>Angularjs总结</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>Angularjs是谷歌开发的前端MVC框架，使得网页动态数据显示和后台数据交互之间、以及用户交互、业务逻辑的实现更加简单。</p>
+<p>总结几个概念：</p>
+<ul>
+<li>Directive（指令）：Angularjs中实现自定义的HTML标签元素（如可重用的网页模块），也作为属性或class实现相应的DOM操作功能，总之，所有的DOM操作必须要用Drective来实现；</li>
+<li>Control（控件）：用来对数据Model进行操作，实现业务逻辑和后台数据交互，Control需要绑定到DOM中的一块元素，并作用于这一块DOM元素；</li>
+<li>Scope（作用域）：用来绑定数据Model，每一个Control绑定的元素块都产生一个对应的Scope，Control和绑定的元素形成层级嵌套结构，对应的Scope中的Model也形成一中继承关系，子Scope可访问父级的数据，也可同名覆盖；</li>
+<li>Model（数据）：在Control中作为对应的Scope的属性，可以是基本数据类型，可以是对象，也可以是函数，在Control所对应的DOM块中则可以直接访问，不需要用Scope；</li>
+<li>Template（模板）：包含Control和数据Model绑定的DOM代码片段或片段文件；</li>
+<li>Service（服务）：用来提供全局的通用的服务方法，通过工厂的模式实现。</li>
+</ul>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
                         <time class="post-time" datetime="2012-12-08T13:04:00" pubdate>
                             Sat 08 December 2012
                         </time>
@@ -383,24 +406,6 @@ sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
 <p>说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。</p>
 <p>好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步<a href="http://www.bioinformatics.tk">论坛</a>查看）</p>
 <div class="highlight"><pre><span class="x"> $gm_update_frequency ...</span></pre></div>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2011-05-13T23:52:00" pubdate>
-                            Fri 13 May 2011
-                        </time>
-                        <a href="./posts/今天的演讲稿.html" rel="bookmark"><h1>今天的演讲稿</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <h1 style="text-align: center;">Love our country rationally</h1>
-<p>When I entered college, I became interested in reading news about our
-country. I only read those positive news, and refused to read negative
-ones. If someone showed me dark side of our country, I would naturally
-defend or find excuse for it. I also liked ...</p>
                     </section>
                 </article>
             </li>
