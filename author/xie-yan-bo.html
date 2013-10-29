@@ -220,6 +220,28 @@ type）和数据URI ...</p></blockquote>
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
+                        <time class="post-time" datetime="2013-10-29T16:00:00" pubdate>
+                            Tue 29 October 2013
+                        </time>
+                        <a href="../posts/JDBC-mysql-中文查询问题.html" rel="bookmark"><h1>JDBC mysql 中文查询问题</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>在使用JDBC进行mysql连接查询时，经常会遇到中文编码的问题。若使用LIKE查询语句实现关键词搜索，由于连接和存储的字符编码不一致，返回的结果中除了有包含关键词的记录外，还包含许多其他的记录。</p>
+<p>解决的办法是：给JDBC的url传入编码参数，如：</p>
+<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">test</span><span class="o">?</span><span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="o">&amp;</span><span class="n">connectionCollation</span><span class="o">=</span><span class="n">utf8_general_ci</span><span class="o">&amp;</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+</pre></div>
+
+
+<p>若放到XML配置文件中，注意将&amp;符号进行转义：</p>
+<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">tongyimenhu</span><span class="o">?</span><span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="o">&amp;</span><span class="n">amp</span><span class="o">;</span><span class="n">connectionCollation</span><span class="o">=</span><span class="n">utf8_general_ci</span><span class="o">&amp;</span><span class="n">amp</span><span class="o">;</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+</pre></div>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
                         <time class="post-time" datetime="2010-07-01T21:08:00" pubdate>
                             Thu 01 July 2010
                         </time>
@@ -305,48 +327,6 @@ user@IP:远程文件路径</span></p>
 <p>最后重启nautilus</p>
 <div class="highlight"><pre><span class="n">pkill</span> <span class="n">nautilus</span>
 </pre></div>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2011-04-25T20:50:00" pubdate>
-                            Mon 25 April 2011
-                        </time>
-                        <a href="../posts/WordPress连接微博android客户端.html" rel="bookmark"><h1>WordPress连接微博android客户端</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p>一直想写一个连接多个微博平台的android程序，苦于自己水平不足。</p>
-<p>昨天有时间利用<a href="http://www.smyx.net/" title="水脉烟香">水脉烟香</a>的<a href="http://www.smyx.net/wp-connect.html">WordPress连接微博</a>插件写了个android客户端，也算练练手。</p>
-<p>功能很简单，只是做了个简陋界面，用了下POST协议。</p>
-<p>程序界面如图：</p>
-<p><img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2011/04/Screenshot.png" title="Screenshot" /></p>
-<blockquote>
-<h3>程序用户：</h3>
-<ol>
-<li><span style="color: #ff0000;">有wordpress独立博客；</span></li>
-<li><span style="color: #ff0000;">安装了水脉烟香的连接微博插件，并绑定了相应账号；</span></li>
-<li><span style="color: #ff0000;">按插件要求创建了独立的微博发布页面。</span></li>
-</ol>
-<h3>程序使用：</h3>
-<ol>
-<li><span style="color: #ff0000;">微博连接地址输入你的微博发布页面地址；</span></li>
-<li><span style="color: #ff0000;">密码为插件配置界面所设置的密码。</span></li>
-</ol>
-<h3>TODO：</h3>
-<ol>
-<li><span style="color: #0000ff;">添加上传图片功能，图片上传到wordpress博客，然后发送到微博消息；</span></li>
-<li><span style="color: #0000ff;">错误处理，用户体验方面优化；</span></li>
-<li><span style="color: #0000ff;">界面做好看点，地址和密码放设置里面，保存。</span></li>
-</ol>
-</blockquote>
-<p>下载地址：<a href="http://www.yeyanbo.com/wp-content/uploads/2011/04/WPConnect.apk" title="WPConnect.apk">WPConnect.apk</a></p>
-<blockquote>
-<p><span style="text-decoration: underline;"><span style="color: #ff00ff;">更新： 只留消息发送界面，其他信息放入设置界面</span></span></p>
-<p><span style="color: #ff00ff;">下载地址：<a href="http://www.yeyanbo.com/wp-content/uploads/2011/04/WPConnect0.1.apk" title="WPConnect0.1.apk">WPConnect0.1.apk</a></span></p>
-</blockquote>
                     </section>
                 </article>
             </li>

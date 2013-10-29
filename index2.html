@@ -51,6 +51,27 @@
                         <li>
                 <article class="post-entry">
                     <header class="entry-header">
+                        <time class="post-time" datetime="2011-06-05T15:42:00" pubdate>
+                            Sun 05 June 2011
+                        </time>
+                        <a href="./posts/没干正事.html" rel="bookmark"><h1>没干正事</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <p>最近好像一直没干正事。</p>
+<p>虽然天天照常在实验室，九点到，十一点回，作息很规律，上班时间也是在忙自己的课题或者学习新的技术（和专业相关的），但是，可能是没有明显的结果吧，总觉得没做多少事情。反倒是下班之后，忙一些自己喜欢的事情比较有结果，好像反而成了这段时间的主要工作。</p>
+<h5>discuz!X论坛谷歌地图</h5>
+<p>以前本科快毕业的时候玩过一段时间的discuz论坛程序。那时高山师兄建的一个生物信息学的谷歌群总是上不去，我就想建一个论坛方便交流，所以就用discuz7.2建了一个<a href="http://www.bioinformatics.tk" title="生物信息学天空">生物信息学天空</a>论坛，后来师兄去了美国，上的人也少了，就一直没管。</p>
+<p>最近熊杰等兄弟搞个了旅游论坛<a href="http://www.69city.net">69city</a>，需要实现些地图定位的功能，俺也就参加了，顺便整理了一下之前自己搞的那个。</p>
+<p>说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。</p>
+<p>好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步<a href="http://www.bioinformatics.tk">论坛</a>查看）</p>
+<div class="highlight"><pre><span class="x"> $gm_update_frequency ...</span></pre></div>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+                        <li>
+                <article class="post-entry">
+                    <header class="entry-header">
                         <time class="post-time" datetime="2011-05-13T23:52:00" pubdate>
                             Fri 13 May 2011
                         </time>
@@ -260,42 +281,6 @@ provider之外的components，components之间的传递信息，可指定激活�
 <li><strong>申明所含components</strong>：所有的components包含在\&lt;application>\&lt;/application>中，activity用\&lt;activity>\&lt;/activity>申明，service用\&lt;service>\&lt;/service>申明；</li>
 <li>
 <p><strong>申明components的能力</strong>：在activity中采用\&lt;intent-filter>\&lt;/intent-filter>描述所能接受的intent，包含action和category，action=android.intent.action ...</p></li></ul>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2010-11-27T10:45:00" pubdate>
-                            Sat 27 November 2010
-                        </time>
-                        <a href="./posts/科研必备网络技能之使用代理.html" rel="bookmark"><h1>科研必备网络技能之使用代理</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <h1><strong>使用代理</strong></h1>
-<p>你可能遇到过这样一些情况：</p>
-<ol>
-<li>正在用google搜索某篇文献，你不觉得其中关键词有什么不妥，但突然出现“此网页无法访问”，之后十多分钟你都不能使用google（你是否认为google服务器挂了）；</li>
-<li>终于找到这篇文献，但是发现链接打不开（你一般会认为这个链接已经死掉）；</li>
-<li>你打开了这个链接，但是因为你不在学校或者研究所，你发现这篇文献需要付费才能下载；</li>
-<li>在校外无法访问校内的BBS；</li>
-<li>你想在国外网站上申请一个什么服务，但是发现你所在的IP无法申请。</li>
-<li>你想玩国外的某个网游，譬如魔兽世界美服，你的IP无法登录。</li>
-<li>你听说过的国外的许多优秀网络服务无法访问。</li>
-</ol>
-<p>还有很多……</p>
-<p>你需要使用代理。</p>
-<p><strong>什么是代理？</strong></p>
-<p>代理相当于你的电脑和所访问的网络服务之间的一台服务器，你通过这台服务器间接访问你所请求的网络服务，而不是直接访问。</p>
-<p><img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/11/翻墙原理.jpg" title="翻墙原理" /></p>
-<p>图片转自可能吧</p>
-<p><strong>代理的用途</strong></p>
-<ol>
-<li>突破服务提供者对访问者IP的限制，3、 4、
-    5、6属于这种情况。你想下载某个杂志上的文章，发现学校或研究所里面可以下载，在外面就需要你付费了，那是因为学校或研究所已经对杂志付过费，这样，学校或研究所里面的IP都被允许免费下载。如果你使用其中的一个IP作为代理，便能免费下载（吴跃伟老师有提供武汉分院图书馆的代理地址）。456同样的道理，只不过换一个IP。</li>
-<li>透过防火墙对某些网站的封锁（各种技术，不细说），1、
-    2 ...</li></ol>
                     </section>
                 </article>
             </li>
