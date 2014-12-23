@@ -9,17 +9,17 @@
         <title>Lijax</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-                    <link rel="stylesheet" href="./theme/css/normalize.css">
+            <link rel="stylesheet" href="./theme/css/normalize.css">
         <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="./theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="./theme/css/main.css">
-        
+
     <link rel="stylesheet" href="./theme/css/blog.css">
     <link rel="stylesheet" href="./theme/css/github.css">
-                <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
-                        <script src="./theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="./theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,54 +27,82 @@
         <![endif]-->
 
         <div id="wrapper">
-                <header id="sidebar" class="side-shadow">
+<header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href="."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <a id="site-title" href="."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
         <p id="site-desc"></p>
     </hgroup>
     <nav>
         <ul id="nav-links">
-                                        <li><a href="./pages/about.html">关于Lijax</a></li>
-                            <li><a href="./pages/bioinformatics-resources.html">生物信息学资源</a></li>
-                                </ul>
+                <li><a href="./../en">英文</a></li>
+                <li><a href="./">中文</a></li>
+                <li><a href="./contact">联系</a></li>
+        </ul>
     </nav>
-    <footer id="site-info">
+<footer id="site-info">
     <p>
         Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
-    </p>
-    <p>
-        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
     </p>
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2014-12-23T19:46:00" pubdate>
+                            二 23 十二月 2014
+                        </time>
+                        <a href="./posts/升级到Ubuntu 14.04系统后github无法使用的问题.html" rel="bookmark"><h1>升级到Ubuntu 14.04系统后github无法使用的问题</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h2>问题描述</h2>
+<p>从Ubuntu 12.04升级到14.04之后，github的SSH认证总是失败，重新添加新的Key也不行。</p>
+<div class="highlight"><pre><span class="err">$</span><span class="n">git</span> <span class="n">push</span>
+<span class="n">Permission</span> <span class="n">denied</span> <span class="p">(</span><span class="n">publickey</span><span class="p">).</span>
+<span class="nl">fatal:</span> <span class="n">Could</span> <span class="n">not ...</span></pre></div>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2014-12-20T23:00:00" pubdate>
+                            六 20 十二月 2014
+                        </time>
+                        <a href="./posts/phppgadmin安装后无法访问问题.html" rel="bookmark"><h1>phppgadmin安装后无法访问问题</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h2>问题描述</h2>
+<h3>问题1</h3>
+<p>安装完phppgadmin之后无法通过<a href="http://localhost/phppgadmin">http://localhost/phppgadmin</a>地址进行访问，显示Not Found。</p>
+<h3>问题2</h3>
+<p>登录显示phppgadmin Login disallowed for security ...</p>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2013-10-29T16:00:00" pubdate>
-                            Tue 29 October 2013
+                            二 29 十月 2013
                         </time>
                         <a href="./posts/JDBC-mysql-中文查询问题.html" rel="bookmark"><h1>JDBC mysql 中文查询问题</h1></a>
                     </header>
                     <section class="post-content">
                         <p>在使用JDBC进行mysql连接查询时，经常会遇到中文编码的问题。若使用LIKE查询语句实现关键词搜索，由于连接和存储的字符编码不一致，返回的结果中除了有包含关键词的记录外，还包含许多其他的记录。</p>
 <p>解决的办法是：给JDBC的url传入编码参数，如：</p>
-<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">test</span><span class="o">?</span><span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="o">&amp;</span><span class="n">connectionCollation</span><span class="o">=</span><span class="n">utf8_general_ci</span><span class="o">&amp;</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
-</pre></div>
-
-
-<p>若放到XML配置文件中，注意将&amp;符号进行转义：</p>
-<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">tongyimenhu</span><span class="o">?</span><span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="o">&amp;</span><span class="n">amp</span><span class="o">;</span><span class="n">connectionCollation</span><span class="o">=</span><span class="n">utf8_general_ci</span><span class="o">&amp;</span><span class="n">amp</span><span class="o">;</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
-</pre></div>
+<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">test</span><span class="o">?</span><span class="n">useUnicode ...</span></pre></div>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2013-08-30T20:30:00" pubdate>
-                            Fri 30 August 2013
+                            五 30 八月 2013
                         </time>
                         <a href="./posts/Angularjs总结.html" rel="bookmark"><h1>Angularjs总结</h1></a>
                     </header>
@@ -83,45 +111,78 @@
 <p>总结几个概念：</p>
 <ul>
 <li>Directive（指令）：Angularjs中实现自定义的HTML标签元素（如可重用的网页模块），也作为属性或class实现相应的DOM操作功能，总之，所有的DOM操作必须要用Drective来实现；</li>
-<li>Control（控件）：用来对数据Model进行操作，实现业务逻辑和后台数据交互，Control需要绑定到DOM中的一块元素，并作用于这一块DOM元素；</li>
-<li>Scope（作用域）：用来绑定数据Model，每一个Control绑定的元素块都产生一个对应的Scope，Control和绑定的元素形成层级嵌套结构，对应的Scope中的Model也形成一中继承关系，子Scope可访问父级的数据，也可同名覆盖；</li>
-<li>Model（数据）：在Control中作为对应的Scope的属性，可以是基本数据类型，可以是对象，也可以是函数，在Control所对应的DOM块中则可以直接访问，不需要用Scope；</li>
-<li>Template（模板）：包含Control和数据Model绑定的DOM代码片段或片段文件；</li>
-<li>Service（服务）：用来提供全局的通用的服务方法，通过工厂的模式实现。</li>
-</ul>
+<li>Control（控件）：用来对数据Model进行操作 ...</li></ul>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2013-04-19T20:00:00" pubdate>
+                            五 19 四月 2013
+                        </time>
+                        <a href="./posts/Linux系统程序安装方法汇总.html" rel="bookmark"><h1>Linux系统程序安装方法汇总</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h2>源代码安装</h2>
+<p>Linux是开源系统，大部分程序都是以开源的形式发布的。最原始的安装Linux程序的方法是直接下载程序的源代码，在本机上编译安装，但是这种方式操作起来比较繁琐，例如需要解决各种第三方源代码依赖的问题。因为源码安装遇到的问题各式各样，这里只是列出常见的安装步骤，大概可分为五部：</p>
+<ol>
+<li>
+<p>首先从互联网上获取源代码压缩包，一般是以 <code>tar.gz</code> 为扩展名的文件 ...</p></li></ol>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2013-01-08T15:00:00" pubdate>
+                            二 08 一月 2013
+                        </time>
+                        <a href="./posts/python包管理工具pip安装方法.html" rel="bookmark"><h1>python包管理工具pip安装方法</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h2>包管理工具</h2>
+<p>就像linux系统软件包的管理（debian系列的<code>apt</code>，redhat系列的<code>yum</code>）一样，几乎每种开源语言都有一个模块或包管理工具：</p>
+<table>
+<thead>
+<tr>
+<th align="left">语言</th>
+<th align="left">包管理工具</th>
+<th align="left">包主站</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">python</td>
+<td align="left">pip/easy_install</td>
+<td align="left">Python ...</td></tr></tbody></table>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2012-12-08T13:04:00" pubdate>
-                            Sat 08 December 2012
+                            六 08 十二月 2012
                         </time>
                         <a href="./posts/Ubuntu-Linux默认程序关联文件.html" rel="bookmark"><h1>Ubuntu/Linux默认程序关联文件</h1></a>
                     </header>
                     <section class="post-content">
                         <p>今天想修改默认的文本编辑器gedit为sublime_text,更改了几次都没成功，原来关联文件一共有三个，记录以备用。</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">gnome</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span> <span class="n">or</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span>  
-<span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">mimeapps</span><span class="p">.</span><span class="n">list</span>  
-<span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span>
-</pre></div>
-
-
-<p>用文本编辑器更改上述三个文件中的信息，替换gedit.desktop为sublime-text-2.desktop（确认/usr/share/applications/下的名称）</p>
-<p>最后重启nautilus</p>
-<div class="highlight"><pre><span class="n">pkill</span> <span class="n">nautilus</span>
-</pre></div>
+<span class="o">~/</span><span class="p">.</span><span class="n">local ...</span></pre></div>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2012-10-06T13:56:00" pubdate>
-                            Sat 06 October 2012
+                            六 06 十月 2012
                         </time>
                         <a href="./posts/蒙特卡罗模拟-可汗学院示例.html" rel="bookmark"><h1>蒙特卡罗模拟-可汗学院示例</h1></a>
                     </header>
@@ -134,295 +195,23 @@ Academy</a>）上看到的一个有趣的蒙特卡罗模拟的代码示例，蛮
 <h2><a href="http://www.khanacademy.org/cs/basketball-decisions/1024155511">Basketball Decisions</a></h2>
 <iframe style="width: 580px; height: 460px; border: 0px;" src="http://www.khanacademy.org/cs/basketball-decisions/1024155511/embedded?editor=yes&amp;buttons=yes&amp;author=yes" frameborder="0" scrolling="auto"></iframe>
 
-<p>Made using: <a href="http://www.khanacademy.org/cs">Khan Academy Computer Science</a>.</p>
+<p>Made using: <a href="http://www.khanacademy.org/cs">Khan Academy Computer ...</a></p>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2012-04-22T20:05:00" pubdate>
-                            Sun 22 April 2012
-                        </time>
-                        <a href="./posts/Eutils用法总结.html" rel="bookmark"><h1>Eutils用法总结</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p>好久没更新了，这里都长草了。。。</p>
-<p>总结下Eutils的用法，参考《<a href="http://www.ncbi.nlm.nih.gov/books/NBK25500/">E-utilities Quick
-Start</a>》，没时间看英文的可以参考下。</p>
-<h2>简介</h2>
-<p>Eutils全称是The Entrez Programming Utilities
-(E-utilities)，是由八个服务器端程序组成的一套编程工具，它提供用于访问NCBI
-Entrez查询和数据库系统的稳定接口。
-这八个工具包括Einfo、ESearch、EPost、ESummary、EFetch、ELink、EGQuery、ESpell（详见表1）。通过这些工具，你可以访问NCBI
-Entrez所包含的序列、三维结构、文献等所有38个数据库。</p>
-<p><strong><span style="text-align: center;">表1. 八种Eutils工具</span></strong></p>
-<table class="aligncenter" cellspacing="0" cellpadding="4">
-<tbody>
-<tr>
-<th>
-<span style="font-family: 'DejaVu Serif Condensed', serif;">Eutils
-Name</span>
-
-</th>
-<th>
-<span style="font-family: 'DejaVu Serif Condensed', serif;">Entry</span>
-
-</th>
-<th>
-<span style="font-family: 'DejaVu Serif Condensed', serif;">Required
-Parameters</span>
-
-</th>
-<th>
-<span style="font-family: 'DejaVu Serif Condensed', serif;">Optional
-Parameters</span>
-
-</th>
-<th>
-<span style="font-family: 'DejaVu Serif Condensed', serif;">Return
-Format</span>
-
-</th>
-</tr>
-<tr>
-<td>
-<span style="color: #985735;"><span style="font-family: inherit;"><span style="font-size: small;">EInfo</span></span></span>
-
-</td>
-<td>
-<span><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: x-small;">einfo.fcgi</span></span></span>
-
-</td>
-<td valign="TOP">
-</td>
-<td valign="TOP">
-<span style="font-family: 'DejaVu Serif Condensed', serif;">db</span>
-
-</td>
-<td>
-<span><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: x-small;">xml</span></span></span>
-
-</td>
-</tr>
-<tr>
-<td>
-<span style="color: #985735;"><span style="font-family: inherit;"><span style="font-size: small;">ESearch</span></span></span>
-
-</td>
-<td>
-<span><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: x-small;">esearch.fcgi ...</span></span></span></td></tr></tbody></table>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2012-02-23T15:20:00" pubdate>
-                            Thu 23 February 2012
-                        </time>
-                        <a href="./posts/博客搬家.html" rel="bookmark"><h1>博客搬家</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p>好久没更新博客了</p>
-<p>以前一直托管在免费的空间上，经常宕机，也懒得去管</p>
-<p>反正自己也没时间去写，访问量也不是很多，宕不宕机好像没多大关系</p>
-<p>再说本来就是免费的，有得用就不错了</p>
-<p>不过同时还建了一个论坛在托管在上面，人数现在也很多了，总这样断断续续似乎不大好</p>
-<p>于是终于狠心，花了几百大洋，搬了个比较靠谱的空间</p>
-<p>测试一下，哦，耶！</p>
-<p><img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2012/02/aaa-300x295.png" title="aaa" /></p>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2011-06-18T21:44:00" pubdate>
-                            Sat 18 June 2011
-                        </time>
-                        <a href="./posts/生物信息学相关期刊feed汇总.html" rel="bookmark"><h1>生物信息学相关期刊feed汇总</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <dt>
-[Advances in Bioinformatics][]
-</dt>
-
-<dd>
-<http://www.hindawi.com/RSS.aspx?journalx3dabi>
-</dd>
-
-<dt>
-[Algorithms for molecular biology][]
-</dt>
-
-<dd>
-<http://www.almob.org/rss/>
-</dd>
-
-<dt>
-[BioData Mining][]
-</dt>
-
-<dd>
-<http://www.biodatamining.org/rss>
-</dd>
-
-<dt>
-[Bioinformatics][]
-</dt>
-
-<dd>
-<http://bioinformatics.oupjournals.org/rss/recent.xml>
-</dd>
-
-<dt>
-[Bioinformatics and Biology Insights][]
-</dt>
-
-<dd>
-<http://la-press.com/feed.php?journal_id=39>
-</dd>
-
-<dt>
-[Biomedical engineering online][]
-</dt>
-
-<dd>
-<http://www.biomedical-engineering-online.com/rss/>
-</dd>
-
-<dt>
-[Biometrics][]
-</dt>
-
-<dd>
-<http://www3.interscience.wiley.com/rss/journal/118538342>
-</dd>
-
-<dt>
-[Biometrika][]
-</dt>
-
-<dd>
-<http://biomet.oupjournals.org/rss/recent.xml>
-</dd>
-
-<dt>
-[Biostatistics][]
-</dt>
-
-<dd>
-<http://biostatistics.oxfordjournals.org/rss/current.xml>
-</dd>
-
-<dt>
-[BMC bioinformatics][]
-</dt>
-
-<dd>
-<http://www.biomedcentral.com/bmcbioinformatics/rss/>
-</dd>
-
-<dt>
-[BMC genomics][]
-</dt>
-
-<dd>
-<http://www.biomedcentral.com/bmcgenomics/rss>
-</dd>
-
-<dt>
-[BMC medical informatics and decision making][]
-</dt>
-
-<dd>
-<http://www.biomedcentral.com/bmcmedinformdecismak/rss/>
-</dd>
-
-<dt>
-[Briefings in bioinformatics][]
-</dt>
-
-<dd>
-<http://bib.oxfordjournals.org/rss/current.xml>
-</dd>
-
-<dt>
-[British Journal of Healthcare Computing and Information Management][]
-</dt>
-
-<dd>
-<http://www.bjhcim.co.uk/news.xml>
-</dd>
-
-<dt>
-[Cancer informatics][]
-</dt>
-
-<dd>
-<http://la-press.com/feed.php?journal_id=10>
-</dd>
-
-<dt>
-[Computers, informatics, nursing][]
-</dt>
-
-<dd>
-<http://194.66.22.134/rss/journals//00024665/current.rss>
-</dd>
-
-<dt>
-[Database: The Journal of ...</dt>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                        <li>
-                <article class="post-entry">
-                    <header class="entry-header">
-                        <time class="post-time" datetime="2011-06-10T19:21:00" pubdate>
-                            Fri 10 June 2011
-                        </time>
-                        <a href="./posts/继续玩谷歌吉他.html" rel="bookmark"><h1>继续玩谷歌吉他</h1></a>
-                    </header>
-                    <section class="post-content">
-                        <p>爱谷歌，爱生活，把谷歌吉他搬到自己的博客继续玩。  </p>
-<iframe src="/guitar/google-guitar.htm" height="350px" width="660px" style="overflow:hidden" frameborder="0"></iframe>
-
-<p>之前把代码搞下来在自己电脑上玩，总发不出声音，看了<a href="http://www.zhujun.org/web/google-doodle-guitar-source-code/">朱俊独立博客</a>才知道是flash的安全问题，上传到网站上就没这个问题了。</p>
-<p>搜罗一下曲子：<br />
-小星星：<br />
-1155665 4433221 5544332 5544332 1155665 4433221<br />
-沧海一笑：<br />
-pouyt uytew wewetyuop ppouyty<br />
-欢乐颂：<br />
-uuiooiuyttyuuyyuuiooiuyttyuytt<br />
-爱情买卖：<br />
-hhdsd ssdsas gggdgggd hddsd hhdsd ssdsas gggdgggd jggdh dhkkdhk jhjhgsd
-sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
-月亮之上：<br />
-3686 3675 53686565326553 3686 89865 36865326656<br />
-两只老虎 ...</p>
-                    </section>
-                </article>
-            </li>
-            <hr/>
-                    </ol>
-                <div class="paginator">
-                        Page 1 / 5
-                            <a href="./index2.html">
-                    <i class="icon-circle-arrow-right"></i>
+        </ol>
+        <div class="paginator">
+            Page 1 / 5
+                <a href="./index2.html">
+                    <i class="fa fa-arrow-circle-right"></i>
                 </a>
-                    </div>
-        
+        </div>
+
     </div>
         </div>
 
-        <script>
+<script>
     var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

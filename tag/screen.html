@@ -9,17 +9,17 @@
         <title>Lijax - screen</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-                    <link rel="stylesheet" href="../theme/css/normalize.css">
+            <link rel="stylesheet" href="../theme/css/normalize.css">
         <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="../theme/css/main.css">
-        
+
     <link rel="stylesheet" href="../theme/css/blog.css">
     <link rel="stylesheet" href="../theme/css/github.css">
-                <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
-                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,32 +27,30 @@
         <![endif]-->
 
         <div id="wrapper">
-                <header id="sidebar" class="side-shadow">
+<header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <a id="site-title" href=".."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
         <p id="site-desc"></p>
     </hgroup>
     <nav>
         <ul id="nav-links">
-                                        <li><a href="../pages/about.html">关于Lijax</a></li>
-                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
-                                </ul>
+                <li><a href="../../en">英文</a></li>
+                <li><a href="../">中文</a></li>
+                <li><a href="../contact">联系</a></li>
+        </ul>
     </nav>
-    <footer id="site-info">
+<footer id="site-info">
     <p>
         Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
-    </p>
-    <p>
-        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
     </p>
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2010-10-18T10:46:00" pubdate>
-                            Mon 18 October 2010
+                            一 18 十月 2010
                         </time>
                         <a href="../posts/Linux远程多任务不断线操作方法.html" rel="bookmark"><h1>Linux远程多任务不断线操作方法</h1></a>
                     </header>
@@ -60,37 +58,20 @@
                         <p>Linux 远程多任务不断线操作方法</p>
 <p>生物信息学经常会运行一些高计算量的程序，普通的计算机不能胜任，必须放在远程的高性能计算机上的运行。因此本地和远程之间的操作是非常频繁的事情。这些高计算量的程序可能运行几个小时，几天，甚至几个月，本地的计算机不可能一直开着，那么怎样实现本地与远程断开之后程序仍然运行呢？我们可以用screen命令实现。</p>
 <p>常用的三个命令：</p>
-<p>scp 实现本地与远程的文件传输</p>
-<p>ssh 登录远程linux系统</p>
-<p>screen 实现多任务后台运行</p>
-<p>步骤：</p>
-<p>1.将需要运行的文件和程序上传到服务器</p>
-<p><span style="color: #0000ff;">scp 本地文件路径
-user@IP:远程文件路径</span></p>
-<p>按提示输入密码后传送</p>
-<p><span style="color: #ff0000;">user@IP's password:</span></p>
-<p>2.登录远程服务器</p>
-<p><span style="color: #0000ff;">ssh user@IP</span></p>
-<p>按提示输入密码后登录</p>
-<p><span style="color: #ff0000;">user@IP's password:</span></p>
-<p>3.服务器后台运行程序</p>
-<p>输入<span style="color: #0000ff;">screen</span>命令进入后台程序运行</p>
-<p>screen命令行界面运行目标程序</p>
-<p>至此程序已经在后台开始运行</p>
-<p>怎样退出呢 ...</p>
+<p>scp 实现本地与远程的文件传输 ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                    </ol>
-                <div class="paginator">
-                        Page 1 / 1
-                    </div>
-        
+        </ol>
+        <div class="paginator">
+            Page 1 / 1
+        </div>
+
     </div>
         </div>
 
-        <script>
+<script>
     var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

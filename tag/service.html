@@ -9,17 +9,17 @@
         <title>Lijax - service</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-                    <link rel="stylesheet" href="../theme/css/normalize.css">
+            <link rel="stylesheet" href="../theme/css/normalize.css">
         <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="../theme/css/main.css">
-        
+
     <link rel="stylesheet" href="../theme/css/blog.css">
     <link rel="stylesheet" href="../theme/css/github.css">
-                <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
-                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,32 +27,30 @@
         <![endif]-->
 
         <div id="wrapper">
-                <header id="sidebar" class="side-shadow">
+<header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <a id="site-title" href=".."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
         <p id="site-desc"></p>
     </hgroup>
     <nav>
         <ul id="nav-links">
-                                        <li><a href="../pages/about.html">关于Lijax</a></li>
-                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
-                                </ul>
+                <li><a href="../../en">英文</a></li>
+                <li><a href="../">中文</a></li>
+                <li><a href="../contact">联系</a></li>
+        </ul>
     </nav>
-    <footer id="site-info">
+<footer id="site-info">
     <p>
         Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
-    </p>
-    <p>
-        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
     </p>
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-04-08T00:18:00" pubdate>
-                            Fri 08 April 2011
+                            五 08 四月 2011
                         </time>
                         <a href="../posts/android程序构成.html" rel="bookmark"><h1>android程序构成</h1></a>
                     </header>
@@ -65,30 +63,20 @@
 <li><strong>Content providers</strong>：提供数据操作，其他components通过
     ContentResolver层对content provider进行数据操作；</li>
 <li><strong>Broadcast
-    receivers</strong>：接收系统级别程序广播，没有用户界面，可在在提示栏创建显示信息，经常是激活activity和service的入口；</li>
-</ul>
-<h3>Intent</h3>
-<p>用来激活除content
-provider之外的components，components之间的传递信息，可指定激活某个特定component，也可通过intent-filter指定可激活的components类别。</p>
-<h3>Manifest</h3>
-<p>描述.apk程序包的信息</p>
-<ul>
-<li><strong>申明所含components</strong>：所有的components包含在\&lt;application>\&lt;/application>中，activity用\&lt;activity>\&lt;/activity>申明，service用\&lt;service>\&lt;/service>申明；</li>
-<li>
-<p><strong>申明components的能力</strong>：在activity中采用\&lt;intent-filter>\&lt;/intent-filter>描述所能接受的intent，包含action和category，action=android.intent.action ...</p></li></ul>
+    receivers</strong>：接收系统级别程序广播 ...</li></ul>
                     </section>
                 </article>
             </li>
             <hr/>
-                    </ol>
-                <div class="paginator">
-                        Page 1 / 1
-                    </div>
-        
+        </ol>
+        <div class="paginator">
+            Page 1 / 1
+        </div>
+
     </div>
         </div>
 
-        <script>
+<script>
     var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

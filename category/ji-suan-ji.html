@@ -9,17 +9,17 @@
         <title>Lijax - 计算机</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-                    <link rel="stylesheet" href="../theme/css/normalize.css">
+            <link rel="stylesheet" href="../theme/css/normalize.css">
         <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="../theme/css/main.css">
-        
+
     <link rel="stylesheet" href="../theme/css/blog.css">
     <link rel="stylesheet" href="../theme/css/github.css">
-                <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
-                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,54 +27,46 @@
         <![endif]-->
 
         <div id="wrapper">
-                <header id="sidebar" class="side-shadow">
+<header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <a id="site-title" href=".."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
         <p id="site-desc"></p>
     </hgroup>
     <nav>
         <ul id="nav-links">
-                                        <li><a href="../pages/about.html">关于Lijax</a></li>
-                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
-                                </ul>
+                <li><a href="../../en">英文</a></li>
+                <li><a href="../">中文</a></li>
+                <li><a href="../contact">联系</a></li>
+        </ul>
     </nav>
-    <footer id="site-info">
+<footer id="site-info">
     <p>
         Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
-    </p>
-    <p>
-        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
     </p>
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2013-10-29T16:00:00" pubdate>
-                            Tue 29 October 2013
+                            二 29 十月 2013
                         </time>
                         <a href="../posts/JDBC-mysql-中文查询问题.html" rel="bookmark"><h1>JDBC mysql 中文查询问题</h1></a>
                     </header>
                     <section class="post-content">
                         <p>在使用JDBC进行mysql连接查询时，经常会遇到中文编码的问题。若使用LIKE查询语句实现关键词搜索，由于连接和存储的字符编码不一致，返回的结果中除了有包含关键词的记录外，还包含许多其他的记录。</p>
 <p>解决的办法是：给JDBC的url传入编码参数，如：</p>
-<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">test</span><span class="o">?</span><span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="o">&amp;</span><span class="n">connectionCollation</span><span class="o">=</span><span class="n">utf8_general_ci</span><span class="o">&amp;</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
-</pre></div>
-
-
-<p>若放到XML配置文件中，注意将&amp;符号进行转义：</p>
-<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">tongyimenhu</span><span class="o">?</span><span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="o">&amp;</span><span class="n">amp</span><span class="o">;</span><span class="n">connectionCollation</span><span class="o">=</span><span class="n">utf8_general_ci</span><span class="o">&amp;</span><span class="n">amp</span><span class="o">;</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
-</pre></div>
+<div class="highlight"><pre><span class="n">jdbc</span><span class="o">:</span><span class="n">mysql</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3306</span><span class="o">/</span><span class="n">test</span><span class="o">?</span><span class="n">useUnicode ...</span></pre></div>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2013-08-30T20:30:00" pubdate>
-                            Fri 30 August 2013
+                            五 30 八月 2013
                         </time>
                         <a href="../posts/Angularjs总结.html" rel="bookmark"><h1>Angularjs总结</h1></a>
                     </header>
@@ -83,45 +75,32 @@
 <p>总结几个概念：</p>
 <ul>
 <li>Directive（指令）：Angularjs中实现自定义的HTML标签元素（如可重用的网页模块），也作为属性或class实现相应的DOM操作功能，总之，所有的DOM操作必须要用Drective来实现；</li>
-<li>Control（控件）：用来对数据Model进行操作，实现业务逻辑和后台数据交互，Control需要绑定到DOM中的一块元素，并作用于这一块DOM元素；</li>
-<li>Scope（作用域）：用来绑定数据Model，每一个Control绑定的元素块都产生一个对应的Scope，Control和绑定的元素形成层级嵌套结构，对应的Scope中的Model也形成一中继承关系，子Scope可访问父级的数据，也可同名覆盖；</li>
-<li>Model（数据）：在Control中作为对应的Scope的属性，可以是基本数据类型，可以是对象，也可以是函数，在Control所对应的DOM块中则可以直接访问，不需要用Scope；</li>
-<li>Template（模板）：包含Control和数据Model绑定的DOM代码片段或片段文件；</li>
-<li>Service（服务）：用来提供全局的通用的服务方法，通过工厂的模式实现。</li>
-</ul>
+<li>Control（控件）：用来对数据Model进行操作 ...</li></ul>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2012-12-08T13:04:00" pubdate>
-                            Sat 08 December 2012
+                            六 08 十二月 2012
                         </time>
                         <a href="../posts/Ubuntu-Linux默认程序关联文件.html" rel="bookmark"><h1>Ubuntu/Linux默认程序关联文件</h1></a>
                     </header>
                     <section class="post-content">
                         <p>今天想修改默认的文本编辑器gedit为sublime_text,更改了几次都没成功，原来关联文件一共有三个，记录以备用。</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">gnome</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span> <span class="n">or</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span>  
-<span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="n">mimeapps</span><span class="p">.</span><span class="n">list</span>  
-<span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">applications</span><span class="o">/</span><span class="k">default</span><span class="p">.</span><span class="n">list</span>
-</pre></div>
-
-
-<p>用文本编辑器更改上述三个文件中的信息，替换gedit.desktop为sublime-text-2.desktop（确认/usr/share/applications/下的名称）</p>
-<p>最后重启nautilus</p>
-<div class="highlight"><pre><span class="n">pkill</span> <span class="n">nautilus</span>
-</pre></div>
+<span class="o">~/</span><span class="p">.</span><span class="n">local ...</span></pre></div>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2012-10-06T13:56:00" pubdate>
-                            Sat 06 October 2012
+                            六 06 十月 2012
                         </time>
                         <a href="../posts/蒙特卡罗模拟-可汗学院示例.html" rel="bookmark"><h1>蒙特卡罗模拟-可汗学院示例</h1></a>
                     </header>
@@ -134,16 +113,16 @@ Academy</a>）上看到的一个有趣的蒙特卡罗模拟的代码示例，蛮
 <h2><a href="http://www.khanacademy.org/cs/basketball-decisions/1024155511">Basketball Decisions</a></h2>
 <iframe style="width: 580px; height: 460px; border: 0px;" src="http://www.khanacademy.org/cs/basketball-decisions/1024155511/embedded?editor=yes&amp;buttons=yes&amp;author=yes" frameborder="0" scrolling="auto"></iframe>
 
-<p>Made using: <a href="http://www.khanacademy.org/cs">Khan Academy Computer Science</a>.</p>
+<p>Made using: <a href="http://www.khanacademy.org/cs">Khan Academy Computer ...</a></p>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-06-10T19:21:00" pubdate>
-                            Fri 10 June 2011
+                            五 10 六月 2011
                         </time>
                         <a href="../posts/继续玩谷歌吉他.html" rel="bookmark"><h1>继续玩谷歌吉他</h1></a>
                     </header>
@@ -154,47 +133,32 @@ Academy</a>）上看到的一个有趣的蒙特卡罗模拟的代码示例，蛮
 <p>之前把代码搞下来在自己电脑上玩，总发不出声音，看了<a href="http://www.zhujun.org/web/google-doodle-guitar-source-code/">朱俊独立博客</a>才知道是flash的安全问题，上传到网站上就没这个问题了。</p>
 <p>搜罗一下曲子：<br />
 小星星：<br />
-1155665 4433221 5544332 5544332 1155665 4433221<br />
-沧海一笑：<br />
-pouyt uytew wewetyuop ppouyty<br />
-欢乐颂：<br />
-uuiooiuyttyuuyyuuiooiuyttyuytt<br />
-爱情买卖：<br />
-hhdsd ssdsas gggdgggd hddsd hhdsd ssdsas gggdgggd jggdh dhkkdhk jhjhgsd
-sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
-月亮之上：<br />
-3686 3675 53686565326553 3686 89865 36865326656<br />
-两只老虎 ...</p>
+1155665 4433221 5544332 5544332 ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-06-05T15:42:00" pubdate>
-                            Sun 05 June 2011
+                            日 05 六月 2011
                         </time>
                         <a href="../posts/没干正事.html" rel="bookmark"><h1>没干正事</h1></a>
                     </header>
                     <section class="post-content">
                         <p>最近好像一直没干正事。</p>
 <p>虽然天天照常在实验室，九点到，十一点回，作息很规律，上班时间也是在忙自己的课题或者学习新的技术（和专业相关的），但是，可能是没有明显的结果吧，总觉得没做多少事情。反倒是下班之后，忙一些自己喜欢的事情比较有结果，好像反而成了这段时间的主要工作。</p>
-<h5>discuz!X论坛谷歌地图</h5>
-<p>以前本科快毕业的时候玩过一段时间的discuz论坛程序。那时高山师兄建的一个生物信息学的谷歌群总是上不去，我就想建一个论坛方便交流，所以就用discuz7.2建了一个<a href="http://www.bioinformatics.tk" title="生物信息学天空">生物信息学天空</a>论坛，后来师兄去了美国，上的人也少了，就一直没管。</p>
-<p>最近熊杰等兄弟搞个了旅游论坛<a href="http://www.69city.net">69city</a>，需要实现些地图定位的功能，俺也就参加了，顺便整理了一下之前自己搞的那个。</p>
-<p>说实话以前没搞过php，javascript懂一点，谷歌地图没沾过，discuz插件就更没搞过了。一切都是从头开始学，也算有激情，discuz插件开发文档，谷歌地图文档，还好同时有点其他的编程基础，也算顺利。借鉴了别人的一些插件代码，东拼西凑，总算做出了些功能。</p>
-<p>好像还没有人做过的discuz的实时消息地图功能，这里共享一下代码（只提供php实现生成论坛json数据的功能，前端显示请移步<a href="http://www.bioinformatics.tk">论坛</a>查看）</p>
-<div class="highlight"><pre><span class="x"> $gm_update_frequency ...</span></pre></div>
+<h5>discuz!X论坛谷歌地图 ...</h5>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-05-10T09:37:00" pubdate>
-                            Tue 10 May 2011
+                            二 10 五月 2011
                         </time>
                         <a href="../posts/file-roller压缩包中文乱码解决方法.html" rel="bookmark"><h1>file roller压缩包中文乱码解决方法</h1></a>
                     </header>
@@ -203,61 +167,39 @@ sssasdg djjgsd dhkkdhk ;l;lkl ;;lkllkj gdghh<br />
 <p>~~~~ {lang="LINUX"}
 sudo apt-get remove rar
 sudo apt-get remove unrar</p>
-<div class="highlight"><pre><span class="err">安裝</span><span class="n">p7zip</span><span class="err">、</span><span class="n">p7zip</span><span class="o">-</span><span class="n">rar</span>
-
-<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span><span class="p">}</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">p7zip</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">p7zip</span><span class="o">-</span><span class="n">rar</span>
-</pre></div>
+<div class="highlight"><pre><span class="err">安裝</span><span class="n">p7zip</span><span class="err">、</span><span class="n">p7zip ...</span></pre></div>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-05-08T13:12:00" pubdate>
-                            Sun 08 May 2011
+                            日 08 五月 2011
                         </time>
                         <a href="../posts/virtualbox-ose4.0.4-安装及运行错误.html" rel="bookmark"><h1>virtualbox-ose4.0.4 安装及运行错误</h1></a>
                     </header>
                     <section class="post-content">
                         <p>今天debian升级后，重装virtualbox-ose报了个错</p>
 <p>~~~~ {lang="LINUX" colla="+"}
-Starting VirtualBox kernel modulesNo suitable module for running kernel found ...
-failed!
-failed!</p>
-<div class="highlight"><pre><span class="err">但是程序还是安装成功了，也就没管它</span>
-
-<span class="err">直接运行，添加虚拟机，启动时，还是报错了，弹出两个窗口，大概如下</span>  
-<span class="err">窗口</span><span class="mi">1</span>
-
-<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span> <span class="n">colla</span><span class="o">=</span><span class="s">&quot;+&quot;</span><span class="p">}</span>
-<span class="n">result</span> <span class="n">code</span><span class="o">:</span><span class="n">NS_ERROR_FAILURE</span> <span class="p">(</span><span class="mh">0x80004005</span><span class="p">)</span>
-<span class="nl">component:</span><span class="n">VirtualBox</span>
-<span class="nl">interface:</span><span class="n">IVirtualBox</span> <span class="p">{</span><span class="mi">2158464</span><span class="n">a</span><span class="o">-</span><span class="n">f706</span><span class="o">-</span><span class="mi">414</span><span class="n">b</span><span class="o">-</span><span class="n">a8c4</span><span class="o">-</span><span class="n">fb589dfc6b62</span><span class="p">}</span>
-</pre></div>
-
-
-<p>窗口2</p>
-<p>~~~~ {lang="LINUX" colla="+"}
-kernel ...</p>
+Starting VirtualBox kernel modulesNo suitable module for running kernel found ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                    </ol>
-                <div class="paginator">
-                        Page 1 / 3
-                            <a href="../category/ji-suan-ji2.html">
-                    <i class="icon-circle-arrow-right"></i>
+        </ol>
+        <div class="paginator">
+            Page 1 / 3
+                <a href="../category/ji-suan-ji2.html">
+                    <i class="fa fa-arrow-circle-right"></i>
                 </a>
-                    </div>
-        
+        </div>
+
     </div>
         </div>
 
-        <script>
+<script>
     var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

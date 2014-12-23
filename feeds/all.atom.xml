@@ -1,5 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Lijax</title><link href="http://www.yeyanbo.com/cn/" rel="alternate"></link><link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" rel="self"></link><id>http://www.yeyanbo.com/cn/</id><updated>2013-10-29T16:00:00+08:00</updated><entry><title>JDBC mysql 中文查询问题</title><link href="http://www.yeyanbo.com/cn/posts/JDBC-mysql-%E4%B8%AD%E6%96%87%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98.html" rel="alternate"></link><updated>2013-10-29T16:00:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2013-10-29:posts/JDBC-mysql-中文查询问题.html</id><summary type="html">&lt;p&gt;在使用JDBC进行mysql连接查询时，经常会遇到中文编码的问题。若使用LIKE查询语句实现关键词搜索，由于连接和存储的字符编码不一致，返回的结果中除了有包含关键词的记录外，还包含许多其他的记录。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Lijax</title><link href="http://www.yeyanbo.com/cn/" rel="alternate"></link><link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" rel="self"></link><id>http://www.yeyanbo.com/cn/</id><updated>2014-12-23T19:46:00+08:00</updated><entry><title>升级到Ubuntu 14.04系统后github无法使用的问题</title><link href="http://www.yeyanbo.com/cn/posts/%E5%8D%87%E7%BA%A7%E5%88%B0Ubuntu%2014.04%E7%B3%BB%E7%BB%9F%E5%90%8Egithub%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98.html" rel="alternate"></link><updated>2014-12-23T19:46:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2014-12-23:posts/升级到Ubuntu 14.04系统后github无法使用的问题.html</id><summary type="html">&lt;h2&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;从Ubuntu 12.04升级到14.04之后，github的SSH认证总是失败，重新添加新的Key也不行。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt;
+&lt;span class="n"&gt;Permission&lt;/span&gt; &lt;span class="n"&gt;denied&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;publickey&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+&lt;span class="nl"&gt;fatal:&lt;/span&gt; &lt;span class="n"&gt;Could&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;repository&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+
+&lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;sure&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;have&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;correct&lt;/span&gt; &lt;span class="n"&gt;access&lt;/span&gt; &lt;span class="n"&gt;rights&lt;/span&gt;
+&lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;查看&lt;code&gt;~/.ssh&lt;/code&gt;目录可以看出目录中有多对key文件。工作中，你可能使用公用的github，也可能公司有自己搭建的私有代码托管gitlab，这就需要创建多对key，而每一对key文件对应着不同的服务器。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;aws_ec2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;  &lt;span class="n"&gt;gitshell&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pub&lt;/span&gt;    &lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gibh&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gitlab&lt;/span&gt;      &lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pub&lt;/span&gt;  &lt;span class="n"&gt;onecoao&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;
+&lt;span class="n"&gt;config&lt;/span&gt;       &lt;span class="n"&gt;git_skybit&lt;/span&gt;      &lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gibh&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gitlab&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pub&lt;/span&gt;  &lt;span class="n"&gt;known_hosts&lt;/span&gt;
+&lt;span class="n"&gt;gitshell&lt;/span&gt;     &lt;span class="n"&gt;git_skybit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pub&lt;/span&gt;  &lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;           &lt;span class="n"&gt;known_hosts&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;old&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;所以很有可能的情况是，key配置虽然正确，但是git命令在ssh连接时根本没有找到对应的key。&lt;/p&gt;
+&lt;h2&gt;系统环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu: 14.04&lt;/li&gt;
+&lt;li&gt;git: 1.9.1&lt;/li&gt;
+&lt;li&gt;ssh: OpenSSH_6.6.1p1 Ubuntu-2ubuntu2, OpenSSL 1.0.1f 6 Jan 2014&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;解决方法&lt;/h2&gt;
+&lt;p&gt;测试ssh发现，认证过程中ssh会读取两个配置文件，一个是自己配置的&lt;code&gt;~/.ssh/config&lt;/code&gt;，另一个是系统自带的&lt;code&gt;/etc/ssh/ssh_config&lt;/code&gt;。
+怎么让不同的服务器git访问使用不同key pair，就是这两个配置文件的一种功能，即通过配置文件指定每个Host对应的key文件。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;vT&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;span class="n"&gt;OpenSSH_6&lt;/span&gt;&lt;span class="mf"&gt;.6.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;OpenSSL&lt;/span&gt; &lt;span class="mf"&gt;1.0.1f&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;configuration&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Reading&lt;/span&gt; &lt;span class="n"&gt;configuration&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssh_config&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssh_config&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Applying&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Connecting&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;192.30.252.129&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="mf"&gt;22.&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Connection&lt;/span&gt; &lt;span class="n"&gt;established&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_dsa&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_dsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_ecdsa&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_ecdsa&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_ed25519&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;identity&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_ed25519&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cert&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Enabling&lt;/span&gt; &lt;span class="n"&gt;compatibility&lt;/span&gt; &lt;span class="n"&gt;mode&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;protocol&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Local&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;string&lt;/span&gt; &lt;span class="n"&gt;SSH&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;OpenSSH_6&lt;/span&gt;&lt;span class="mf"&gt;.6.1&lt;/span&gt;&lt;span class="n"&gt;p1&lt;/span&gt; &lt;span class="n"&gt;Ubuntu&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2u&lt;/span&gt;&lt;span class="n"&gt;buntu2&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Remote&lt;/span&gt; &lt;span class="n"&gt;protocol&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;software&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;libssh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.6.0&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;libssh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.6.0&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_KEXINIT&lt;/span&gt; &lt;span class="n"&gt;sent&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_KEXINIT&lt;/span&gt; &lt;span class="n"&gt;received&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;kex&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="n"&gt;aes128&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ctr&lt;/span&gt; &lt;span class="n"&gt;hmac&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;sha1&lt;/span&gt; &lt;span class="n"&gt;none&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;kex&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="n"&gt;aes128&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ctr&lt;/span&gt; &lt;span class="n"&gt;hmac&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;sha1&lt;/span&gt; &lt;span class="n"&gt;none&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;sending&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_KEX_ECDH_INIT&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;expecting&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_KEX_ECDH_REPLY&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Server&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;RSA&lt;/span&gt; &lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;27&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ac&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a5&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;76&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;63&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;56&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;eb&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;a6&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;known&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="n"&gt;matches&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;RSA&lt;/span&gt; &lt;span class="n"&gt;host&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Found&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;known_hosts&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;ssh_rsa_verify&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;signature&lt;/span&gt; &lt;span class="n"&gt;correct&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_NEWKEYS&lt;/span&gt; &lt;span class="n"&gt;sent&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;expecting&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_NEWKEYS&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_NEWKEYS&lt;/span&gt; &lt;span class="n"&gt;received&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Roaming&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;allowed&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_SERVICE_REQUEST&lt;/span&gt; &lt;span class="n"&gt;sent&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;SSH2_MSG_SERVICE_ACCEPT&lt;/span&gt; &lt;span class="n"&gt;received&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Authentications&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;can&lt;/span&gt; &lt;span class="k"&gt;continue&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;publickey&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Next&lt;/span&gt; &lt;span class="n"&gt;authentication&lt;/span&gt; &lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;publickey&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Trying&lt;/span&gt; &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Trying&lt;/span&gt; &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_dsa&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Trying&lt;/span&gt; &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_ecdsa&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;Trying&lt;/span&gt; &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_ed25519&lt;/span&gt;
+&lt;span class="nl"&gt;debug1:&lt;/span&gt; &lt;span class="n"&gt;No&lt;/span&gt; &lt;span class="n"&gt;more&lt;/span&gt; &lt;span class="n"&gt;authentication&lt;/span&gt; &lt;span class="n"&gt;methods&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;try&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;Permission&lt;/span&gt; &lt;span class="n"&gt;denied&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;publickey&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;查看一下这两个文件的内容：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt; 
+&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="n"&gt;gitlab&lt;/span&gt;
+    &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+    &lt;span class="n"&gt;HostName&lt;/span&gt; &lt;span class="mf"&gt;192.168.1.214&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gibh&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gitlab&lt;/span&gt;
+
+&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;
+    &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+    &lt;span class="n"&gt;HostName&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;
+
+&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="n"&gt;gitshell&lt;/span&gt;
+    &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+    &lt;span class="n"&gt;HostName&lt;/span&gt; &lt;span class="n"&gt;gitshell&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gitshell&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ssh_config&lt;/span&gt;
+&lt;span class="cp"&gt;# This is the ssh client system-wide configuration file.  See&lt;/span&gt;
+&lt;span class="cp"&gt;# ssh_config(5) for more information.  This file provides defaults for&lt;/span&gt;
+&lt;span class="cp"&gt;# users, and the values can be changed in per-user configuration files&lt;/span&gt;
+&lt;span class="cp"&gt;# or on the command line.&lt;/span&gt;
+
+&lt;span class="cp"&gt;# Configuration data is parsed as follows:&lt;/span&gt;
+&lt;span class="cp"&gt;#  1. command line options&lt;/span&gt;
+&lt;span class="cp"&gt;#  2. user-specific file&lt;/span&gt;
+&lt;span class="cp"&gt;#  3. system-wide file&lt;/span&gt;
+&lt;span class="cp"&gt;# Any configuration value is only changed the first time it is set.&lt;/span&gt;
+&lt;span class="cp"&gt;# Thus, host-specific definitions should be at the beginning of the&lt;/span&gt;
+&lt;span class="cp"&gt;# configuration file, and defaults at the end.&lt;/span&gt;
+
+&lt;span class="cp"&gt;# Site-wide defaults for some commonly used options.  For a comprehensive&lt;/span&gt;
+&lt;span class="cp"&gt;# list of available options, their meanings and defaults, please see the&lt;/span&gt;
+&lt;span class="cp"&gt;# ssh_config(5) man page.&lt;/span&gt;
+&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="cp"&gt;#   ForwardAgent no&lt;/span&gt;
+&lt;span class="cp"&gt;#   ForwardX11 no&lt;/span&gt;
+&lt;span class="cp"&gt;#   ForwardX11Trusted yes&lt;/span&gt;
+&lt;span class="cp"&gt;#   RhostsRSAAuthentication no&lt;/span&gt;
+&lt;span class="cp"&gt;#   RSAAuthentication yes&lt;/span&gt;
+&lt;span class="cp"&gt;#   PasswordAuthentication yes&lt;/span&gt;
+&lt;span class="cp"&gt;#   HostbasedAuthentication no&lt;/span&gt;
+&lt;span class="cp"&gt;#   GSSAPIAuthentication no&lt;/span&gt;
+&lt;span class="cp"&gt;#   GSSAPIDelegateCredentials no&lt;/span&gt;
+&lt;span class="cp"&gt;#   GSSAPIKeyExchange no&lt;/span&gt;
+&lt;span class="cp"&gt;#   GSSAPITrustDNS no&lt;/span&gt;
+&lt;span class="cp"&gt;#   BatchMode no&lt;/span&gt;
+&lt;span class="cp"&gt;#   CheckHostIP yes&lt;/span&gt;
+&lt;span class="cp"&gt;#   AddressFamily any&lt;/span&gt;
+&lt;span class="cp"&gt;#   ConnectTimeout 0&lt;/span&gt;
+&lt;span class="cp"&gt;#   StrictHostKeyChecking ask&lt;/span&gt;
+&lt;span class="cp"&gt;#   IdentityFile ~/.ssh/identity&lt;/span&gt;
+&lt;span class="cp"&gt;#   IdentityFile ~/.ssh/id_rsa&lt;/span&gt;
+&lt;span class="cp"&gt;#   IdentityFile ~/.ssh/id_dsa&lt;/span&gt;
+&lt;span class="cp"&gt;#   Port 22&lt;/span&gt;
+&lt;span class="cp"&gt;#   Protocol 2,1&lt;/span&gt;
+&lt;span class="cp"&gt;#   Cipher 3des&lt;/span&gt;
+&lt;span class="cp"&gt;#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc&lt;/span&gt;
+&lt;span class="cp"&gt;#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160&lt;/span&gt;
+&lt;span class="cp"&gt;#   EscapeChar ~&lt;/span&gt;
+&lt;span class="cp"&gt;#   Tunnel no&lt;/span&gt;
+&lt;span class="cp"&gt;#   TunnelDevice any:any&lt;/span&gt;
+&lt;span class="cp"&gt;#   PermitLocalCommand no&lt;/span&gt;
+&lt;span class="cp"&gt;#   VisualHostKey no&lt;/span&gt;
+&lt;span class="cp"&gt;#   ProxyCommand ssh -q -W %h:%p gateway.example.com&lt;/span&gt;
+&lt;span class="cp"&gt;#   RekeyLimit 1G 1h&lt;/span&gt;
+    &lt;span class="n"&gt;SendEnv&lt;/span&gt; &lt;span class="n"&gt;LANG&lt;/span&gt; &lt;span class="n"&gt;LC_&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+    &lt;span class="n"&gt;HashKnownHosts&lt;/span&gt; &lt;span class="n"&gt;yes&lt;/span&gt;
+    &lt;span class="n"&gt;GSSAPIAuthentication&lt;/span&gt; &lt;span class="n"&gt;yes&lt;/span&gt;
+    &lt;span class="n"&gt;GSSAPIDelegateCredentials&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;每一个Host代表一个服务器配置的开始。HostName参数指定服务器地址，IdentityFile参数指定所要用到的key文件。&lt;/p&gt;
+&lt;p&gt;第一个文件是自定义配置的，是升级后从12.04版本保留下来的，可以看出Host后面为服务器的名称，下面的HostName指定了服务器地址。而第二个文件为14.04系统自带的配置，这里Host后面用星号代替，而后面启用和没启用的参数中却没有HostName。&lt;/p&gt;
+&lt;p&gt;再看上面的ssh测试结果，本次测试中，ssh使用了系统配置文件&lt;code&gt;/etc/ssh/ssh_config&lt;/code&gt;中的第19行所对应的Host配置，从而最终选择了默认的&lt;code&gt;~/.ssh/id_rsa&lt;/code&gt;文件，而自定义配置文件&lt;code&gt;~/.ssh/config&lt;/code&gt;未能产生效果。&lt;/p&gt;
+&lt;p&gt;是否在14.04中，服务器地址应该配置在Host后面？这样猜测不是没有道理的，星号正好可以在ssh连接时，作为服务器筛选的通配符使用。&lt;/p&gt;
+&lt;p&gt;那么修改一下&lt;code&gt;~/.ssh/config&lt;/code&gt;，将HostName去掉，并将地址放到Host后面，修改后内容如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="mf"&gt;192.168.1.214&lt;/span&gt;
+    &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gibh&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gitlab&lt;/span&gt;
+
+&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+    &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;
+
+&lt;span class="n"&gt;Host&lt;/span&gt; &lt;span class="n"&gt;gitshell&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+    &lt;span class="n"&gt;User&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+    &lt;span class="n"&gt;IdentityFile&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gitshell&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;再测试ssh，测试结果如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="nx"&gt;ssh&lt;/span&gt; &lt;span class="na"&gt;-vT&lt;/span&gt; &lt;span class="nx"&gt;git&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="nx"&gt;github.com&lt;/span&gt;
+&lt;span class="nx"&gt;OpenSSH_6.6.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;OpenSSL&lt;/span&gt; &lt;span class="mf"&gt;1.0.1&lt;/span&gt;&lt;span class="nb"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="nx"&gt;Jan&lt;/span&gt; &lt;span class="mi"&gt;2014&lt;/span&gt;
+&lt;span class="nx"&gt;debug1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Reading&lt;/span&gt; &lt;span class="nx"&gt;configuration&lt;/span&gt; &lt;span class="kd"&gt;data&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;home&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;yeyanbo&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;.ssh&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;config&lt;/span&gt;
+&lt;span class="nx"&gt;debug1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;home&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;yeyanbo&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;.ssh&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;config&lt;/span&gt; &lt;span class="nb"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Applying&lt;/span&gt; &lt;span class="nx"&gt;options&lt;/span&gt; &lt;span class="nb"&gt;for&lt;/span&gt; &lt;span class="nx"&gt;github.com&lt;/span&gt;
+&lt;span class="nx"&gt;debug1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Reading&lt;/span&gt; &lt;span class="nx"&gt;configuration&lt;/span&gt; &lt;span class="kd"&gt;data&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;etc&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;ssh&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;ssh_config&lt;/span&gt;
+&lt;span class="nx"&gt;debug1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;etc&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;ssh&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;ssh_config&lt;/span&gt; &lt;span class="nb"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Applying&lt;/span&gt; &lt;span class="nx"&gt;options&lt;/span&gt; &lt;span class="nb"&gt;for&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="nx"&gt;debug1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;Connecting&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;github.com&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;192.30.252.128&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; port 22.
+debug1: Connection established.
+debug1: identity file /home/yeyanbo/.ssh/id_rsa.github type 1
+debug1: identity file /home/yeyanbo/.ssh/id_rsa.github-cert type -1
+debug1: Enabling compatibility mode for protocol 2.0
+debug1: Local version string SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2
+debug1: Remote protocol version 2.0, remote software version libssh-0.6.0
+debug1: no match: libssh-0.6.0
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: server-&amp;gt;client aes128-ctr hmac-sha1 none
+debug1: kex: client-&amp;gt;server aes128-ctr hmac-sha1 none
+debug1: sending SSH2_MSG_KEX_ECDH_INIT
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: RSA 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+debug1: Host &amp;#39;github.com&amp;#39; is known and matches the RSA host key.
+debug1: Found key in /home/yeyanbo/.ssh/known_hosts:3
+debug1: ssh_rsa_verify: signature correct
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: Roaming not allowed by server
+debug1: SSH2_MSG_SERVICE_REQUEST sent
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering RSA public key: /home/yeyanbo/.ssh/id_rsa.github
+debug1: Server accepts key: pkalg ssh-rsa blen 279
+debug1: key_parse_private2: missing begin marker
+debug1: key_parse_private_pem: PEM_read_PrivateKey failed
+debug1: read PEM private key done: type &lt;span class="nt"&gt;&amp;lt;unknown&amp;gt;&lt;/span&gt;
+Enter passphrase for key &amp;#39;/home/yeyanbo/.ssh/id_rsa.github&amp;#39;: 
+debug1: key_parse_private2: missing begin marker
+debug1: read PEM private key done: type RSA
+debug1: Authentication succeeded (publickey).
+Authenticated to github.com (&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;192.30.252.128&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;:22).
+debug1: channel 0: new &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;client&lt;/span&gt;&lt;span class="na"&gt;-session&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;
+debug1: Entering interactive session.
+debug1: Sending environment.
+debug1: Sending env LANG = zh_CN.UTF-8
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+Hi lijax! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 3312, received 1768 bytes, in 0.6 seconds
+Bytes per second: sent 5392.4, received 2878.5
+debug1: Exit status 1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可以看出已经成功找到&lt;code&gt;~/.ssh/config&lt;/code&gt;中github的配置，并找到&lt;code&gt;~/.ssh/id_rsa.github&lt;/code&gt;秘钥文件。&lt;/p&gt;
+&lt;p&gt;再进行简短测试，认证成功:)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ssh&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="n"&gt;passphrase&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="n"&gt;passphrase&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
+&lt;span class="n"&gt;Hi&lt;/span&gt; &lt;span class="n"&gt;lijax&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;You&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ve&lt;/span&gt; &lt;span class="n"&gt;successfully&lt;/span&gt; &lt;span class="n"&gt;authenticated&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;but&lt;/span&gt; &lt;span class="n"&gt;GitHub&lt;/span&gt; &lt;span class="n"&gt;does&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;provide&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt; &lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="ssh"></category><category term="ssh_config"></category><category term="github"></category><category term="gitlab"></category></entry><entry><title>phppgadmin安装后无法访问问题</title><link href="http://www.yeyanbo.com/cn/posts/phppgadmin%E5%AE%89%E8%A3%85%E5%90%8E%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98.html" rel="alternate"></link><updated>2014-12-20T23:00:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2014-12-20:posts/phppgadmin安装后无法访问问题.html</id><summary type="html">&lt;h2&gt;问题描述&lt;/h2&gt;
+&lt;h3&gt;问题1&lt;/h3&gt;
+&lt;p&gt;安装完phppgadmin之后无法通过&lt;a href="http://localhost/phppgadmin"&gt;http://localhost/phppgadmin&lt;/a&gt;地址进行访问，显示Not Found。&lt;/p&gt;
+&lt;h3&gt;问题2&lt;/h3&gt;
+&lt;p&gt;登录显示phppgadmin Login disallowed for security reasons.&lt;/p&gt;
+&lt;h2&gt;安装环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu 14.04&lt;/li&gt;
+&lt;li&gt;Postgresql 9.3&lt;/li&gt;
+&lt;li&gt;phpPgAdmin 5.1&lt;/li&gt;
+&lt;li&gt;php 5.5.9&lt;/li&gt;
+&lt;li&gt;apache 2.4.7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;安装步骤&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;postgresql&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;phppgadmin&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;解决方法&lt;/h2&gt;
+&lt;h3&gt;问题1&lt;/h3&gt;
+&lt;p&gt;因为该版本的apache配置目录发生改变，而phppgadmin没有进行相应的调整。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt;
+&lt;span class="n"&gt;apache2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;    &lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;  &lt;span class="n"&gt;mods&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;  &lt;span class="n"&gt;sites&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;
+&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;  &lt;span class="n"&gt;envvars&lt;/span&gt;       &lt;span class="n"&gt;mods&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;    &lt;span class="n"&gt;sites&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;
+&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;          &lt;span class="n"&gt;magic&lt;/span&gt;         &lt;span class="n"&gt;ports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
+&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;phppgadmin&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如上所示按照sites目录的配置方式，conf也分成conf-available和conf-enabled。所以需要将conf.d目录下的phppgadmin拷贝到conf-available目录下，并在conf-enabled下创建软链接启用该配置。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;cp&lt;/span&gt; &lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;phppgadmin&lt;/span&gt; &lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;
+&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;yeyanbo&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;:/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;apache2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;ln&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="p"&gt;..&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;phppgadmin&lt;/span&gt; &lt;span class="n"&gt;phppgadmin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;conf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;重启apache&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt; &lt;span class="n"&gt;apache2&lt;/span&gt; &lt;span class="n"&gt;restart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;问题2&lt;/h3&gt;
+&lt;p&gt;编辑文件 &lt;code&gt;/etc/phppgadmin/config.ini.php&lt;/code&gt; ，将配置参数 &lt;code&gt;$conf['extra_login_security'] = true;&lt;/code&gt; 中true改为false，重启apache。&lt;/p&gt;</summary><category term="postgres"></category><category term="phppgadmin"></category><category term="apache"></category></entry><entry><title>JDBC mysql 中文查询问题</title><link href="http://www.yeyanbo.com/cn/posts/JDBC-mysql-%E4%B8%AD%E6%96%87%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98.html" rel="alternate"></link><updated>2013-10-29T16:00:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2013-10-29:posts/JDBC-mysql-中文查询问题.html</id><summary type="html">&lt;p&gt;在使用JDBC进行mysql连接查询时，经常会遇到中文编码的问题。若使用LIKE查询语句实现关键词搜索，由于连接和存储的字符编码不一致，返回的结果中除了有包含关键词的记录外，还包含许多其他的记录。&lt;/p&gt;
 &lt;p&gt;解决的办法是：给JDBC的url传入编码参数，如：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;jdbc&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3306&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;?&lt;/span&gt;&lt;span class="n"&gt;useUnicode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;connectionCollation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;utf8_general_ci&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;characterEncoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;UTF&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -16,7 +291,166 @@
 &lt;li&gt;Model（数据）：在Control中作为对应的Scope的属性，可以是基本数据类型，可以是对象，也可以是函数，在Control所对应的DOM块中则可以直接访问，不需要用Scope；&lt;/li&gt;
 &lt;li&gt;Template（模板）：包含Control和数据Model绑定的DOM代码片段或片段文件；&lt;/li&gt;
 &lt;li&gt;Service（服务）：用来提供全局的通用的服务方法，通过工厂的模式实现。&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Ubuntu/Linux默认程序关联文件</title><link href="http://www.yeyanbo.com/cn/posts/Ubuntu-Linux%E9%BB%98%E8%AE%A4%E7%A8%8B%E5%BA%8F%E5%85%B3%E8%81%94%E6%96%87%E4%BB%B6.html" rel="alternate"></link><updated>2012-12-08T13:04:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2012-12-08:posts/Ubuntu-Linux默认程序关联文件.html</id><summary type="html">&lt;p&gt;今天想修改默认的文本编辑器gedit为sublime_text,更改了几次都没成功，原来关联文件一共有三个，记录以备用。&lt;/p&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Linux系统程序安装方法汇总</title><link href="http://www.yeyanbo.com/cn/posts/Linux%E7%B3%BB%E7%BB%9F%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB.html" rel="alternate"></link><updated>2013-04-19T20:00:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2013-04-19:posts/Linux系统程序安装方法汇总.html</id><summary type="html">&lt;h2&gt;源代码安装&lt;/h2&gt;
+&lt;p&gt;Linux是开源系统，大部分程序都是以开源的形式发布的。最原始的安装Linux程序的方法是直接下载程序的源代码，在本机上编译安装，但是这种方式操作起来比较繁琐，例如需要解决各种第三方源代码依赖的问题。因为源码安装遇到的问题各式各样，这里只是列出常见的安装步骤，大概可分为五部：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先从互联网上获取源代码压缩包，一般是以 &lt;code&gt;tar.gz&lt;/code&gt; 为扩展名的文件。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;wget&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//www.example.com/example.tar.gz&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压文件，进入源代码目录：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;tar&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xzf&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译前配置，以检查当前编译环境，可以设置 &lt;code&gt;--prefix&lt;/code&gt; 参数来选定程序安装目录，默认一般为 &lt;code&gt;/usr/local/&lt;/code&gt; ：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;configure&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;prefix&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;opt&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装。因为一般都安装系统目录，所以需要管理员权限（命令前加 &lt;code&gt;sudo&lt;/code&gt; ），除非配置时 &lt;code&gt;--prefix&lt;/code&gt; 指定为个人目录：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;程序包安装&lt;/h2&gt;
+&lt;p&gt;和常见的windows程序安装包类似，通过源代码编译之后Linux程序也可以程序包的方式安装。不同Linux系统打包的方式有所不同，常见的可分为两类：基于dpkg打包方式的Debian系列（Debian、Ubuntu、Mint等），程序包扩展名为&lt;code&gt;.deb&lt;/code&gt;；和基于rpm打包方式的Redhat系列（Redhat、CentOS、Fedora等），程序包扩展名为&lt;code&gt;.rpm&lt;/code&gt;。和源码一样，这些程序包也需要单独从互联网上获取。下载完成之后，根据系统不同，可以用如下命令安装。&lt;/p&gt;
+&lt;p&gt;Debian系列：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;dpkg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deb&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;RedHat系列：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;rpm&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rpm&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;软件包仓库安装&lt;/h2&gt;
+&lt;p&gt;Linux相对于windows的一个好处是，由于大部分软件都是开源的，他们基本上都能在软件仓库找到并安装，而不需要手工下载然后再安装（当然现在windows也很流行这种模式，如以360软件管家为首的软件管理工具等等）。为了方便程序的发布传播、系统的升级，几乎每个发行版本都有自己的软件包仓库和对应的软件包管理工具，Debian系列的为apt，Redhat系列的为yum。所以只要找到需要安装的软件包的名字，基本上一个命令就能安装。以mysql为例：&lt;/p&gt;
+&lt;p&gt;Debian系列安装命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Redhat系列安装命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;yum&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;而很多时候你可能知道某个程序的名字，但是由于Linux系统版本不同，它的包名可能有区别，当然你可以谷歌查找。另一个方式是通过包管理工具检索：&lt;/p&gt;
+&lt;p&gt;Debian系列查找命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt; &lt;span class="n"&gt;search&lt;/span&gt; &lt;span class="n"&gt;mysql&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Redhat系列查找命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;cache&lt;/span&gt; &lt;span class="n"&gt;search&lt;/span&gt; &lt;span class="n"&gt;mysql&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;可能检索处很多，根据介绍找出对应的包名，即可用安装命令安装。&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Linux派系&lt;/th&gt;
+&lt;th&gt;源码安装&lt;/th&gt;
+&lt;th&gt;程序包安装&lt;/th&gt;
+&lt;th&gt;仓库安装&lt;/th&gt;
+&lt;th&gt;包检索&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Debian&lt;/td&gt;
+&lt;td&gt;make install&lt;/td&gt;
+&lt;td&gt;dpkg -i&lt;/td&gt;
+&lt;td&gt;apt-get install&lt;/td&gt;
+&lt;td&gt;apt-cache search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Redhat&lt;/td&gt;
+&lt;td&gt;make install&lt;/td&gt;
+&lt;td&gt;rpm -i&lt;/td&gt;
+&lt;td&gt;yum install&lt;/td&gt;
+&lt;td&gt;yum search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</summary><category term="Linux"></category><category term="程序安装"></category><category term="apt"></category><category term="yum"></category><category term="dpkg"></category><category term="rpm"></category></entry><entry><title>python包管理工具pip安装方法</title><link href="http://www.yeyanbo.com/cn/posts/python%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7pip%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.html" rel="alternate"></link><updated>2013-01-08T15:00:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2013-01-08:posts/python包管理工具pip安装方法.html</id><summary type="html">&lt;h2&gt;包管理工具&lt;/h2&gt;
+&lt;p&gt;就像linux系统软件包的管理（debian系列的&lt;code&gt;apt&lt;/code&gt;，redhat系列的&lt;code&gt;yum&lt;/code&gt;）一样，几乎每种开源语言都有一个模块或包管理工具：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="left"&gt;语言&lt;/th&gt;
+&lt;th align="left"&gt;包管理工具&lt;/th&gt;
+&lt;th align="left"&gt;包主站&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;python&lt;/td&gt;
+&lt;td align="left"&gt;pip/easy_install&lt;/td&gt;
+&lt;td align="left"&gt;Python Package Index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;perl&lt;/td&gt;
+&lt;td align="left"&gt;cpan&lt;/td&gt;
+&lt;td align="left"&gt;CPAN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;R&lt;/td&gt;
+&lt;td align="left"&gt;install.packages&lt;/td&gt;
+&lt;td align="left"&gt;CRAN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;Ruby&lt;/td&gt;
+&lt;td align="left"&gt;gem&lt;/td&gt;
+&lt;td align="left"&gt;RubyGems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;java&lt;/td&gt;
+&lt;td align="left"&gt;maven&lt;/td&gt;
+&lt;td align="left"&gt;Maven Central Repository&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;python起初使用&lt;code&gt;easy_install&lt;/code&gt;进行包的管理，&lt;code&gt;pip&lt;/code&gt;对它进行了很多改进，功能上更强大，所以现在一般使用&lt;code&gt;pip&lt;/code&gt;进行python包的管理。&lt;/p&gt;
+&lt;h2&gt;安装步骤&lt;/h2&gt;
+&lt;p&gt;安装环境：unbuntu&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;easy_install&lt;/code&gt; 包含在&lt;code&gt;python-setuptools&lt;/code&gt;中，首先用系统包管理工具安装&lt;code&gt;python-setuptools&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setuptools&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pip其实也是python的一个包，所以最后只需要用&lt;code&gt;easy_install&lt;/code&gt;安装&lt;code&gt;pip&lt;/code&gt; 即可：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;easy_install&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="python"></category><category term="easy_install"></category><category term="pip"></category></entry><entry><title>Ubuntu/Linux默认程序关联文件</title><link href="http://www.yeyanbo.com/cn/posts/Ubuntu-Linux%E9%BB%98%E8%AE%A4%E7%A8%8B%E5%BA%8F%E5%85%B3%E8%81%94%E6%96%87%E4%BB%B6.html" rel="alternate"></link><updated>2012-12-08T13:04:00+08:00</updated><author><name>叶彦波</name></author><id>tag:www.yeyanbo.com/cn,2012-12-08:posts/Ubuntu-Linux默认程序关联文件.html</id><summary type="html">&lt;p&gt;今天想修改默认的文本编辑器gedit为sublime_text,更改了几次都没成功，原来关联文件一共有三个，记录以备用。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;  
 &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mimeapps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;  
 &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;applications&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;

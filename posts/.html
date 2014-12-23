@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>    升级到Ubuntu 14.04系统后github无法使用的问题
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+            <link rel="stylesheet" href="../theme/css/normalize.css">
+        <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../theme/css/main.css">
+
+    <link rel="stylesheet" href="../theme/css/blog.css">
+    <link rel="stylesheet" href="../theme/css/github.css">
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper">
+<header id="sidebar" class="side-shadow">
+    <hgroup id="site-header">
+        <a id="site-title" href=".."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
+        <p id="site-desc"></p>
+    </hgroup>
+    <nav>
+        <ul id="nav-links">
+                <li><a href="../../en">英文</a></li>
+                <li><a href="../">中文</a></li>
+                <li><a href="../contact">联系</a></li>
+        </ul>
+    </nav>
+<footer id="site-info">
+    <p>
+        Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
+    </p>
+</footer></header>
+    <div id="post-container">
+        <ol id="post-list">
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2014-12-23T19:46:00" pubdate>
+                            二 23 十二月 2014
+                        </time>
+                        <a href="../posts/.html" rel="bookmark"><h1>升级到Ubuntu 14.04系统后github无法使用的问题</h1></a>
+                    </header>
+
+                    <section class="post-content">
+                        <h2>问题描述</h2>
+<p>从Ubuntu 12.04升级到14.04之后，github的SSH认证总是失败，重新添加新的Key也不行。</p>
+<div class="highlight"><pre><span class="err">$</span><span class="n">git</span> <span class="n">push</span>
+<span class="n">Permission</span> <span class="n">denied</span> <span class="p">(</span><span class="n">publickey</span><span class="p">).</span>
+<span class="nl">fatal:</span> <span class="n">Could</span> <span class="n">not</span> <span class="n">read</span> <span class="n">from</span> <span class="n">remote</span> <span class="n">repository</span><span class="p">.</span>
+
+<span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">access</span> <span class="n">rights</span>
+<span class="n">and</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">exists</span><span class="p">.</span>
+</pre></div>
+
+
+<p>查看<code>~/.ssh</code>目录可以看出目录中有多对key文件。工作中，你可能使用公用的github，也可能公司有自己搭建的私有代码托管gitlab，这就需要创建多对key，而每一对key文件对应着不同的服务器。</p>
+<div class="highlight"><pre><span class="err">$</span><span class="n">ls</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span>
+<span class="n">aws_ec2</span><span class="p">.</span><span class="n">pem</span>  <span class="n">gitshell</span><span class="p">.</span><span class="n">pub</span>    <span class="n">id_rsa</span><span class="p">.</span><span class="n">gibh</span><span class="p">.</span><span class="n">gitlab</span>      <span class="n">id_rsa</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">pub</span>  <span class="n">onecoao</span><span class="p">.</span><span class="n">pem</span>
+<span class="n">config</span>       <span class="n">git_skybit</span>      <span class="n">id_rsa</span><span class="p">.</span><span class="n">gibh</span><span class="p">.</span><span class="n">gitlab</span><span class="p">.</span><span class="n">pub</span>  <span class="n">known_hosts</span>
+<span class="n">gitshell</span>     <span class="n">git_skybit</span><span class="p">.</span><span class="n">pub</span>  <span class="n">id_rsa</span><span class="p">.</span><span class="n">github</span>           <span class="n">known_hosts</span><span class="p">.</span><span class="n">old</span>
+<span class="err">```</span><span class="n">shell</span>
+
+<span class="err">所以很有可能的情况是，</span><span class="n">key</span><span class="err">配置虽然正确，但是</span><span class="n">git</span><span class="err">命令在</span><span class="n">ssh</span><span class="err">连接时根本没有找到对应的</span><span class="n">key</span><span class="err">。</span>
+
+<span class="cp">## 系统环境</span>
+
+<span class="o">-</span> <span class="n">Ubuntu</span><span class="o">:</span> <span class="mf">14.04</span>
+<span class="o">-</span> <span class="n">git</span><span class="o">:</span> <span class="mf">1.9.1</span>
+<span class="o">-</span> <span class="n">ssh</span><span class="o">:</span> <span class="n">OpenSSH_6</span><span class="mf">.6.1</span><span class="n">p1</span> <span class="n">Ubuntu</span><span class="o">-</span><span class="mi">2u</span><span class="n">buntu2</span><span class="p">,</span> <span class="n">OpenSSL</span> <span class="mf">1.0.1f</span> <span class="mi">6</span> <span class="n">Jan</span> <span class="mi">2014</span>
+
+<span class="cp">## 解决方法</span>
+
+<span class="err">测试</span><span class="n">ssh</span><span class="err">发现，认证过程中</span><span class="n">ssh</span><span class="err">会读取两个配置文件，一个是自己配置的`</span><span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span><span class="err">`，另一个是系统自带的`</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_config</span><span class="err">`。</span>
+<span class="err">怎么让不同的服务器</span><span class="n">git</span><span class="err">访问使用不同</span><span class="n">key</span> <span class="n">pair</span><span class="err">，就是这两个配置文件的一种功能，即通过配置文件指定每个</span><span class="n">Host</span><span class="err">对应的</span><span class="n">key</span><span class="err">文件。</span>
+
+<span class="err">```</span><span class="n">shell</span>
+<span class="err">$</span><span class="n">ssh</span> <span class="o">-</span><span class="n">vT</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span>
+<span class="n">OpenSSH_6</span><span class="mf">.6.1</span><span class="p">,</span> <span class="n">OpenSSL</span> <span class="mf">1.0.1f</span> <span class="mi">6</span> <span class="n">Jan</span> <span class="mi">2014</span>
+<span class="nl">debug1:</span> <span class="n">Reading</span> <span class="n">configuration</span> <span class="n">data</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span>
+<span class="nl">debug1:</span> <span class="n">Reading</span> <span class="n">configuration</span> <span class="n">data</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_config</span>
+<span class="nl">debug1:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_config</span> <span class="n">line</span> <span class="mi">19</span><span class="o">:</span> <span class="n">Applying</span> <span class="n">options</span> <span class="k">for</span> <span class="o">*</span>
+<span class="nl">debug1:</span> <span class="n">Connecting</span> <span class="n">to</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span> <span class="p">[</span><span class="mf">192.30.252.129</span><span class="p">]</span> <span class="n">port</span> <span class="mf">22.</span>
+<span class="nl">debug1:</span> <span class="n">Connection</span> <span class="n">established</span><span class="p">.</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">-</span><span class="n">cert</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_dsa</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_dsa</span><span class="o">-</span><span class="n">cert</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ecdsa</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ecdsa</span><span class="o">-</span><span class="n">cert</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">identity</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="o">-</span><span class="n">cert</span> <span class="n">type</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nl">debug1:</span> <span class="n">Enabling</span> <span class="n">compatibility</span> <span class="n">mode</span> <span class="k">for</span> <span class="n">protocol</span> <span class="mf">2.0</span>
+<span class="nl">debug1:</span> <span class="n">Local</span> <span class="n">version</span> <span class="n">string</span> <span class="n">SSH</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="n">OpenSSH_6</span><span class="mf">.6.1</span><span class="n">p1</span> <span class="n">Ubuntu</span><span class="o">-</span><span class="mi">2u</span><span class="n">buntu2</span>
+<span class="nl">debug1:</span> <span class="n">Remote</span> <span class="n">protocol</span> <span class="n">version</span> <span class="mf">2.0</span><span class="p">,</span> <span class="n">remote</span> <span class="n">software</span> <span class="n">version</span> <span class="n">libssh</span><span class="o">-</span><span class="mf">0.6.0</span>
+<span class="nl">debug1:</span> <span class="n">no</span> <span class="n">match</span><span class="o">:</span> <span class="n">libssh</span><span class="o">-</span><span class="mf">0.6.0</span>
+<span class="nl">debug1:</span> <span class="n">SSH2_MSG_KEXINIT</span> <span class="n">sent</span>
+<span class="nl">debug1:</span> <span class="n">SSH2_MSG_KEXINIT</span> <span class="n">received</span>
+<span class="nl">debug1:</span> <span class="n">kex</span><span class="o">:</span> <span class="n">server</span><span class="o">-&gt;</span><span class="n">client</span> <span class="n">aes128</span><span class="o">-</span><span class="n">ctr</span> <span class="n">hmac</span><span class="o">-</span><span class="n">sha1</span> <span class="n">none</span>
+<span class="nl">debug1:</span> <span class="n">kex</span><span class="o">:</span> <span class="n">client</span><span class="o">-&gt;</span><span class="n">server</span> <span class="n">aes128</span><span class="o">-</span><span class="n">ctr</span> <span class="n">hmac</span><span class="o">-</span><span class="n">sha1</span> <span class="n">none</span>
+<span class="nl">debug1:</span> <span class="n">sending</span> <span class="n">SSH2_MSG_KEX_ECDH_INIT</span>
+<span class="nl">debug1:</span> <span class="n">expecting</span> <span class="n">SSH2_MSG_KEX_ECDH_REPLY</span>
+<span class="nl">debug1:</span> <span class="n">Server</span> <span class="n">host</span> <span class="n">key</span><span class="o">:</span> <span class="n">RSA</span> <span class="mi">16</span><span class="o">:</span><span class="mi">27</span><span class="o">:</span><span class="n">ac</span><span class="o">:</span><span class="n">a5</span><span class="o">:</span><span class="mi">76</span><span class="o">:</span><span class="mi">28</span><span class="o">:</span><span class="mi">2</span><span class="n">d</span><span class="o">:</span><span class="mi">36</span><span class="o">:</span><span class="mi">63</span><span class="o">:</span><span class="mi">1</span><span class="n">b</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mi">4</span><span class="n">d</span><span class="o">:</span><span class="n">eb</span><span class="o">:</span><span class="n">df</span><span class="o">:</span><span class="n">a6</span><span class="o">:</span><span class="mi">48</span>
+<span class="nl">debug1:</span> <span class="n">Host</span> <span class="err">&#39;</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="err">&#39;</span> <span class="n">is</span> <span class="n">known</span> <span class="n">and</span> <span class="n">matches</span> <span class="n">the</span> <span class="n">RSA</span> <span class="n">host</span> <span class="n">key</span><span class="p">.</span>
+<span class="nl">debug1:</span> <span class="n">Found</span> <span class="n">key</span> <span class="n">in</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">known_hosts</span><span class="o">:</span><span class="mi">3</span>
+<span class="nl">debug1:</span> <span class="n">ssh_rsa_verify</span><span class="o">:</span> <span class="n">signature</span> <span class="n">correct</span>
+<span class="nl">debug1:</span> <span class="n">SSH2_MSG_NEWKEYS</span> <span class="n">sent</span>
+<span class="nl">debug1:</span> <span class="n">expecting</span> <span class="n">SSH2_MSG_NEWKEYS</span>
+<span class="nl">debug1:</span> <span class="n">SSH2_MSG_NEWKEYS</span> <span class="n">received</span>
+<span class="nl">debug1:</span> <span class="n">Roaming</span> <span class="n">not</span> <span class="n">allowed</span> <span class="n">by</span> <span class="n">server</span>
+<span class="nl">debug1:</span> <span class="n">SSH2_MSG_SERVICE_REQUEST</span> <span class="n">sent</span>
+<span class="nl">debug1:</span> <span class="n">SSH2_MSG_SERVICE_ACCEPT</span> <span class="n">received</span>
+<span class="nl">debug1:</span> <span class="n">Authentications</span> <span class="n">that</span> <span class="n">can</span> <span class="k">continue</span><span class="o">:</span> <span class="n">publickey</span>
+<span class="nl">debug1:</span> <span class="n">Next</span> <span class="n">authentication</span> <span class="n">method</span><span class="o">:</span> <span class="n">publickey</span>
+<span class="nl">debug1:</span> <span class="n">Trying</span> <span class="n">private</span> <span class="n">key</span><span class="o">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span>
+<span class="nl">debug1:</span> <span class="n">Trying</span> <span class="n">private</span> <span class="n">key</span><span class="o">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_dsa</span>
+<span class="nl">debug1:</span> <span class="n">Trying</span> <span class="n">private</span> <span class="n">key</span><span class="o">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ecdsa</span>
+<span class="nl">debug1:</span> <span class="n">Trying</span> <span class="n">private</span> <span class="n">key</span><span class="o">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span>
+<span class="nl">debug1:</span> <span class="n">No</span> <span class="n">more</span> <span class="n">authentication</span> <span class="n">methods</span> <span class="n">to</span> <span class="n">try</span><span class="p">.</span>
+<span class="n">Permission</span> <span class="n">denied</span> <span class="p">(</span><span class="n">publickey</span><span class="p">).</span>
+</pre></div>
+
+
+<p>查看一下这两个文件的内容：</p>
+<div class="highlight"><pre><span class="err">$</span><span class="n">cat</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span> 
+<span class="n">Host</span> <span class="n">gitlab</span>
+    <span class="n">User</span> <span class="n">git</span>
+    <span class="n">HostName</span> <span class="mf">192.168.1.214</span>
+    <span class="n">IdentityFile</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">gibh</span><span class="p">.</span><span class="n">gitlab</span>
+
+<span class="n">Host</span> <span class="n">github</span>
+    <span class="n">User</span> <span class="n">git</span>
+    <span class="n">HostName</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">IdentityFile</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">github</span>
+
+<span class="n">Host</span> <span class="n">gitshell</span>
+    <span class="n">User</span> <span class="n">git</span>
+    <span class="n">HostName</span> <span class="n">gitshell</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">IdentityFile</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">gitshell</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="err">$</span><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_config</span>
+<span class="cp"># This is the ssh client system-wide configuration file.  See</span>
+<span class="cp"># ssh_config(5) for more information.  This file provides defaults for</span>
+<span class="cp"># users, and the values can be changed in per-user configuration files</span>
+<span class="cp"># or on the command line.</span>
+
+<span class="cp"># Configuration data is parsed as follows:</span>
+<span class="cp">#  1. command line options</span>
+<span class="cp">#  2. user-specific file</span>
+<span class="cp">#  3. system-wide file</span>
+<span class="cp"># Any configuration value is only changed the first time it is set.</span>
+<span class="cp"># Thus, host-specific definitions should be at the beginning of the</span>
+<span class="cp"># configuration file, and defaults at the end.</span>
+
+<span class="cp"># Site-wide defaults for some commonly used options.  For a comprehensive</span>
+<span class="cp"># list of available options, their meanings and defaults, please see the</span>
+<span class="cp"># ssh_config(5) man page.</span>
+<span class="n">Host</span> <span class="o">*</span>
+<span class="cp">#   ForwardAgent no</span>
+<span class="cp">#   ForwardX11 no</span>
+<span class="cp">#   ForwardX11Trusted yes</span>
+<span class="cp">#   RhostsRSAAuthentication no</span>
+<span class="cp">#   RSAAuthentication yes</span>
+<span class="cp">#   PasswordAuthentication yes</span>
+<span class="cp">#   HostbasedAuthentication no</span>
+<span class="cp">#   GSSAPIAuthentication no</span>
+<span class="cp">#   GSSAPIDelegateCredentials no</span>
+<span class="cp">#   GSSAPIKeyExchange no</span>
+<span class="cp">#   GSSAPITrustDNS no</span>
+<span class="cp">#   BatchMode no</span>
+<span class="cp">#   CheckHostIP yes</span>
+<span class="cp">#   AddressFamily any</span>
+<span class="cp">#   ConnectTimeout 0</span>
+<span class="cp">#   StrictHostKeyChecking ask</span>
+<span class="cp">#   IdentityFile ~/.ssh/identity</span>
+<span class="cp">#   IdentityFile ~/.ssh/id_rsa</span>
+<span class="cp">#   IdentityFile ~/.ssh/id_dsa</span>
+<span class="cp">#   Port 22</span>
+<span class="cp">#   Protocol 2,1</span>
+<span class="cp">#   Cipher 3des</span>
+<span class="cp">#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc</span>
+<span class="cp">#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160</span>
+<span class="cp">#   EscapeChar ~</span>
+<span class="cp">#   Tunnel no</span>
+<span class="cp">#   TunnelDevice any:any</span>
+<span class="cp">#   PermitLocalCommand no</span>
+<span class="cp">#   VisualHostKey no</span>
+<span class="cp">#   ProxyCommand ssh -q -W %h:%p gateway.example.com</span>
+<span class="cp">#   RekeyLimit 1G 1h</span>
+    <span class="n">SendEnv</span> <span class="n">LANG</span> <span class="n">LC_</span><span class="o">*</span>
+    <span class="n">HashKnownHosts</span> <span class="n">yes</span>
+    <span class="n">GSSAPIAuthentication</span> <span class="n">yes</span>
+    <span class="n">GSSAPIDelegateCredentials</span> <span class="n">no</span>
+</pre></div>
+
+
+<p>每一个Host代表一个服务器配置的开始。HostName参数指定服务器地址，IdentityFile参数指定所要用到的key文件。</p>
+<p>第一个文件是自定义配置的，是升级后从12.04版本保留下来的，可以看出Host后面为服务器的名称，下面的HostName指定了服务器地址。而第二个文件为14.04系统自带的配置，这里Host后面用星号代替，而后面启用和没启用的参数中却没有HostName。</p>
+<p>再看上面的ssh测试结果，本次测试中，ssh使用了系统配置文件<code>/etc/ssh/ssh_config</code>中的第19行所对应的Host配置，从而最终选择了默认的<code>~/.ssh/id_rsa</code>文件，而自定义配置文件<code>~/.ssh/config</code>未能产生效果。</p>
+<p>是否在14.04中，服务器地址应该配置在Host后面？这样猜测不是没有道理的，星号正好可以在ssh连接时，作为服务器筛选的通配符使用。</p>
+<p>那么修改一下<code>~/.ssh/config</code>，将HostName去掉，并将地址放到Host后面，修改后内容如下：</p>
+<div class="highlight"><pre><span class="n">Host</span> <span class="mf">192.168.1.214</span>
+    <span class="n">User</span> <span class="n">git</span>
+    <span class="n">IdentityFile</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">gibh</span><span class="p">.</span><span class="n">gitlab</span>
+
+<span class="n">Host</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">User</span> <span class="n">git</span>
+    <span class="n">IdentityFile</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">github</span>
+
+<span class="n">Host</span> <span class="n">gitshell</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">User</span> <span class="n">git</span>
+    <span class="n">IdentityFile</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">gitshell</span>
+</pre></div>
+
+
+<p>再测试ssh，测试结果如下：</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="nx">ssh</span> <span class="na">-vT</span> <span class="nx">git</span><span class="p">@</span><span class="nx">github.com</span>
+<span class="nx">OpenSSH_6.6.1</span><span class="p">,</span> <span class="nx">OpenSSL</span> <span class="mf">1.0.1</span><span class="nb">f</span> <span class="mi">6</span> <span class="nx">Jan</span> <span class="mi">2014</span>
+<span class="nx">debug1</span><span class="p">:</span> <span class="nx">Reading</span> <span class="nx">configuration</span> <span class="kd">data</span> <span class="p">/</span><span class="nb">home</span><span class="p">/</span><span class="nx">yeyanbo</span><span class="p">/</span><span class="nx">.ssh</span><span class="p">/</span><span class="nx">config</span>
+<span class="nx">debug1</span><span class="p">:</span> <span class="p">/</span><span class="nb">home</span><span class="p">/</span><span class="nx">yeyanbo</span><span class="p">/</span><span class="nx">.ssh</span><span class="p">/</span><span class="nx">config</span> <span class="nb">line</span> <span class="mi">5</span><span class="p">:</span> <span class="nx">Applying</span> <span class="nx">options</span> <span class="nb">for</span> <span class="nx">github.com</span>
+<span class="nx">debug1</span><span class="p">:</span> <span class="nx">Reading</span> <span class="nx">configuration</span> <span class="kd">data</span> <span class="p">/</span><span class="nx">etc</span><span class="p">/</span><span class="nx">ssh</span><span class="p">/</span><span class="nx">ssh_config</span>
+<span class="nx">debug1</span><span class="p">:</span> <span class="p">/</span><span class="nx">etc</span><span class="p">/</span><span class="nx">ssh</span><span class="p">/</span><span class="nx">ssh_config</span> <span class="nb">line</span> <span class="mi">19</span><span class="p">:</span> <span class="nx">Applying</span> <span class="nx">options</span> <span class="nb">for</span> <span class="o">*</span>
+<span class="nx">debug1</span><span class="p">:</span> <span class="nx">Connecting</span> <span class="k">to</span> <span class="nx">github.com</span> <span class="err">[</span><span class="mf">192.30.252.128</span><span class="cp">]</span> port 22.
+debug1: Connection established.
+debug1: identity file /home/yeyanbo/.ssh/id_rsa.github type 1
+debug1: identity file /home/yeyanbo/.ssh/id_rsa.github-cert type -1
+debug1: Enabling compatibility mode for protocol 2.0
+debug1: Local version string SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2
+debug1: Remote protocol version 2.0, remote software version libssh-0.6.0
+debug1: no match: libssh-0.6.0
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: server-&gt;client aes128-ctr hmac-sha1 none
+debug1: kex: client-&gt;server aes128-ctr hmac-sha1 none
+debug1: sending SSH2_MSG_KEX_ECDH_INIT
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: RSA 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+debug1: Host &#39;github.com&#39; is known and matches the RSA host key.
+debug1: Found key in /home/yeyanbo/.ssh/known_hosts:3
+debug1: ssh_rsa_verify: signature correct
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: Roaming not allowed by server
+debug1: SSH2_MSG_SERVICE_REQUEST sent
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering RSA public key: /home/yeyanbo/.ssh/id_rsa.github
+debug1: Server accepts key: pkalg ssh-rsa blen 279
+debug1: key_parse_private2: missing begin marker
+debug1: key_parse_private_pem: PEM_read_PrivateKey failed
+debug1: read PEM private key done: type <span class="nt">&lt;unknown&gt;</span>
+Enter passphrase for key &#39;/home/yeyanbo/.ssh/id_rsa.github&#39;: 
+debug1: key_parse_private2: missing begin marker
+debug1: read PEM private key done: type RSA
+debug1: Authentication succeeded (publickey).
+Authenticated to github.com (<span class="cp">[</span><span class="mf">192.30.252.128</span><span class="cp">]</span>:22).
+debug1: channel 0: new <span class="cp">[</span><span class="nx">client</span><span class="na">-session</span><span class="cp">]</span>
+debug1: Entering interactive session.
+debug1: Sending environment.
+debug1: Sending env LANG = zh_CN.UTF-8
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+Hi lijax! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 3312, received 1768 bytes, in 0.6 seconds
+Bytes per second: sent 5392.4, received 2878.5
+debug1: Exit status 1
+</pre></div>
+
+
+<p>可以看出已经成功找到<code>~/.ssh/config</code>中github的配置，并找到<code>~/.ssh/id_rsa.github</code>秘钥文件。</p>
+<p>再进行简短测试，认证成功:)</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span>
+<span class="n">Enter</span> <span class="n">passphrase</span> <span class="k">for</span> <span class="n">key</span> <span class="err">&#39;</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">github</span><span class="err">&#39;</span><span class="o">:</span> 
+<span class="n">Enter</span> <span class="n">passphrase</span> <span class="k">for</span> <span class="n">key</span> <span class="err">&#39;</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">yeyanbo</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">github</span><span class="err">&#39;</span><span class="o">:</span> 
+<span class="n">Hi</span> <span class="n">lijax</span><span class="o">!</span> <span class="n">You</span><span class="err">&#39;</span><span class="n">ve</span> <span class="n">successfully</span> <span class="n">authenticated</span><span class="p">,</span> <span class="n">but</span> <span class="n">GitHub</span> <span class="n">does</span> <span class="n">not</span> <span class="n">provide</span> <span class="n">shell</span> <span class="n">access</span><span class="p">.</span>
+</pre></div>
+                    </section>
+                    <hr/>
+                    <aside class="post-meta">
+                        <p>Category: <a href="../category/linux.html">Linux</a></p>
+                        <p>Tags: <a href="../tag/ssh.html">ssh</a>, <a href="../tag/ssh_config.html">ssh_config</a>, <a href="../tag/github.html">github</a>, <a href="../tag/gitlab.html">gitlab</a>, </p>
+                    </aside>
+                    <hr/>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'yeyanbo';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+                </article>
+            </li>
+        </ol>
+    </div>
+        </div>
+
+<script>
+    var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+        <script src="../theme/js/main.js"></script>
+    </body>
+</html>

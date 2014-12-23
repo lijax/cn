@@ -9,17 +9,17 @@
         <title>Lijax - Linux</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-                    <link rel="stylesheet" href="../theme/css/normalize.css">
+            <link rel="stylesheet" href="../theme/css/normalize.css">
         <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="../theme/css/main.css">
-        
+
     <link rel="stylesheet" href="../theme/css/blog.css">
     <link rel="stylesheet" href="../theme/css/github.css">
-                <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
-                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,32 +27,48 @@
         <![endif]-->
 
         <div id="wrapper">
-                <header id="sidebar" class="side-shadow">
+<header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <a id="site-title" href=".."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
         <p id="site-desc"></p>
     </hgroup>
     <nav>
         <ul id="nav-links">
-                                        <li><a href="../pages/about.html">关于Lijax</a></li>
-                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
-                                </ul>
+                <li><a href="../../en">英文</a></li>
+                <li><a href="../">中文</a></li>
+                <li><a href="../contact">联系</a></li>
+        </ul>
     </nav>
-    <footer id="site-info">
+<footer id="site-info">
     <p>
         Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
-    </p>
-    <p>
-        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
     </p>
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
+                <article class="post-entry">
+                    <header class="entry-header">
+                        <time class="post-time" datetime="2013-04-19T20:00:00" pubdate>
+                            五 19 四月 2013
+                        </time>
+                        <a href="../posts/Linux系统程序安装方法汇总.html" rel="bookmark"><h1>Linux系统程序安装方法汇总</h1></a>
+                    </header>
+                    <section class="post-content">
+                        <h2>源代码安装</h2>
+<p>Linux是开源系统，大部分程序都是以开源的形式发布的。最原始的安装Linux程序的方法是直接下载程序的源代码，在本机上编译安装，但是这种方式操作起来比较繁琐，例如需要解决各种第三方源代码依赖的问题。因为源码安装遇到的问题各式各样，这里只是列出常见的安装步骤，大概可分为五部：</p>
+<ol>
+<li>
+<p>首先从互联网上获取源代码压缩包，一般是以 <code>tar.gz</code> 为扩展名的文件 ...</p></li></ol>
+                    </section>
+                </article>
+            </li>
+            <hr/>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-05-10T09:37:00" pubdate>
-                            Tue 10 May 2011
+                            二 10 五月 2011
                         </time>
                         <a href="../posts/file-roller压缩包中文乱码解决方法.html" rel="bookmark"><h1>file roller压缩包中文乱码解决方法</h1></a>
                     </header>
@@ -61,54 +77,32 @@
 <p>~~~~ {lang="LINUX"}
 sudo apt-get remove rar
 sudo apt-get remove unrar</p>
-<div class="highlight"><pre><span class="err">安裝</span><span class="n">p7zip</span><span class="err">、</span><span class="n">p7zip</span><span class="o">-</span><span class="n">rar</span>
-
-<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span><span class="p">}</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">p7zip</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">p7zip</span><span class="o">-</span><span class="n">rar</span>
-</pre></div>
+<div class="highlight"><pre><span class="err">安裝</span><span class="n">p7zip</span><span class="err">、</span><span class="n">p7zip ...</span></pre></div>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2011-05-08T13:12:00" pubdate>
-                            Sun 08 May 2011
+                            日 08 五月 2011
                         </time>
                         <a href="../posts/virtualbox-ose4.0.4-安装及运行错误.html" rel="bookmark"><h1>virtualbox-ose4.0.4 安装及运行错误</h1></a>
                     </header>
                     <section class="post-content">
                         <p>今天debian升级后，重装virtualbox-ose报了个错</p>
 <p>~~~~ {lang="LINUX" colla="+"}
-Starting VirtualBox kernel modulesNo suitable module for running kernel found ...
-failed!
-failed!</p>
-<div class="highlight"><pre><span class="err">但是程序还是安装成功了，也就没管它</span>
-
-<span class="err">直接运行，添加虚拟机，启动时，还是报错了，弹出两个窗口，大概如下</span>  
-<span class="err">窗口</span><span class="mi">1</span>
-
-<span class="o">~~~~</span> <span class="p">{</span><span class="n">lang</span><span class="o">=</span><span class="s">&quot;LINUX&quot;</span> <span class="n">colla</span><span class="o">=</span><span class="s">&quot;+&quot;</span><span class="p">}</span>
-<span class="n">result</span> <span class="n">code</span><span class="o">:</span><span class="n">NS_ERROR_FAILURE</span> <span class="p">(</span><span class="mh">0x80004005</span><span class="p">)</span>
-<span class="nl">component:</span><span class="n">VirtualBox</span>
-<span class="nl">interface:</span><span class="n">IVirtualBox</span> <span class="p">{</span><span class="mi">2158464</span><span class="n">a</span><span class="o">-</span><span class="n">f706</span><span class="o">-</span><span class="mi">414</span><span class="n">b</span><span class="o">-</span><span class="n">a8c4</span><span class="o">-</span><span class="n">fb589dfc6b62</span><span class="p">}</span>
-</pre></div>
-
-
-<p>窗口2</p>
-<p>~~~~ {lang="LINUX" colla="+"}
-kernel ...</p>
+Starting VirtualBox kernel modulesNo suitable module for running kernel found ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2010-10-18T10:46:00" pubdate>
-                            Mon 18 October 2010
+                            一 18 十月 2010
                         </time>
                         <a href="../posts/Linux远程多任务不断线操作方法.html" rel="bookmark"><h1>Linux远程多任务不断线操作方法</h1></a>
                     </header>
@@ -116,33 +110,16 @@ kernel ...</p>
                         <p>Linux 远程多任务不断线操作方法</p>
 <p>生物信息学经常会运行一些高计算量的程序，普通的计算机不能胜任，必须放在远程的高性能计算机上的运行。因此本地和远程之间的操作是非常频繁的事情。这些高计算量的程序可能运行几个小时，几天，甚至几个月，本地的计算机不可能一直开着，那么怎样实现本地与远程断开之后程序仍然运行呢？我们可以用screen命令实现。</p>
 <p>常用的三个命令：</p>
-<p>scp 实现本地与远程的文件传输</p>
-<p>ssh 登录远程linux系统</p>
-<p>screen 实现多任务后台运行</p>
-<p>步骤：</p>
-<p>1.将需要运行的文件和程序上传到服务器</p>
-<p><span style="color: #0000ff;">scp 本地文件路径
-user@IP:远程文件路径</span></p>
-<p>按提示输入密码后传送</p>
-<p><span style="color: #ff0000;">user@IP's password:</span></p>
-<p>2.登录远程服务器</p>
-<p><span style="color: #0000ff;">ssh user@IP</span></p>
-<p>按提示输入密码后登录</p>
-<p><span style="color: #ff0000;">user@IP's password:</span></p>
-<p>3.服务器后台运行程序</p>
-<p>输入<span style="color: #0000ff;">screen</span>命令进入后台程序运行</p>
-<p>screen命令行界面运行目标程序</p>
-<p>至此程序已经在后台开始运行</p>
-<p>怎样退出呢 ...</p>
+<p>scp 实现本地与远程的文件传输 ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2010-07-01T21:08:00" pubdate>
-                            Thu 01 July 2010
+                            四 01 七月 2010
                         </time>
                         <a href="../posts/Linux和windows引导修复方法.html" rel="bookmark"><h1>Linux和windows引导修复方法</h1></a>
                     </header>
@@ -153,30 +130,16 @@ user@IP:远程文件路径</span></p>
 <li>首先将grub引导写入Linux所在移动硬盘的mbr：</li>
 </ul>
 <p><span style="color: #ff0000;">sudo grub-install
-/dev/sdb（这里sdb是我对移动硬盘，根据情况而定）</span></p>
-<ul>
-<li>再对windows所在的系统进行修复，使用ms-sys工具:</li>
-</ul>
-<p>ms-sys不能通过软件库在线安装，需要单独下载，可通过<a href="http://ms-sys.sourceforge.net/">http://ms-sys.sourceforge.net/</a>下载。</p>
-<p>在这之前确保你已经安装过gettext软件包，否则安装过程中可能会报<span style="color: #0000ff;">
-msgfmt：命令未找到 <span style="color: #000000;">错误。</span></span></p>
-<p><span style="color: #ff0000;">sudo apt-get install gettext </span></p>
-<p>按照上面链接中的安装步骤进行ms-sys安装。</p>
-<p>安装完，执行下面的命令修复windows引导</p>
-<p><span style="color: #ff0000;">sudo ms-sys -m
-/dev/sda（sda是我的windows所在硬盘）</span></p>
-<p>成功修复后得到以下消息</p>
-<div id="_mcePaste" style="padding-left: 30px;">
-<span style="color: #0000ff;">Windows 2000/XP/2003 master boot ...</span></div>
+/dev/sdb（这里sdb是我对移动硬盘，根据情况而定 ...</span></p>
                     </section>
                 </article>
             </li>
             <hr/>
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2010-06-29T23:17:00" pubdate>
-                            Tue 29 June 2010
+                            二 29 六月 2010
                         </time>
                         <a href="../posts/雨林木风系统-ylmf-OS.html" rel="bookmark"><h1>雨林木风系统（ylmf OS）</h1></a>
                     </header>
@@ -185,28 +148,20 @@ msgfmt：命令未找到 <span style="color: #000000;">错误。</span></span><
 <p>以前接触过Ubuntu 9.10，对安装过程多少有些了解。</p>
 <p>前一段时间听说了雨林木风系统，听说就是根据Ubuntu
 10.04专门美化设计的，xp的风格，里面加入了许多我们常用的工具，很符合用惯了windows系统的国人的习惯，一直想找个时间装一下。</p>
-<p>今天就找了这个系统装在了自己的移动硬盘上。</p>
-<p><img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/06/ylmf-os-1.jpg" title="ylmf-os-1" /></p>
-<p>画面还不错，典型的xp。</p>
-<p>这次安装居然忘了设置交换分区了，于是乎在网上查了一下，果然有解决办法。可以建一个img文件来作文swap分区，感觉这个比固定的设置交换分区还好，以后安装都不用设置交换分区了，想设多大装完再说。</p>
-<p><strong>第一步，建立一个img文件，大小为512M，需要1024的话就把count=500000改成1000000，这样我们才能访问它。</strong></p>
-<p><strong> </strong><code>dd if=/dev/zero of=swap.img bs=1024 count=500000</code></p>
-<p><strong>第二步，对它进行格式化，不要担心，格式化的只是这个文件，不用sudo。</strong></p>
-<p><code>mkswap swap.img</code></p>
-<p><strong>第三步 ...</strong></p>
+<p>今天就找了这个系统装在了自己的移动硬盘上 ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                    </ol>
-                <div class="paginator">
-                        Page 1 / 1
-                    </div>
-        
+        </ol>
+        <div class="paginator">
+            Page 1 / 1
+        </div>
+
     </div>
         </div>
 
-        <script>
+<script>
     var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

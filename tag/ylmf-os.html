@@ -9,17 +9,17 @@
         <title>Lijax - Ylmf OS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-                    <link rel="stylesheet" href="../theme/css/normalize.css">
+            <link rel="stylesheet" href="../theme/css/normalize.css">
         <link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="../theme/css/main.css">
-        
+
     <link rel="stylesheet" href="../theme/css/blog.css">
     <link rel="stylesheet" href="../theme/css/github.css">
-                <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
-                        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
+        <link href="http://www.yeyanbo.com/cn/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Lijax Atom Feed" />
+        <script src="../theme/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,32 +27,30 @@
         <![endif]-->
 
         <div id="wrapper">
-                <header id="sidebar" class="side-shadow">
+<header id="sidebar" class="side-shadow">
     <hgroup id="site-header">
-        <a id="site-title" href=".."><h1><i class="icon-coffee"></i> Lijax</h1></a>
+        <a id="site-title" href=".."><h1><i class="fa fa-coffee"></i> Lijax</h1></a>
         <p id="site-desc"></p>
     </hgroup>
     <nav>
         <ul id="nav-links">
-                                        <li><a href="../pages/about.html">关于Lijax</a></li>
-                            <li><a href="../pages/bioinformatics-resources.html">生物信息学资源</a></li>
-                                </ul>
+                <li><a href="../../en">英文</a></li>
+                <li><a href="../">中文</a></li>
+                <li><a href="../contact">联系</a></li>
+        </ul>
     </nav>
-    <footer id="site-info">
+<footer id="site-info">
     <p>
         Proudly powered by <a href="http://getpelican.com/">Pelican</a> and <a href="http://python.org/">Python</a>. Theme by<a href="https://github.com/hdra/pelican-cait">hndr</a>.
-    </p>
-    <p>
-        Textures by <a href="http://subtlepatterns.com/">Subtle Pattern</a>. Font Awesome by <a href="http://fortawesome.github.io/Font-Awesome/">Dave Grandy</a>.
     </p>
 </footer></header>
     <div id="post-container">
         <ol id="post-list">
-                        <li>
+            <li>
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2010-06-29T23:17:00" pubdate>
-                            Tue 29 June 2010
+                            二 29 六月 2010
                         </time>
                         <a href="../posts/雨林木风系统-ylmf-OS.html" rel="bookmark"><h1>雨林木风系统（ylmf OS）</h1></a>
                     </header>
@@ -61,28 +59,20 @@
 <p>以前接触过Ubuntu 9.10，对安装过程多少有些了解。</p>
 <p>前一段时间听说了雨林木风系统，听说就是根据Ubuntu
 10.04专门美化设计的，xp的风格，里面加入了许多我们常用的工具，很符合用惯了windows系统的国人的习惯，一直想找个时间装一下。</p>
-<p>今天就找了这个系统装在了自己的移动硬盘上。</p>
-<p><img alt="" src="http://www.yeyanbo.com/wp-content/uploads/2010/06/ylmf-os-1.jpg" title="ylmf-os-1" /></p>
-<p>画面还不错，典型的xp。</p>
-<p>这次安装居然忘了设置交换分区了，于是乎在网上查了一下，果然有解决办法。可以建一个img文件来作文swap分区，感觉这个比固定的设置交换分区还好，以后安装都不用设置交换分区了，想设多大装完再说。</p>
-<p><strong>第一步，建立一个img文件，大小为512M，需要1024的话就把count=500000改成1000000，这样我们才能访问它。</strong></p>
-<p><strong> </strong><code>dd if=/dev/zero of=swap.img bs=1024 count=500000</code></p>
-<p><strong>第二步，对它进行格式化，不要担心，格式化的只是这个文件，不用sudo。</strong></p>
-<p><code>mkswap swap.img</code></p>
-<p><strong>第三步 ...</strong></p>
+<p>今天就找了这个系统装在了自己的移动硬盘上 ...</p>
                     </section>
                 </article>
             </li>
             <hr/>
-                    </ol>
-                <div class="paginator">
-                        Page 1 / 1
-                    </div>
-        
+        </ol>
+        <div class="paginator">
+            Page 1 / 1
+        </div>
+
     </div>
         </div>
 
-        <script>
+<script>
     var _gaq=[['_setAccount','UA-27029821-2'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
